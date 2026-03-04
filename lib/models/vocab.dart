@@ -15,7 +15,7 @@ class Vocab {
 
   factory Vocab.fromJson(Map<String, dynamic> json) {
     return Vocab(
-      id: json['id'] as String,
+      id: json['id'].toString(),
       word: json['word'] as String,
       meaning: json['meaning'] as String,
       example: json['example'] as String,
