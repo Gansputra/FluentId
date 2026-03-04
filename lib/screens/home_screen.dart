@@ -129,6 +129,17 @@ class _HomeScreenState extends State<HomeScreen> {
                           color: _isCorrect! ? Colors.green : Colors.red,
                         ),
                       ),
+                      if (!_isCorrect!) ...[
+                        const SizedBox(height: 8),
+                        Text(
+                          "Jawaban benar: ${_currentVocab!.meaning}",
+                          style: const TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black54,
+                          ),
+                        ),
+                      ],
                       const SizedBox(height: 24),
                       ElevatedButton(
                         onPressed: () => _generateNewQuiz(allVocabs),
