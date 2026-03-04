@@ -13,7 +13,11 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final VocabService _vocabService = VocabService();
   late Future<List<Vocab>> _vocabFuture;
+  
   Vocab? _currentVocab;
+  List<String> _options = [];
+  String? _selectedOption;
+  bool? _isCorrect;
 
   @override
   void initState() {
@@ -21,92 +25,171 @@ class _HomeScreenState extends State<HomeScreen> {
     _vocabFuture = _vocabService.loadVocabularies();
   }
 
-  void _refreshRandomVocab(List<Vocab> vocabs) {
-    if (vocabs.isNotEmpty) {
-      setState(() {
-        _currentVocab = vocabs[Random().nextInt(vocabs.length)];
-      });
-    }
+  // Fungsi internal untuk menghitung data quiz tanpa setState
+  void _setupQuizData(List<Vocab> allVocabs) {
+    if (allVocabs.length < 4) return;
+
+    final random = Random();
+    final correctVocab = allVocabs[random.nextInt(allVocabs.length)];
+    
+    List<String> wrongMeanings = allVocabs
+        .where((v) => v.id != correctVocab.id)
+        .map((v) => v.meaning)
+        .toList();
+    wrongMeanings.shuffle();
+    
+    List<String> quizOptions = [correctVocab.meaning];
+    quizOptions.addAll(wrongMeanings.take(3));
+    quizOptions.shuffle();
+
+    _currentVocab = correctVocab;
+    _options = quizOptions;
+    _selectedOption = null;
+    _isCorrect = null;
+  }
+
+  // Fungsi untuk trigger quiz baru dengan setState (dipanggil dari tombol)
+  void _generateNewQuiz(List<Vocab> allVocabs) {
+    setState(() {
+      _setupQuizData(allVocabs);
+    });
+  }
+
+  void _checkAnswer(String selected) {
+    if (_selectedOption != null) return;
+
+    setState(() {
+      _selectedOption = selected;
+      _isCorrect = selected == _currentVocab!.meaning;
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: FutureBuilder<List<Vocab>>(
-        future: _vocabFuture,
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(child: CircularProgressIndicator());
-          } else if (snapshot.hasError) {
-            return Center(child: Text('Error: ${snapshot.error}'));
-          } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-            return const Center(child: Text('No data found'));
-          }
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [Colors.deepPurple.shade50, Colors.white],
+          ),
+        ),
+        child: FutureBuilder<List<Vocab>>(
+          future: _vocabFuture,
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const Center(child: CircularProgressIndicator());
+            } else if (snapshot.hasError) {
+              return Center(child: Text('Error: ${snapshot.error}'));
+            } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
+              return const Center(child: Text('No data found'));
+            }
 
-          final vocabs = snapshot.data!;
-          // Set initial random vocab once data is loaded
-          _currentVocab ??= vocabs[Random().nextInt(vocabs.length)];
+            final allVocabs = snapshot.data!;
+            
+            // Inisialisasi data quiz jika belum ada, tanpa setState karena masih dalam build
+            if (_currentVocab == null) {
+              _setupQuizData(allVocabs);
+            }
 
-          return Center(
-            child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                   Card(
-                    elevation: 4,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15),
+            return SafeArea(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text(
+                      "Apa arti dari kata ini?",
+                      style: TextStyle(fontSize: 18, color: Colors.deepPurple, fontWeight: FontWeight.w500),
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(24.0),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text(
-                            _currentVocab!.word,
-                            style: Theme.of(context).textTheme.headlineLarge?.copyWith(
-                                  fontWeight: FontWeight.bold,
-                                  color: Theme.of(context).colorScheme.primary,
-                                ),
+                    const SizedBox(height: 16),
+                    Text(
+                      _currentVocab!.word,
+                      style: Theme.of(context).textTheme.displayMedium?.copyWith(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black87,
                           ),
-                          const SizedBox(height: 8),
-                          Text(
-                            _currentVocab!.meaning,
-                            style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                                  fontStyle: FontStyle.italic,
-                                  color: Colors.grey[700],
-                                ),
-                          ),
-                          const Divider(height: 32),
-                          const Text(
-                            "Contoh Kalimat:",
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          const SizedBox(height: 8),
-                          Text(
-                            '"${_currentVocab!.example}"',
-                            textAlign: TextAlign.center,
-                            style: Theme.of(context).textTheme.bodyLarge,
-                          ),
-                        ],
+                    ),
+                    const SizedBox(height: 40),
+                    ..._options.map((option) => _buildOptionButton(option)),
+                    const SizedBox(height: 40),
+                    if (_selectedOption != null) ...[
+                      Icon(
+                        _isCorrect! ? Icons.check_circle : Icons.cancel,
+                        color: _isCorrect! ? Colors.green : Colors.red,
+                        size: 60,
                       ),
-                    ),
-                  ),
-                  const SizedBox(height: 32),
-                  ElevatedButton.icon(
-                    onPressed: () => _refreshRandomVocab(vocabs),
-                    icon: const Icon(Icons.refresh),
-                    label: const Text("Kata Acak Lainnya"),
-                    style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-                    ),
-                  ),
-                ],
+                      const SizedBox(height: 8),
+                      Text(
+                        _isCorrect! ? "Benar sekali!" : "Oops, kurang tepat!",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: _isCorrect! ? Colors.green : Colors.red,
+                        ),
+                      ),
+                      const SizedBox(height: 24),
+                      ElevatedButton(
+                        onPressed: () => _generateNewQuiz(allVocabs),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.deepPurple,
+                          foregroundColor: Colors.white,
+                          padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+                        ),
+                        child: const Text("Pertanyaan Selanjutnya", style: TextStyle(fontSize: 16)),
+                      ),
+                    ],
+                  ],
+                ),
               ),
+            );
+          },
+        ),
+      ),
+    );
+  }
+
+  Widget _buildOptionButton(String option) {
+    bool isSelected = _selectedOption == option;
+    bool isCorrectOption = option == _currentVocab?.meaning;
+    
+    Color buttonColor = Colors.white;
+    if (_selectedOption != null) {
+      if (isCorrectOption) {
+        buttonColor = Colors.green.shade100;
+      } else if (isSelected) {
+        buttonColor = Colors.red.shade100;
+      }
+    }
+
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 12.0),
+      child: SizedBox(
+        width: double.infinity,
+        child: OutlinedButton(
+          onPressed: () => _checkAnswer(option),
+          style: OutlinedButton.styleFrom(
+            backgroundColor: buttonColor,
+            padding: const EdgeInsets.symmetric(vertical: 16),
+            side: BorderSide(
+              color: isSelected 
+                  ? (_isCorrect! ? Colors.green : Colors.red) 
+                  : (_selectedOption != null && isCorrectOption ? Colors.green : Colors.deepPurple.shade200),
+              width: isSelected || (_selectedOption != null && isCorrectOption) ? 2 : 1,
             ),
-          );
-        },
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+          ),
+          child: Text(
+            option,
+            style: TextStyle(
+              fontSize: 18,
+              color: Colors.black87,
+              fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+            ),
+          ),
+        ),
       ),
     );
   }
