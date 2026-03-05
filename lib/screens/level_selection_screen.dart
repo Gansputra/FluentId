@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:fluentid/services/progress_service.dart';
 import '../widgets/interactive_particle_background.dart';
 import 'home_screen.dart';
 
@@ -11,10 +12,37 @@ class LevelSelectionScreen extends StatefulWidget {
 }
 
 class _LevelSelectionScreenState extends State<LevelSelectionScreen> {
-  // Mock progression data - in real app, this should come from local storage
-  final int _userScore = 0; 
+  final ProgressService _progressService = ProgressService();
+  
+  int _userScore = 0; 
+  int _basicProgress = 0;
+  int _advancedProgress = 0;
+  int _professionalProgress = 0;
+
   final int _scoreToUnlockAdvanced = 500;
   final int _scoreToUnlockProfessional = 1500;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadProgress();
+  }
+
+  Future<void> _loadProgress() async {
+    final xp = await _progressService.getXp();
+    final basic = await _progressService.getMasteredCount("Basic");
+    final advanced = await _progressService.getMasteredCount("Advanced");
+    final professional = await _progressService.getMasteredCount("Professional");
+
+    if (mounted) {
+      setState(() {
+        _userScore = xp;
+        _basicProgress = basic;
+        _advancedProgress = advanced;
+        _professionalProgress = professional;
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +94,8 @@ class _LevelSelectionScreenState extends State<LevelSelectionScreen> {
                   color: Colors.blue,
                   fileName: "vocabBasic.json",
                   isLocked: false,
-                  progress: "0/1000",
+                  progress: "$_basicProgress/1000",
+                  progressValue: _basicProgress / 1000,
                 ),
                 _buildLevelCard(
                   title: "Advanced",
@@ -76,7 +105,8 @@ class _LevelSelectionScreenState extends State<LevelSelectionScreen> {
                   fileName: "vocabAdvanced.json",
                   isLocked: _userScore < _scoreToUnlockAdvanced,
                   lockInfo: "Butuh ${_scoreToUnlockAdvanced - _userScore} XP lagi",
-                  progress: "0/500",
+                  progress: "$_advancedProgress/500",
+                  progressValue: _advancedProgress / 500,
                 ),
                 _buildLevelCard(
                   title: "Professional",
@@ -86,7 +116,8 @@ class _LevelSelectionScreenState extends State<LevelSelectionScreen> {
                   fileName: "vocabProfessional.json",
                   isLocked: _userScore < _scoreToUnlockProfessional,
                   lockInfo: "Butuh ${_scoreToUnlockProfessional - _userScore} XP lagi",
-                  progress: "0/200",
+                  progress: "$_professionalProgress/200",
+                  progressValue: _professionalProgress / 200,
                 ),
               ],
             ),
@@ -105,6 +136,7 @@ class _LevelSelectionScreenState extends State<LevelSelectionScreen> {
     required bool isLocked,
     String? lockInfo,
     required String progress,
+    required double progressValue,
   }) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 20.0),
@@ -119,7 +151,7 @@ class _LevelSelectionScreenState extends State<LevelSelectionScreen> {
                   fileName: fileName,
                 ),
               ),
-            ),
+            ).then((_) => _loadProgress()),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(25),
           child: BackdropFilter(
@@ -192,7 +224,7 @@ class _LevelSelectionScreenState extends State<LevelSelectionScreen> {
                           ClipRRect(
                             borderRadius: BorderRadius.circular(10),
                             child: LinearProgressIndicator(
-                              value: 0, // Placeholder for actual progress
+                              value: progressValue,
                               backgroundColor: color.withOpacity(0.1),
                               valueColor: AlwaysStoppedAnimation<Color>(color),
                               minHeight: 6,

@@ -5,6 +5,7 @@ import 'package:confetti/confetti.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import '../models/vocab.dart';
 import '../services/vocab_service.dart';
+import 'package:fluentid/services/progress_service.dart';
 import '../widgets/interactive_particle_background.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -28,6 +29,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   late AnimationController _shakeController;
   late Animation<double> _shakeAnimation;
   late FlutterTts _flutterTts;
+  
+  final ProgressService _progressService = ProgressService();
   
   Vocab? _currentVocab;
   List<String> _options = [];
@@ -116,8 +119,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
     if (correct) {
       _confettiController.play();
+      _progressService.masterWord(widget.levelName, _currentVocab!.id);
     } else {
       _shakeController.forward(from: 0.0);
+      // Jika salah, progress tidak nambah (stay)
     }
   }
 
