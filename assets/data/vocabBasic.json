@@ -1398,5 +1398,5605 @@
         "meaning": "lupa",
         "example": "Don't forget me.",
         "mastery": 0
+    },
+    {
+        "id": 201,
+        "word": "form",
+        "meaning": "bentuk",
+        "example": "The cloud formed a strange form.",
+        "mastery": 0
+    },
+    {
+        "id": 202,
+        "word": "forward",
+        "meaning": "maju",
+        "example": "Step forward.",
+        "mastery": 0
+    },
+    {
+        "id": 203,
+        "word": "four",
+        "meaning": "empat",
+        "example": "I have four apples.",
+        "mastery": 0
+    },
+    {
+        "id": 204,
+        "word": "free",
+        "meaning": "bebas",
+        "example": "You are free to go.",
+        "mastery": 0
+    },
+    {
+        "id": 205,
+        "word": "friend",
+        "meaning": "teman",
+        "example": "He is my best friend.",
+        "mastery": 0
+    },
+    {
+        "id": 206,
+        "word": "from",
+        "meaning": "dari",
+        "example": "I am from Indonesia.",
+        "mastery": 0
+    },
+    {
+        "id": 207,
+        "word": "front",
+        "meaning": "depan",
+        "example": "Stand in front of me.",
+        "mastery": 0
+    },
+    {
+        "id": 208,
+        "word": "full",
+        "meaning": "penuh",
+        "example": "The glass is full.",
+        "mastery": 0
+    },
+    {
+        "id": 209,
+        "word": "future",
+        "meaning": "masa depan",
+        "example": "Think about your future.",
+        "mastery": 0
+    },
+    {
+        "id": 210,
+        "word": "game",
+        "meaning": "permainan",
+        "example": "Let's play a game.",
+        "mastery": 0
+    },
+    {
+        "id": 211,
+        "word": "garden",
+        "meaning": "taman",
+        "example": "The garden is beautiful.",
+        "mastery": 0
+    },
+    {
+        "id": 212,
+        "word": "general",
+        "meaning": "umum",
+        "example": "This is general knowledge.",
+        "mastery": 0
+    },
+    {
+        "id": 213,
+        "word": "get",
+        "meaning": "mendapatkan",
+        "example": "I get a gift.",
+        "mastery": 0
+    },
+    {
+        "id": 214,
+        "word": "girl",
+        "meaning": "anak perempuan",
+        "example": "The girl is smiling.",
+        "mastery": 0
+    },
+    {
+        "id": 215,
+        "word": "give",
+        "meaning": "memberi",
+        "example": "Give me the book.",
+        "mastery": 0
+    },
+    {
+        "id": 216,
+        "word": "glass",
+        "meaning": "gelas",
+        "example": "The glass broke.",
+        "mastery": 0
+    },
+    {
+        "id": 217,
+        "word": "go",
+        "meaning": "pergi",
+        "example": "Go home.",
+        "mastery": 0
+    },
+    {
+        "id": 218,
+        "word": "goal",
+        "meaning": "tujuan",
+        "example": "My goal is success.",
+        "mastery": 0
+    },
+    {
+        "id": 219,
+        "word": "good",
+        "meaning": "baik",
+        "example": "She is a good person.",
+        "mastery": 0
+    },
+    {
+        "id": 220,
+        "word": "government",
+        "meaning": "pemerintah",
+        "example": "The government announced a plan.",
+        "mastery": 0
+    },
+    {
+        "id": 221,
+        "word": "great",
+        "meaning": "hebat",
+        "example": "That was a great movie.",
+        "mastery": 0
+    },
+    {
+        "id": 222,
+        "word": "green",
+        "meaning": "hijau",
+        "example": "The grass is green.",
+        "mastery": 0
+    },
+    {
+        "id": 223,
+        "word": "ground",
+        "meaning": "tanah",
+        "example": "The ball fell to the ground.",
+        "mastery": 0
+    },
+    {
+        "id": 224,
+        "word": "group",
+        "meaning": "kelompok",
+        "example": "They formed a group.",
+        "mastery": 0
+    },
+    {
+        "id": 225,
+        "word": "grow",
+        "meaning": "tumbuh",
+        "example": "Plants grow fast.",
+        "mastery": 0
+    },
+    {
+        "id": 226,
+        "word": "guess",
+        "meaning": "menebak",
+        "example": "Guess the answer.",
+        "mastery": 0
+    },
+    {
+        "id": 227,
+        "word": "gun",
+        "meaning": "senjata",
+        "example": "The soldier carried a gun.",
+        "mastery": 0
+    },
+    {
+        "id": 228,
+        "word": "hair",
+        "meaning": "rambut",
+        "example": "Her hair is long.",
+        "mastery": 0
+    },
+    {
+        "id": 229,
+        "word": "half",
+        "meaning": "setengah",
+        "example": "Eat half of it.",
+        "mastery": 0
+    },
+    {
+        "id": 230,
+        "word": "hand",
+        "meaning": "tangan",
+        "example": "Raise your hand.",
+        "mastery": 0
+    },
+    {
+        "id": 231,
+        "word": "happen",
+        "meaning": "terjadi",
+        "example": "What happened yesterday?",
+        "mastery": 0
+    },
+    {
+        "id": 232,
+        "word": "happy",
+        "meaning": "bahagia",
+        "example": "I feel happy today.",
+        "mastery": 0
+    },
+    {
+        "id": 233,
+        "word": "hard",
+        "meaning": "keras",
+        "example": "This rock is hard.",
+        "mastery": 0
+    },
+    {
+        "id": 234,
+        "word": "have",
+        "meaning": "memiliki",
+        "example": "I have a car.",
+        "mastery": 0
+    },
+    {
+        "id": 235,
+        "word": "he",
+        "meaning": "dia laki-laki",
+        "example": "He is my friend.",
+        "mastery": 0
+    },
+    {
+        "id": 236,
+        "word": "head",
+        "meaning": "kepala",
+        "example": "My head hurts.",
+        "mastery": 0
+    },
+    {
+        "id": 237,
+        "word": "health",
+        "meaning": "kesehatan",
+        "example": "Health is important.",
+        "mastery": 0
+    },
+    {
+        "id": 238,
+        "word": "hear",
+        "meaning": "mendengar",
+        "example": "I hear a sound.",
+        "mastery": 0
+    },
+    {
+        "id": 239,
+        "word": "heart",
+        "meaning": "hati",
+        "example": "His heart is kind.",
+        "mastery": 0
+    },
+    {
+        "id": 240,
+        "word": "heat",
+        "meaning": "panas",
+        "example": "The heat is intense.",
+        "mastery": 0
+    },
+    {
+        "id": 241,
+        "word": "help",
+        "meaning": "membantu",
+        "example": "Help me please.",
+        "mastery": 0
+    },
+    {
+        "id": 242,
+        "word": "here",
+        "meaning": "di sini",
+        "example": "Come here.",
+        "mastery": 0
+    },
+    {
+        "id": 243,
+        "word": "high",
+        "meaning": "tinggi",
+        "example": "The mountain is high.",
+        "mastery": 0
+    },
+    {
+        "id": 244,
+        "word": "history",
+        "meaning": "sejarah",
+        "example": "I like history.",
+        "mastery": 0
+    },
+    {
+        "id": 245,
+        "word": "hold",
+        "meaning": "memegang",
+        "example": "Hold my hand.",
+        "mastery": 0
+    },
+    {
+        "id": 246,
+        "word": "home",
+        "meaning": "rumah",
+        "example": "I am at home.",
+        "mastery": 0
+    },
+    {
+        "id": 247,
+        "word": "hope",
+        "meaning": "harapan",
+        "example": "I have hope.",
+        "mastery": 0
+    },
+    {
+        "id": 248,
+        "word": "horse",
+        "meaning": "kuda",
+        "example": "The horse runs fast.",
+        "mastery": 0
+    },
+    {
+        "id": 249,
+        "word": "hospital",
+        "meaning": "rumah sakit",
+        "example": "She works at a hospital.",
+        "mastery": 0
+    },
+    {
+        "id": 250,
+        "word": "hot",
+        "meaning": "panas",
+        "example": "The soup is hot.",
+        "mastery": 0
+    },
+    {
+        "id": 251,
+        "word": "hour",
+        "meaning": "jam",
+        "example": "Wait one hour.",
+        "mastery": 0
+    },
+    {
+        "id": 252,
+        "word": "house",
+        "meaning": "rumah",
+        "example": "The house is big.",
+        "mastery": 0
+    },
+    {
+        "id": 253,
+        "word": "how",
+        "meaning": "bagaimana",
+        "example": "How are you?",
+        "mastery": 0
+    },
+    {
+        "id": 254,
+        "word": "however",
+        "meaning": "namun",
+        "example": "However, we continued.",
+        "mastery": 0
+    },
+    {
+        "id": 255,
+        "word": "human",
+        "meaning": "manusia",
+        "example": "Humans think differently.",
+        "mastery": 0
+    },
+    {
+        "id": 256,
+        "word": "hundred",
+        "meaning": "seratus",
+        "example": "There are one hundred people.",
+        "mastery": 0
+    },
+    {
+        "id": 257,
+        "word": "husband",
+        "meaning": "suami",
+        "example": "Her husband works here.",
+        "mastery": 0
+    },
+    {
+        "id": 258,
+        "word": "idea",
+        "meaning": "ide",
+        "example": "That's a good idea.",
+        "mastery": 0
+    },
+    {
+        "id": 259,
+        "word": "identify",
+        "meaning": "mengidentifikasi",
+        "example": "Identify the problem.",
+        "mastery": 0
+    },
+    {
+        "id": 260,
+        "word": "image",
+        "meaning": "gambar",
+        "example": "This image is clear.",
+        "mastery": 0
+    },
+    {
+        "id": 261,
+        "word": "imagine",
+        "meaning": "membayangkan",
+        "example": "Imagine the future.",
+        "mastery": 0
+    },
+    {
+        "id": 262,
+        "word": "important",
+        "meaning": "penting",
+        "example": "This task is important.",
+        "mastery": 0
+    },
+    {
+        "id": 263,
+        "word": "improve",
+        "meaning": "meningkatkan",
+        "example": "Improve your skills.",
+        "mastery": 0
+    },
+    {
+        "id": 264,
+        "word": "include",
+        "meaning": "termasuk",
+        "example": "The price includes tax.",
+        "mastery": 0
+    },
+    {
+        "id": 265,
+        "word": "increase",
+        "meaning": "meningkat",
+        "example": "Prices increase yearly.",
+        "mastery": 0
+    },
+    {
+        "id": 266,
+        "word": "indeed",
+        "meaning": "memang",
+        "example": "Indeed, it is true.",
+        "mastery": 0
+    },
+    {
+        "id": 267,
+        "word": "indicate",
+        "meaning": "menunjukkan",
+        "example": "The arrow indicates direction.",
+        "mastery": 0
+    },
+    {
+        "id": 268,
+        "word": "industry",
+        "meaning": "industri",
+        "example": "The industry is growing.",
+        "mastery": 0
+    },
+    {
+        "id": 269,
+        "word": "information",
+        "meaning": "informasi",
+        "example": "I need more information.",
+        "mastery": 0
+    },
+    {
+        "id": 270,
+        "word": "inside",
+        "meaning": "di dalam",
+        "example": "Stay inside.",
+        "mastery": 0
+    },
+    {
+        "id": 271,
+        "word": "instead",
+        "meaning": "sebagai gantinya",
+        "example": "Drink water instead.",
+        "mastery": 0
+    },
+    {
+        "id": 272,
+        "word": "interest",
+        "meaning": "minat",
+        "example": "He has interest in science.",
+        "mastery": 0
+    },
+    {
+        "id": 273,
+        "word": "interesting",
+        "meaning": "menarik",
+        "example": "The story is interesting.",
+        "mastery": 0
+    },
+    {
+        "id": 274,
+        "word": "international",
+        "meaning": "internasional",
+        "example": "International trade grows.",
+        "mastery": 0
+    },
+    {
+        "id": 275,
+        "word": "interview",
+        "meaning": "wawancara",
+        "example": "She has a job interview.",
+        "mastery": 0
+    },
+    {
+        "id": 276,
+        "word": "into",
+        "meaning": "ke dalam",
+        "example": "Go into the room.",
+        "mastery": 0
+    },
+    {
+        "id": 277,
+        "word": "issue",
+        "meaning": "masalah",
+        "example": "This issue is serious.",
+        "mastery": 0
+    },
+    {
+        "id": 278,
+        "word": "item",
+        "meaning": "barang",
+        "example": "This item is expensive.",
+        "mastery": 0
+    },
+    {
+        "id": 279,
+        "word": "its",
+        "meaning": "miliknya",
+        "example": "The dog wagged its tail.",
+        "mastery": 0
+    },
+    {
+        "id": 280,
+        "word": "job",
+        "meaning": "pekerjaan",
+        "example": "I like my job.",
+        "mastery": 0
+    },
+    {
+        "id": 281,
+        "word": "join",
+        "meaning": "bergabung",
+        "example": "Join our team.",
+        "mastery": 0
+    },
+    {
+        "id": 282,
+        "word": "judge",
+        "meaning": "hakim",
+        "example": "The judge made a decision.",
+        "mastery": 0
+    },
+    {
+        "id": 283,
+        "word": "jump",
+        "meaning": "melompat",
+        "example": "Jump over it.",
+        "mastery": 0
+    },
+    {
+        "id": 284,
+        "word": "just",
+        "meaning": "hanya",
+        "example": "Just wait.",
+        "mastery": 0
+    },
+    {
+        "id": 285,
+        "word": "keep",
+        "meaning": "menjaga",
+        "example": "Keep the secret.",
+        "mastery": 0
+    },
+    {
+        "id": 286,
+        "word": "key",
+        "meaning": "kunci",
+        "example": "Where is the key?",
+        "mastery": 0
+    },
+    {
+        "id": 287,
+        "word": "kid",
+        "meaning": "anak",
+        "example": "The kid laughed.",
+        "mastery": 0
+    },
+    {
+        "id": 288,
+        "word": "kill",
+        "meaning": "membunuh",
+        "example": "The hunter killed the animal.",
+        "mastery": 0
+    },
+    {
+        "id": 289,
+        "word": "kind",
+        "meaning": "baik hati",
+        "example": "She is kind.",
+        "mastery": 0
+    },
+    {
+        "id": 290,
+        "word": "king",
+        "meaning": "raja",
+        "example": "The king ruled wisely.",
+        "mastery": 0
+    },
+    {
+        "id": 291,
+        "word": "kitchen",
+        "meaning": "dapur",
+        "example": "She is in the kitchen.",
+        "mastery": 0
+    },
+    {
+        "id": 292,
+        "word": "know",
+        "meaning": "tahu",
+        "example": "I know the answer.",
+        "mastery": 0
+    },
+    {
+        "id": 293,
+        "word": "knowledge",
+        "meaning": "pengetahuan",
+        "example": "Knowledge is power.",
+        "mastery": 0
+    },
+    {
+        "id": 294,
+        "word": "land",
+        "meaning": "tanah",
+        "example": "They bought land.",
+        "mastery": 0
+    },
+    {
+        "id": 295,
+        "word": "language",
+        "meaning": "bahasa",
+        "example": "English is a language.",
+        "mastery": 0
+    },
+    {
+        "id": 296,
+        "word": "large",
+        "meaning": "besar",
+        "example": "The building is large.",
+        "mastery": 0
+    },
+    {
+        "id": 297,
+        "word": "last",
+        "meaning": "terakhir",
+        "example": "This is the last one.",
+        "mastery": 0
+    },
+    {
+        "id": 298,
+        "word": "late",
+        "meaning": "terlambat",
+        "example": "He arrived late.",
+        "mastery": 0
+    },
+    {
+        "id": 299,
+        "word": "laugh",
+        "meaning": "tertawa",
+        "example": "They laugh loudly.",
+        "mastery": 0
+    },
+    {
+        "id": 300,
+        "word": "law",
+        "meaning": "hukum",
+        "example": "Everyone must follow the law.",
+        "mastery": 0
+    },
+    {
+        "id": 301,
+        "word": "lead",
+        "meaning": "memimpin",
+        "example": "She leads the team.",
+        "mastery": 0
+    },
+    {
+        "id": 302,
+        "word": "learn",
+        "meaning": "belajar",
+        "example": "Learn something new.",
+        "mastery": 0
+    },
+    {
+        "id": 303,
+        "word": "leave",
+        "meaning": "pergi",
+        "example": "Leave the room.",
+        "mastery": 0
+    },
+    {
+        "id": 304,
+        "word": "left",
+        "meaning": "kiri",
+        "example": "Turn left.",
+        "mastery": 0
+    },
+    {
+        "id": 305,
+        "word": "leg",
+        "meaning": "kaki",
+        "example": "My leg hurts.",
+        "mastery": 0
+    },
+    {
+        "id": 306,
+        "word": "less",
+        "meaning": "lebih sedikit",
+        "example": "Use less sugar.",
+        "mastery": 0
+    },
+    {
+        "id": 307,
+        "word": "let",
+        "meaning": "biarkan",
+        "example": "Let him speak.",
+        "mastery": 0
+    },
+    {
+        "id": 308,
+        "word": "letter",
+        "meaning": "surat",
+        "example": "I wrote a letter.",
+        "mastery": 0
+    },
+    {
+        "id": 309,
+        "word": "level",
+        "meaning": "tingkat",
+        "example": "This level is hard.",
+        "mastery": 0
+    },
+    {
+        "id": 310,
+        "word": "life",
+        "meaning": "hidup",
+        "example": "Life is beautiful.",
+        "mastery": 0
+    },
+    {
+        "id": 311,
+        "word": "light",
+        "meaning": "cahaya",
+        "example": "Turn on the light.",
+        "mastery": 0
+    },
+    {
+        "id": 312,
+        "word": "like",
+        "meaning": "suka",
+        "example": "I like coffee.",
+        "mastery": 0
+    },
+    {
+        "id": 313,
+        "word": "line",
+        "meaning": "garis",
+        "example": "Draw a line.",
+        "mastery": 0
+    },
+    {
+        "id": 314,
+        "word": "list",
+        "meaning": "daftar",
+        "example": "Make a list.",
+        "mastery": 0
+    },
+    {
+        "id": 315,
+        "word": "listen",
+        "meaning": "mendengarkan",
+        "example": "Listen carefully.",
+        "mastery": 0
+    },
+    {
+        "id": 316,
+        "word": "little",
+        "meaning": "kecil",
+        "example": "The puppy is little.",
+        "mastery": 0
+    },
+    {
+        "id": 317,
+        "word": "live",
+        "meaning": "tinggal",
+        "example": "I live here.",
+        "mastery": 0
+    },
+    {
+        "id": 318,
+        "word": "local",
+        "meaning": "lokal",
+        "example": "Local food is tasty.",
+        "mastery": 0
+    },
+    {
+        "id": 319,
+        "word": "long",
+        "meaning": "panjang",
+        "example": "The road is long.",
+        "mastery": 0
+    },
+    {
+        "id": 320,
+        "word": "look",
+        "meaning": "melihat",
+        "example": "Look at the sky.",
+        "mastery": 0
+    },
+    {
+        "id": 321,
+        "word": "lose",
+        "meaning": "kehilangan",
+        "example": "Don't lose hope.",
+        "mastery": 0
+    },
+    {
+        "id": 322,
+        "word": "loss",
+        "meaning": "kerugian",
+        "example": "The company had a loss.",
+        "mastery": 0
+    },
+    {
+        "id": 323,
+        "word": "love",
+        "meaning": "cinta",
+        "example": "I love my family.",
+        "mastery": 0
+    },
+    {
+        "id": 324,
+        "word": "low",
+        "meaning": "rendah",
+        "example": "The price is low.",
+        "mastery": 0
+    },
+    {
+        "id": 325,
+        "word": "machine",
+        "meaning": "mesin",
+        "example": "This machine is powerful.",
+        "mastery": 0
+    },
+    {
+        "id": 326,
+        "word": "main",
+        "meaning": "utama",
+        "example": "This is the main road.",
+        "mastery": 0
+    },
+    {
+        "id": 327,
+        "word": "major",
+        "meaning": "besar",
+        "example": "This is a major problem.",
+        "mastery": 0
+    },
+    {
+        "id": 328,
+        "word": "make",
+        "meaning": "membuat",
+        "example": "Make a cake.",
+        "mastery": 0
+    },
+    {
+        "id": 329,
+        "word": "man",
+        "meaning": "pria",
+        "example": "The man is tall.",
+        "mastery": 0
+    },
+    {
+        "id": 330,
+        "word": "manage",
+        "meaning": "mengelola",
+        "example": "She manages the team.",
+        "mastery": 0
+    },
+    {
+        "id": 331,
+        "word": "many",
+        "meaning": "banyak",
+        "example": "Many people came.",
+        "mastery": 0
+    },
+    {
+        "id": 332,
+        "word": "market",
+        "meaning": "pasar",
+        "example": "The market is busy.",
+        "mastery": 0
+    },
+    {
+        "id": 333,
+        "word": "material",
+        "meaning": "bahan",
+        "example": "Wood is a material.",
+        "mastery": 0
+    },
+    {
+        "id": 334,
+        "word": "matter",
+        "meaning": "masalah",
+        "example": "It doesn't matter.",
+        "mastery": 0
+    },
+    {
+        "id": 335,
+        "word": "may",
+        "meaning": "mungkin",
+        "example": "It may rain.",
+        "mastery": 0
+    },
+    {
+        "id": 336,
+        "word": "maybe",
+        "meaning": "mungkin",
+        "example": "Maybe tomorrow.",
+        "mastery": 0
+    },
+    {
+        "id": 337,
+        "word": "mean",
+        "meaning": "berarti",
+        "example": "What does it mean?",
+        "mastery": 0
+    },
+    {
+        "id": 338,
+        "word": "measure",
+        "meaning": "mengukur",
+        "example": "Measure the length.",
+        "mastery": 0
+    },
+    {
+        "id": 339,
+        "word": "meet",
+        "meaning": "bertemu",
+        "example": "Nice to meet you.",
+        "mastery": 0
+    },
+    {
+        "id": 340,
+        "word": "member",
+        "meaning": "anggota",
+        "example": "She is a member.",
+        "mastery": 0
+    },
+    {
+        "id": 341,
+        "word": "memory",
+        "meaning": "ingatan",
+        "example": "I remember the memory.",
+        "mastery": 0
+    },
+    {
+        "id": 342,
+        "word": "mention",
+        "meaning": "menyebutkan",
+        "example": "He mentioned your name.",
+        "mastery": 0
+    },
+    {
+        "id": 343,
+        "word": "message",
+        "meaning": "pesan",
+        "example": "Send me a message.",
+        "mastery": 0
+    },
+    {
+        "id": 344,
+        "word": "method",
+        "meaning": "metode",
+        "example": "This method works.",
+        "mastery": 0
+    },
+    {
+        "id": 345,
+        "word": "middle",
+        "meaning": "tengah",
+        "example": "Sit in the middle.",
+        "mastery": 0
+    },
+    {
+        "id": 346,
+        "word": "might",
+        "meaning": "mungkin",
+        "example": "It might work.",
+        "mastery": 0
+    },
+    {
+        "id": 347,
+        "word": "military",
+        "meaning": "militer",
+        "example": "He joined the military.",
+        "mastery": 0
+    },
+    {
+        "id": 348,
+        "word": "mind",
+        "meaning": "pikiran",
+        "example": "Open your mind.",
+        "mastery": 0
+    },
+    {
+        "id": 349,
+        "word": "minute",
+        "meaning": "menit",
+        "example": "Wait a minute.",
+        "mastery": 0
+    },
+    {
+        "id": 350,
+        "word": "miss",
+        "meaning": "merindukan",
+        "example": "I miss you.",
+        "mastery": 0
+    },
+    {
+        "id": 351,
+        "word": "mission",
+        "meaning": "misi",
+        "example": "The mission succeeded.",
+        "mastery": 0
+    },
+    {
+        "id": 352,
+        "word": "model",
+        "meaning": "model",
+        "example": "This is a new model.",
+        "mastery": 0
+    },
+    {
+        "id": 353,
+        "word": "modern",
+        "meaning": "modern",
+        "example": "The design is modern.",
+        "mastery": 0
+    },
+    {
+        "id": 354,
+        "word": "moment",
+        "meaning": "momen",
+        "example": "Enjoy the moment.",
+        "mastery": 0
+    },
+    {
+        "id": 355,
+        "word": "money",
+        "meaning": "uang",
+        "example": "Money is important.",
+        "mastery": 0
+    },
+    {
+        "id": 356,
+        "word": "month",
+        "meaning": "bulan",
+        "example": "Next month is busy.",
+        "mastery": 0
+    },
+    {
+        "id": 357,
+        "word": "more",
+        "meaning": "lebih",
+        "example": "I want more.",
+        "mastery": 0
+    },
+    {
+        "id": 358,
+        "word": "morning",
+        "meaning": "pagi",
+        "example": "Good morning.",
+        "mastery": 0
+    },
+    {
+        "id": 359,
+        "word": "most",
+        "meaning": "paling",
+        "example": "This is the most important.",
+        "mastery": 0
+    },
+    {
+        "id": 360,
+        "word": "mother",
+        "meaning": "ibu",
+        "example": "My mother cooks well.",
+        "mastery": 0
+    },
+    {
+        "id": 361,
+        "word": "move",
+        "meaning": "bergerak",
+        "example": "Move quickly.",
+        "mastery": 0
+    },
+    {
+        "id": 362,
+        "word": "movie",
+        "meaning": "film",
+        "example": "The movie is great.",
+        "mastery": 0
+    },
+    {
+        "id": 363,
+        "word": "much",
+        "meaning": "banyak",
+        "example": "Thank you very much.",
+        "mastery": 0
+    },
+    {
+        "id": 364,
+        "word": "music",
+        "meaning": "musik",
+        "example": "I love music.",
+        "mastery": 0
+    },
+    {
+        "id": 365,
+        "word": "must",
+        "meaning": "harus",
+        "example": "You must try.",
+        "mastery": 0
+    },
+    {
+        "id": 366,
+        "word": "name",
+        "meaning": "nama",
+        "example": "My name is Alex.",
+        "mastery": 0
+    },
+    {
+        "id": 367,
+        "word": "nation",
+        "meaning": "bangsa",
+        "example": "The nation grows.",
+        "mastery": 0
+    },
+    {
+        "id": 368,
+        "word": "natural",
+        "meaning": "alami",
+        "example": "Natural beauty.",
+        "mastery": 0
+    },
+    {
+        "id": 369,
+        "word": "near",
+        "meaning": "dekat",
+        "example": "The store is near.",
+        "mastery": 0
+    },
+    {
+        "id": 370,
+        "word": "necessary",
+        "meaning": "perlu",
+        "example": "This is necessary.",
+        "mastery": 0
+    },
+    {
+        "id": 371,
+        "word": "need",
+        "meaning": "membutuhkan",
+        "example": "I need help.",
+        "mastery": 0
+    },
+    {
+        "id": 372,
+        "word": "network",
+        "meaning": "jaringan",
+        "example": "The network is down.",
+        "mastery": 0
+    },
+    {
+        "id": 373,
+        "word": "never",
+        "meaning": "tidak pernah",
+        "example": "I never lie.",
+        "mastery": 0
+    },
+    {
+        "id": 374,
+        "word": "new",
+        "meaning": "baru",
+        "example": "I bought a new phone.",
+        "mastery": 0
+    },
+    {
+        "id": 375,
+        "word": "news",
+        "meaning": "berita",
+        "example": "The news is shocking.",
+        "mastery": 0
+    },
+    {
+        "id": 376,
+        "word": "next",
+        "meaning": "berikutnya",
+        "example": "Next question.",
+        "mastery": 0
+    },
+    {
+        "id": 377,
+        "word": "night",
+        "meaning": "malam",
+        "example": "Good night.",
+        "mastery": 0
+    },
+    {
+        "id": 378,
+        "word": "no",
+        "meaning": "tidak",
+        "example": "No problem.",
+        "mastery": 0
+    },
+    {
+        "id": 379,
+        "word": "none",
+        "meaning": "tidak ada",
+        "example": "None are left.",
+        "mastery": 0
+    },
+    {
+        "id": 380,
+        "word": "north",
+        "meaning": "utara",
+        "example": "The wind comes from north.",
+        "mastery": 0
+    },
+    {
+        "id": 381,
+        "word": "note",
+        "meaning": "catatan",
+        "example": "Take a note.",
+        "mastery": 0
+    },
+    {
+        "id": 382,
+        "word": "nothing",
+        "meaning": "tidak ada apa-apa",
+        "example": "I saw nothing.",
+        "mastery": 0
+    },
+    {
+        "id": 383,
+        "word": "notice",
+        "meaning": "menyadari",
+        "example": "Did you notice it?",
+        "mastery": 0
+    },
+    {
+        "id": 384,
+        "word": "number",
+        "meaning": "angka",
+        "example": "Pick a number.",
+        "mastery": 0
+    },
+    {
+        "id": 385,
+        "word": "object",
+        "meaning": "objek",
+        "example": "The object is heavy.",
+        "mastery": 0
+    },
+    {
+        "id": 386,
+        "word": "observe",
+        "meaning": "mengamati",
+        "example": "Observe the stars.",
+        "mastery": 0
+    },
+    {
+        "id": 387,
+        "word": "occur",
+        "meaning": "terjadi",
+        "example": "The event occurred yesterday.",
+        "mastery": 0
+    },
+    {
+        "id": 388,
+        "word": "off",
+        "meaning": "mati",
+        "example": "Turn off the light.",
+        "mastery": 0
+    },
+    {
+        "id": 389,
+        "word": "offer",
+        "meaning": "menawarkan",
+        "example": "They offer help.",
+        "mastery": 0
+    },
+    {
+        "id": 390,
+        "word": "office",
+        "meaning": "kantor",
+        "example": "She works in an office.",
+        "mastery": 0
+    },
+    {
+        "id": 391,
+        "word": "often",
+        "meaning": "sering",
+        "example": "I often read books.",
+        "mastery": 0
+    },
+    {
+        "id": 392,
+        "word": "oil",
+        "meaning": "minyak",
+        "example": "The car needs oil.",
+        "mastery": 0
+    },
+    {
+        "id": 393,
+        "word": "old",
+        "meaning": "tua",
+        "example": "The building is old.",
+        "mastery": 0
+    },
+    {
+        "id": 394,
+        "word": "once",
+        "meaning": "sekali",
+        "example": "I met him once.",
+        "mastery": 0
+    },
+    {
+        "id": 395,
+        "word": "one",
+        "meaning": "satu",
+        "example": "I have one cat.",
+        "mastery": 0
+    },
+    {
+        "id": 396,
+        "word": "only",
+        "meaning": "hanya",
+        "example": "Only you understand.",
+        "mastery": 0
+    },
+    {
+        "id": 397,
+        "word": "open",
+        "meaning": "membuka",
+        "example": "Open the window.",
+        "mastery": 0
+    },
+    {
+        "id": 398,
+        "word": "operation",
+        "meaning": "operasi",
+        "example": "The operation succeeded.",
+        "mastery": 0
+    },
+    {
+        "id": 399,
+        "word": "opportunity",
+        "meaning": "kesempatan",
+        "example": "This is a great opportunity.",
+        "mastery": 0
+    },
+    {
+        "id": 400,
+        "word": "option",
+        "meaning": "pilihan",
+        "example": "Choose an option.",
+        "mastery": 0
+    },
+    {
+        "id": 401,
+        "word": "accept",
+        "meaning": "menerima",
+        "example": "She decided to accept the offer.",
+        "mastery": 0
+    },
+    {
+        "id": 402,
+        "word": "achieve",
+        "meaning": "mencapai",
+        "example": "He worked hard to achieve his dream.",
+        "mastery": 0
+    },
+    {
+        "id": 403,
+        "word": "acquire",
+        "meaning": "memperoleh",
+        "example": "She wants to acquire new skills.",
+        "mastery": 0
+    },
+    {
+        "id": 404,
+        "word": "adapt",
+        "meaning": "menyesuaikan",
+        "example": "Animals adapt to their environment.",
+        "mastery": 0
+    },
+    {
+        "id": 405,
+        "word": "adjust",
+        "meaning": "menyesuaikan",
+        "example": "You need to adjust the settings.",
+        "mastery": 0
+    },
+    {
+        "id": 406,
+        "word": "admire",
+        "meaning": "mengagumi",
+        "example": "I admire her courage.",
+        "mastery": 0
+    },
+    {
+        "id": 407,
+        "word": "admit",
+        "meaning": "mengakui",
+        "example": "He admitted his mistake.",
+        "mastery": 0
+    },
+    {
+        "id": 408,
+        "word": "adopt",
+        "meaning": "mengadopsi",
+        "example": "They decided to adopt a child.",
+        "mastery": 0
+    },
+    {
+        "id": 409,
+        "word": "advance",
+        "meaning": "kemajuan",
+        "example": "Technology continues to advance.",
+        "mastery": 0
+    },
+    {
+        "id": 410,
+        "word": "affect",
+        "meaning": "mempengaruhi",
+        "example": "The weather affects my mood.",
+        "mastery": 0
+    },
+    {
+        "id": 411,
+        "word": "afford",
+        "meaning": "mampu membeli",
+        "example": "I cannot afford that car.",
+        "mastery": 0
+    },
+    {
+        "id": 412,
+        "word": "aim",
+        "meaning": "tujuan",
+        "example": "His aim is to become a doctor.",
+        "mastery": 0
+    },
+    {
+        "id": 413,
+        "word": "alter",
+        "meaning": "mengubah",
+        "example": "They altered the plan.",
+        "mastery": 0
+    },
+    {
+        "id": 414,
+        "word": "announce",
+        "meaning": "mengumumkan",
+        "example": "They announced the winner.",
+        "mastery": 0
+    },
+    {
+        "id": 415,
+        "word": "anticipate",
+        "meaning": "mengantisipasi",
+        "example": "We anticipate heavy traffic.",
+        "mastery": 0
+    },
+    {
+        "id": 416,
+        "word": "apologize",
+        "meaning": "meminta maaf",
+        "example": "He apologized for being late.",
+        "mastery": 0
+    },
+    {
+        "id": 417,
+        "word": "appeal",
+        "meaning": "menarik",
+        "example": "The design appeals to young people.",
+        "mastery": 0
+    },
+    {
+        "id": 418,
+        "word": "approach",
+        "meaning": "mendekati",
+        "example": "The storm is approaching.",
+        "mastery": 0
+    },
+    {
+        "id": 419,
+        "word": "approve",
+        "meaning": "menyetujui",
+        "example": "The manager approved the plan.",
+        "mastery": 0
+    },
+    {
+        "id": 420,
+        "word": "argue",
+        "meaning": "berdebat",
+        "example": "They argue about politics.",
+        "mastery": 0
+    },
+    {
+        "id": 421,
+        "word": "arrange",
+        "meaning": "mengatur",
+        "example": "She arranged the meeting.",
+        "mastery": 0
+    },
+    {
+        "id": 422,
+        "word": "assist",
+        "meaning": "membantu",
+        "example": "The nurse assisted the doctor.",
+        "mastery": 0
+    },
+    {
+        "id": 423,
+        "word": "assume",
+        "meaning": "menganggap",
+        "example": "I assume he is busy.",
+        "mastery": 0
+    },
+    {
+        "id": 424,
+        "word": "assure",
+        "meaning": "meyakinkan",
+        "example": "She assured me everything was fine.",
+        "mastery": 0
+    },
+    {
+        "id": 425,
+        "word": "attach",
+        "meaning": "melampirkan",
+        "example": "Please attach the document.",
+        "mastery": 0
+    },
+    {
+        "id": 426,
+        "word": "attempt",
+        "meaning": "mencoba",
+        "example": "He attempted to climb the wall.",
+        "mastery": 0
+    },
+    {
+        "id": 427,
+        "word": "attend",
+        "meaning": "menghadiri",
+        "example": "She attended the meeting.",
+        "mastery": 0
+    },
+    {
+        "id": 428,
+        "word": "attract",
+        "meaning": "menarik",
+        "example": "Flowers attract bees.",
+        "mastery": 0
+    },
+    {
+        "id": 429,
+        "word": "avoid",
+        "meaning": "menghindari",
+        "example": "Try to avoid mistakes.",
+        "mastery": 0
+    },
+    {
+        "id": 430,
+        "word": "aware",
+        "meaning": "sadar",
+        "example": "I am aware of the problem.",
+        "mastery": 0
+    },
+    {
+        "id": 431,
+        "word": "balance",
+        "meaning": "keseimbangan",
+        "example": "Life needs balance.",
+        "mastery": 0
+    },
+    {
+        "id": 432,
+        "word": "barely",
+        "meaning": "hampir tidak",
+        "example": "I barely slept last night.",
+        "mastery": 0
+    },
+    {
+        "id": 433,
+        "word": "benefit",
+        "meaning": "manfaat",
+        "example": "Exercise has many benefits.",
+        "mastery": 0
+    },
+    {
+        "id": 434,
+        "word": "blame",
+        "meaning": "menyalahkan",
+        "example": "Don't blame others.",
+        "mastery": 0
+    },
+    {
+        "id": 435,
+        "word": "boost",
+        "meaning": "meningkatkan",
+        "example": "This drink boosts energy.",
+        "mastery": 0
+    },
+    {
+        "id": 436,
+        "word": "boundary",
+        "meaning": "batas",
+        "example": "Respect personal boundaries.",
+        "mastery": 0
+    },
+    {
+        "id": 437,
+        "word": "brief",
+        "meaning": "singkat",
+        "example": "He gave a brief explanation.",
+        "mastery": 0
+    },
+    {
+        "id": 438,
+        "word": "broad",
+        "meaning": "luas",
+        "example": "She has a broad knowledge.",
+        "mastery": 0
+    },
+    {
+        "id": 439,
+        "word": "budget",
+        "meaning": "anggaran",
+        "example": "We need a travel budget.",
+        "mastery": 0
+    },
+    {
+        "id": 440,
+        "word": "burden",
+        "meaning": "beban",
+        "example": "Debt is a heavy burden.",
+        "mastery": 0
+    },
+    {
+        "id": 441,
+        "word": "capture",
+        "meaning": "menangkap",
+        "example": "The camera captured the moment.",
+        "mastery": 0
+    },
+    {
+        "id": 442,
+        "word": "careless",
+        "meaning": "ceroboh",
+        "example": "Careless mistakes happen.",
+        "mastery": 0
+    },
+    {
+        "id": 443,
+        "word": "challenge",
+        "meaning": "tantangan",
+        "example": "This task is a challenge.",
+        "mastery": 0
+    },
+    {
+        "id": 444,
+        "word": "chase",
+        "meaning": "mengejar",
+        "example": "The dog chased the cat.",
+        "mastery": 0
+    },
+    {
+        "id": 445,
+        "word": "cheer",
+        "meaning": "bersorak",
+        "example": "Fans cheer loudly.",
+        "mastery": 0
+    },
+    {
+        "id": 446,
+        "word": "claim",
+        "meaning": "mengklaim",
+        "example": "He claims he is innocent.",
+        "mastery": 0
+    },
+    {
+        "id": 447,
+        "word": "clarify",
+        "meaning": "memperjelas",
+        "example": "Let me clarify the rules.",
+        "mastery": 0
+    },
+    {
+        "id": 448,
+        "word": "combine",
+        "meaning": "menggabungkan",
+        "example": "Combine these ingredients.",
+        "mastery": 0
+    },
+    {
+        "id": 449,
+        "word": "comfort",
+        "meaning": "kenyamanan",
+        "example": "This chair gives comfort.",
+        "mastery": 0
+    },
+    {
+        "id": 450,
+        "word": "commit",
+        "meaning": "berkomitmen",
+        "example": "She committed to the project.",
+        "mastery": 0
+    },
+    {
+        "id": 451,
+        "word": "compare",
+        "meaning": "membandingkan",
+        "example": "Compare these two phones.",
+        "mastery": 0
+    },
+    {
+        "id": 452,
+        "word": "compete",
+        "meaning": "bersaing",
+        "example": "They compete in the market.",
+        "mastery": 0
+    },
+    {
+        "id": 453,
+        "word": "complain",
+        "meaning": "mengeluh",
+        "example": "He always complains.",
+        "mastery": 0
+    },
+    {
+        "id": 454,
+        "word": "complex",
+        "meaning": "rumit",
+        "example": "The problem is complex.",
+        "mastery": 0
+    },
+    {
+        "id": 455,
+        "word": "compose",
+        "meaning": "menyusun",
+        "example": "She composed a song.",
+        "mastery": 0
+    },
+    {
+        "id": 456,
+        "word": "concentrate",
+        "meaning": "berkonsentrasi",
+        "example": "Try to concentrate.",
+        "mastery": 0
+    },
+    {
+        "id": 457,
+        "word": "concern",
+        "meaning": "kekhawatiran",
+        "example": "Health is my concern.",
+        "mastery": 0
+    },
+    {
+        "id": 458,
+        "word": "confirm",
+        "meaning": "mengonfirmasi",
+        "example": "Please confirm your email.",
+        "mastery": 0
+    },
+    {
+        "id": 459,
+        "word": "connect",
+        "meaning": "menghubungkan",
+        "example": "The bridge connects two towns.",
+        "mastery": 0
+    },
+    {
+        "id": 460,
+        "word": "consider",
+        "meaning": "mempertimbangkan",
+        "example": "Consider all options.",
+        "mastery": 0
+    },
+    {
+        "id": 461,
+        "word": "constant",
+        "meaning": "terus-menerus",
+        "example": "The noise is constant.",
+        "mastery": 0
+    },
+    {
+        "id": 462,
+        "word": "consume",
+        "meaning": "mengonsumsi",
+        "example": "People consume media daily.",
+        "mastery": 0
+    },
+    {
+        "id": 463,
+        "word": "contain",
+        "meaning": "mengandung",
+        "example": "This drink contains sugar.",
+        "mastery": 0
+    },
+    {
+        "id": 464,
+        "word": "contribute",
+        "meaning": "berkontribusi",
+        "example": "Everyone contributes ideas.",
+        "mastery": 0
+    },
+    {
+        "id": 465,
+        "word": "convince",
+        "meaning": "meyakinkan",
+        "example": "He convinced me to join.",
+        "mastery": 0
+    },
+    {
+        "id": 466,
+        "word": "cooperate",
+        "meaning": "bekerja sama",
+        "example": "Teams must cooperate.",
+        "mastery": 0
+    },
+    {
+        "id": 467,
+        "word": "cope",
+        "meaning": "mengatasi",
+        "example": "She copes with stress well.",
+        "mastery": 0
+    },
+    {
+        "id": 468,
+        "word": "core",
+        "meaning": "inti",
+        "example": "Trust is the core value.",
+        "mastery": 0
+    },
+    {
+        "id": 469,
+        "word": "correct",
+        "meaning": "memperbaiki",
+        "example": "Correct your mistake.",
+        "mastery": 0
+    },
+    {
+        "id": 470,
+        "word": "crucial",
+        "meaning": "sangat penting",
+        "example": "Timing is crucial.",
+        "mastery": 0
+    },
+    {
+        "id": 471,
+        "word": "curious",
+        "meaning": "penasaran",
+        "example": "Children are curious.",
+        "mastery": 0
+    },
+    {
+        "id": 472,
+        "word": "decline",
+        "meaning": "menurun",
+        "example": "Sales declined this year.",
+        "mastery": 0
+    },
+    {
+        "id": 473,
+        "word": "dedicate",
+        "meaning": "mendedikasikan",
+        "example": "He dedicated his life to science.",
+        "mastery": 0
+    },
+    {
+        "id": 474,
+        "word": "defend",
+        "meaning": "membela",
+        "example": "Soldiers defend the country.",
+        "mastery": 0
+    },
+    {
+        "id": 475,
+        "word": "define",
+        "meaning": "mendefinisikan",
+        "example": "Define the problem first.",
+        "mastery": 0
+    },
+    {
+        "id": 476,
+        "word": "delay",
+        "meaning": "menunda",
+        "example": "The flight was delayed.",
+        "mastery": 0
+    },
+    {
+        "id": 477,
+        "word": "deliver",
+        "meaning": "mengirimkan",
+        "example": "They deliver packages.",
+        "mastery": 0
+    },
+    {
+        "id": 478,
+        "word": "demand",
+        "meaning": "permintaan",
+        "example": "Demand is increasing.",
+        "mastery": 0
+    },
+    {
+        "id": 479,
+        "word": "demonstrate",
+        "meaning": "menunjukkan",
+        "example": "He demonstrated the method.",
+        "mastery": 0
+    },
+    {
+        "id": 480,
+        "word": "depend",
+        "meaning": "bergantung",
+        "example": "It depends on weather.",
+        "mastery": 0
+    },
+    {
+        "id": 481,
+        "word": "detect",
+        "meaning": "mendeteksi",
+        "example": "The system detects errors.",
+        "mastery": 0
+    },
+    {
+        "id": 482,
+        "word": "determine",
+        "meaning": "menentukan",
+        "example": "Hard work determines success.",
+        "mastery": 0
+    },
+    {
+        "id": 483,
+        "word": "develop",
+        "meaning": "mengembangkan",
+        "example": "They develop software.",
+        "mastery": 0
+    },
+    {
+        "id": 484,
+        "word": "devote",
+        "meaning": "mendedikasikan",
+        "example": "She devotes time to study.",
+        "mastery": 0
+    },
+    {
+        "id": 485,
+        "word": "differ",
+        "meaning": "berbeda",
+        "example": "Opinions differ.",
+        "mastery": 0
+    },
+    {
+        "id": 486,
+        "word": "disappear",
+        "meaning": "menghilang",
+        "example": "The fog disappeared.",
+        "mastery": 0
+    },
+    {
+        "id": 487,
+        "word": "discover",
+        "meaning": "menemukan",
+        "example": "Scientists discovered a star.",
+        "mastery": 0
+    },
+    {
+        "id": 488,
+        "word": "discuss",
+        "meaning": "mendiskusikan",
+        "example": "Let's discuss the plan.",
+        "mastery": 0
+    },
+    {
+        "id": 489,
+        "word": "display",
+        "meaning": "menampilkan",
+        "example": "The screen displays data.",
+        "mastery": 0
+    },
+    {
+        "id": 490,
+        "word": "distinguish",
+        "meaning": "membedakan",
+        "example": "Can you distinguish them?",
+        "mastery": 0
+    },
+    {
+        "id": 491,
+        "word": "distribute",
+        "meaning": "mendistribusikan",
+        "example": "They distribute food.",
+        "mastery": 0
+    },
+    {
+        "id": 492,
+        "word": "diverse",
+        "meaning": "beragam",
+        "example": "The culture is diverse.",
+        "mastery": 0
+    },
+    {
+        "id": 493,
+        "word": "dominate",
+        "meaning": "mendominasi",
+        "example": "One team dominated the game.",
+        "mastery": 0
+    },
+    {
+        "id": 494,
+        "word": "doubt",
+        "meaning": "keraguan",
+        "example": "I have doubts.",
+        "mastery": 0
+    },
+    {
+        "id": 495,
+        "word": "dramatic",
+        "meaning": "dramatis",
+        "example": "The change was dramatic.",
+        "mastery": 0
+    },
+    {
+        "id": 496,
+        "word": "efficient",
+        "meaning": "efisien",
+        "example": "This method is efficient.",
+        "mastery": 0
+    },
+    {
+        "id": 497,
+        "word": "eliminate",
+        "meaning": "menghilangkan",
+        "example": "They eliminated errors.",
+        "mastery": 0
+    },
+    {
+        "id": 498,
+        "word": "emerge",
+        "meaning": "muncul",
+        "example": "New problems emerge.",
+        "mastery": 0
+    },
+    {
+        "id": 499,
+        "word": "emphasize",
+        "meaning": "menekankan",
+        "example": "Teachers emphasize practice.",
+        "mastery": 0
+    },
+    {
+        "id": 500,
+        "word": "enable",
+        "meaning": "memungkinkan",
+        "example": "Technology enables progress.",
+        "mastery": 0
+    },
+    {
+        "id": 501,
+        "word": "encourage",
+        "meaning": "mendorong",
+        "example": "Parents encourage learning.",
+        "mastery": 0
+    },
+    {
+        "id": 502,
+        "word": "engage",
+        "meaning": "terlibat",
+        "example": "Students engage in discussion.",
+        "mastery": 0
+    },
+    {
+        "id": 503,
+        "word": "enhance",
+        "meaning": "meningkatkan",
+        "example": "This feature enhances quality.",
+        "mastery": 0
+    },
+    {
+        "id": 504,
+        "word": "ensure",
+        "meaning": "memastikan",
+        "example": "Ensure safety first.",
+        "mastery": 0
+    },
+    {
+        "id": 505,
+        "word": "entire",
+        "meaning": "seluruh",
+        "example": "The entire team came.",
+        "mastery": 0
+    },
+    {
+        "id": 506,
+        "word": "establish",
+        "meaning": "mendirikan",
+        "example": "They established a company.",
+        "mastery": 0
+    },
+    {
+        "id": 507,
+        "word": "evaluate",
+        "meaning": "mengevaluasi",
+        "example": "We evaluate performance.",
+        "mastery": 0
+    },
+    {
+        "id": 508,
+        "word": "evolve",
+        "meaning": "berkembang",
+        "example": "Ideas evolve over time.",
+        "mastery": 0
+    },
+    {
+        "id": 509,
+        "word": "examine",
+        "meaning": "memeriksa",
+        "example": "Doctors examine patients.",
+        "mastery": 0
+    },
+    {
+        "id": 510,
+        "word": "expand",
+        "meaning": "memperluas",
+        "example": "The company expands globally.",
+        "mastery": 0
+    },
+    {
+        "id": 511,
+        "word": "expect",
+        "meaning": "mengharapkan",
+        "example": "I expect good results.",
+        "mastery": 0
+    },
+    {
+        "id": 512,
+        "word": "explain",
+        "meaning": "menjelaskan",
+        "example": "Please explain the problem.",
+        "mastery": 0
+    },
+    {
+        "id": 513,
+        "word": "explore",
+        "meaning": "menjelajah",
+        "example": "They explore the forest.",
+        "mastery": 0
+    },
+    {
+        "id": 514,
+        "word": "express",
+        "meaning": "mengekspresikan",
+        "example": "She expressed her feelings.",
+        "mastery": 0
+    },
+    {
+        "id": 515,
+        "word": "extend",
+        "meaning": "memperpanjang",
+        "example": "They extended the deadline.",
+        "mastery": 0
+    },
+    {
+        "id": 516,
+        "word": "focus",
+        "meaning": "fokus",
+        "example": "Focus on the task.",
+        "mastery": 0
+    },
+    {
+        "id": 517,
+        "word": "force",
+        "meaning": "memaksa",
+        "example": "They forced the door open.",
+        "mastery": 0
+    },
+    {
+        "id": 518,
+        "word": "formal",
+        "meaning": "resmi",
+        "example": "He wore formal clothes.",
+        "mastery": 0
+    },
+    {
+        "id": 519,
+        "word": "frequent",
+        "meaning": "sering",
+        "example": "He is a frequent traveler.",
+        "mastery": 0
+    },
+    {
+        "id": 520,
+        "word": "function",
+        "meaning": "fungsi",
+        "example": "The phone functions well.",
+        "mastery": 0
+    },
+    {
+        "id": 521,
+        "word": "generate",
+        "meaning": "menghasilkan",
+        "example": "The machine generates power.",
+        "mastery": 0
+    },
+    {
+        "id": 522,
+        "word": "gradual",
+        "meaning": "bertahap",
+        "example": "Change is gradual.",
+        "mastery": 0
+    },
+    {
+        "id": 523,
+        "word": "guarantee",
+        "meaning": "menjamin",
+        "example": "We guarantee quality.",
+        "mastery": 0
+    },
+    {
+        "id": 524,
+        "word": "handle",
+        "meaning": "menangani",
+        "example": "She handles pressure well.",
+        "mastery": 0
+    },
+    {
+        "id": 525,
+        "word": "highlight",
+        "meaning": "menyoroti",
+        "example": "The report highlights issues.",
+        "mastery": 0
+    },
+    {
+        "id": 526,
+        "word": "ignore",
+        "meaning": "mengabaikan",
+        "example": "Don't ignore warnings.",
+        "mastery": 0
+    },
+    {
+        "id": 527,
+        "word": "impact",
+        "meaning": "dampak",
+        "example": "The policy has impact.",
+        "mastery": 0
+    },
+    {
+        "id": 528,
+        "word": "improve",
+        "meaning": "meningkatkan",
+        "example": "Practice improves skill.",
+        "mastery": 0
+    },
+    {
+        "id": 529,
+        "word": "include",
+        "meaning": "termasuk",
+        "example": "The price includes tax.",
+        "mastery": 0
+    },
+    {
+        "id": 530,
+        "word": "increase",
+        "meaning": "meningkat",
+        "example": "Prices increase yearly.",
+        "mastery": 0
+    },
+    {
+        "id": 531,
+        "word": "indicate",
+        "meaning": "menunjukkan",
+        "example": "The arrow indicates direction.",
+        "mastery": 0
+    },
+    {
+        "id": 532,
+        "word": "influence",
+        "meaning": "pengaruh",
+        "example": "Friends influence choices.",
+        "mastery": 0
+    },
+    {
+        "id": 533,
+        "word": "inform",
+        "meaning": "memberi informasi",
+        "example": "Please inform the team.",
+        "mastery": 0
+    },
+    {
+        "id": 534,
+        "word": "initial",
+        "meaning": "awal",
+        "example": "The initial plan failed.",
+        "mastery": 0
+    },
+    {
+        "id": 535,
+        "word": "insist",
+        "meaning": "bersikeras",
+        "example": "He insisted on helping.",
+        "mastery": 0
+    },
+    {
+        "id": 536,
+        "word": "inspire",
+        "meaning": "menginspirasi",
+        "example": "Her story inspires people.",
+        "mastery": 0
+    },
+    {
+        "id": 537,
+        "word": "install",
+        "meaning": "memasang",
+        "example": "They installed software.",
+        "mastery": 0
+    },
+    {
+        "id": 538,
+        "word": "intend",
+        "meaning": "berniat",
+        "example": "I intend to travel.",
+        "mastery": 0
+    },
+    {
+        "id": 539,
+        "word": "introduce",
+        "meaning": "memperkenalkan",
+        "example": "She introduced her friend.",
+        "mastery": 0
+    },
+    {
+        "id": 540,
+        "word": "involve",
+        "meaning": "melibatkan",
+        "example": "The project involves many people.",
+        "mastery": 0
+    },
+    {
+        "id": 541,
+        "word": "issue",
+        "meaning": "masalah",
+        "example": "They solved the issue.",
+        "mastery": 0
+    },
+    {
+        "id": 542,
+        "word": "judge",
+        "meaning": "menilai",
+        "example": "Don't judge quickly.",
+        "mastery": 0
+    },
+    {
+        "id": 543,
+        "word": "justify",
+        "meaning": "membenarkan",
+        "example": "He justified his decision.",
+        "mastery": 0
+    },
+    {
+        "id": 544,
+        "word": "maintain",
+        "meaning": "mempertahankan",
+        "example": "Maintain your health.",
+        "mastery": 0
+    },
+    {
+        "id": 545,
+        "word": "major",
+        "meaning": "utama",
+        "example": "It is a major problem.",
+        "mastery": 0
+    },
+    {
+        "id": 546,
+        "word": "manage",
+        "meaning": "mengelola",
+        "example": "She manages the team.",
+        "mastery": 0
+    },
+    {
+        "id": 547,
+        "word": "measure",
+        "meaning": "mengukur",
+        "example": "Measure the length.",
+        "mastery": 0
+    },
+    {
+        "id": 548,
+        "word": "mention",
+        "meaning": "menyebutkan",
+        "example": "He mentioned your name.",
+        "mastery": 0
+    },
+    {
+        "id": 549,
+        "word": "method",
+        "meaning": "metode",
+        "example": "This method works.",
+        "mastery": 0
+    },
+    {
+        "id": 550,
+        "word": "minor",
+        "meaning": "kecil",
+        "example": "It is a minor issue.",
+        "mastery": 0
+    },
+    {
+        "id": 551,
+        "word": "modify",
+        "meaning": "memodifikasi",
+        "example": "They modified the design.",
+        "mastery": 0
+    },
+    {
+        "id": 552,
+        "word": "monitor",
+        "meaning": "memantau",
+        "example": "Doctors monitor patients.",
+        "mastery": 0
+    },
+    {
+        "id": 553,
+        "word": "motivate",
+        "meaning": "memotivasi",
+        "example": "Teachers motivate students.",
+        "mastery": 0
+    },
+    {
+        "id": 554,
+        "word": "negotiate",
+        "meaning": "bernegosiasi",
+        "example": "They negotiated the price.",
+        "mastery": 0
+    },
+    {
+        "id": 555,
+        "word": "observe",
+        "meaning": "mengamati",
+        "example": "Scientists observe stars.",
+        "mastery": 0
+    },
+    {
+        "id": 556,
+        "word": "obtain",
+        "meaning": "memperoleh",
+        "example": "He obtained permission.",
+        "mastery": 0
+    },
+    {
+        "id": 557,
+        "word": "occur",
+        "meaning": "terjadi",
+        "example": "The error occurred yesterday.",
+        "mastery": 0
+    },
+    {
+        "id": 558,
+        "word": "operate",
+        "meaning": "mengoperasikan",
+        "example": "She operates the machine.",
+        "mastery": 0
+    },
+    {
+        "id": 559,
+        "word": "organize",
+        "meaning": "mengatur",
+        "example": "They organized the event.",
+        "mastery": 0
+    },
+    {
+        "id": 560,
+        "word": "overcome",
+        "meaning": "mengatasi",
+        "example": "She overcame fear.",
+        "mastery": 0
+    },
+    {
+        "id": 561,
+        "word": "participate",
+        "meaning": "berpartisipasi",
+        "example": "Students participate actively.",
+        "mastery": 0
+    },
+    {
+        "id": 562,
+        "word": "perform",
+        "meaning": "melakukan",
+        "example": "The system performs well.",
+        "mastery": 0
+    },
+    {
+        "id": 563,
+        "word": "permit",
+        "meaning": "mengizinkan",
+        "example": "Rules permit entry.",
+        "mastery": 0
+    },
+    {
+        "id": 564,
+        "word": "persuade",
+        "meaning": "membujuk",
+        "example": "He persuaded his friend.",
+        "mastery": 0
+    },
+    {
+        "id": 565,
+        "word": "predict",
+        "meaning": "memprediksi",
+        "example": "Experts predict rain.",
+        "mastery": 0
+    },
+    {
+        "id": 566,
+        "word": "prefer",
+        "meaning": "lebih suka",
+        "example": "I prefer coffee.",
+        "mastery": 0
+    },
+    {
+        "id": 567,
+        "word": "prepare",
+        "meaning": "mempersiapkan",
+        "example": "Prepare for the exam.",
+        "mastery": 0
+    },
+    {
+        "id": 568,
+        "word": "preserve",
+        "meaning": "melestarikan",
+        "example": "They preserve culture.",
+        "mastery": 0
+    },
+    {
+        "id": 569,
+        "word": "prevent",
+        "meaning": "mencegah",
+        "example": "Masks prevent illness.",
+        "mastery": 0
+    },
+    {
+        "id": 570,
+        "word": "prior",
+        "meaning": "sebelumnya",
+        "example": "Prior experience helps.",
+        "mastery": 0
+    },
+    {
+        "id": 571,
+        "word": "process",
+        "meaning": "proses",
+        "example": "Learning is a process.",
+        "mastery": 0
+    },
+    {
+        "id": 572,
+        "word": "produce",
+        "meaning": "menghasilkan",
+        "example": "Factories produce goods.",
+        "mastery": 0
+    },
+    {
+        "id": 573,
+        "word": "promote",
+        "meaning": "mempromosikan",
+        "example": "They promote healthy habits.",
+        "mastery": 0
+    },
+    {
+        "id": 574,
+        "word": "protect",
+        "meaning": "melindungi",
+        "example": "Sunscreen protects skin.",
+        "mastery": 0
+    },
+    {
+        "id": 575,
+        "word": "prove",
+        "meaning": "membuktikan",
+        "example": "Evidence proves the theory.",
+        "mastery": 0
+    },
+    {
+        "id": 576,
+        "word": "provide",
+        "meaning": "menyediakan",
+        "example": "The school provides books.",
+        "mastery": 0
+    },
+    {
+        "id": 577,
+        "word": "pursue",
+        "meaning": "mengejar",
+        "example": "She pursues her dream.",
+        "mastery": 0
+    },
+    {
+        "id": 578,
+        "word": "recognize",
+        "meaning": "mengenali",
+        "example": "I recognize his face.",
+        "mastery": 0
+    },
+    {
+        "id": 579,
+        "word": "recommend",
+        "meaning": "merekomendasikan",
+        "example": "I recommend this movie.",
+        "mastery": 0
+    },
+    {
+        "id": 580,
+        "word": "reduce",
+        "meaning": "mengurangi",
+        "example": "Exercise reduces stress.",
+        "mastery": 0
+    },
+    {
+        "id": 581,
+        "word": "reflect",
+        "meaning": "mencerminkan",
+        "example": "His words reflect wisdom.",
+        "mastery": 0
+    },
+    {
+        "id": 582,
+        "word": "reform",
+        "meaning": "mereformasi",
+        "example": "They reformed the system.",
+        "mastery": 0
+    },
+    {
+        "id": 583,
+        "word": "refuse",
+        "meaning": "menolak",
+        "example": "She refused the offer.",
+        "mastery": 0
+    },
+    {
+        "id": 584,
+        "word": "regard",
+        "meaning": "menganggap",
+        "example": "I regard him highly.",
+        "mastery": 0
+    },
+    {
+        "id": 585,
+        "word": "regulate",
+        "meaning": "mengatur",
+        "example": "Laws regulate markets.",
+        "mastery": 0
+    },
+    {
+        "id": 586,
+        "word": "reinforce",
+        "meaning": "memperkuat",
+        "example": "Practice reinforces memory.",
+        "mastery": 0
+    },
+    {
+        "id": 587,
+        "word": "reject",
+        "meaning": "menolak",
+        "example": "They rejected the idea.",
+        "mastery": 0
+    },
+    {
+        "id": 588,
+        "word": "relate",
+        "meaning": "berhubungan",
+        "example": "This story relates to life.",
+        "mastery": 0
+    },
+    {
+        "id": 589,
+        "word": "remain",
+        "meaning": "tetap",
+        "example": "Remain calm.",
+        "mastery": 0
+    },
+    {
+        "id": 590,
+        "word": "remove",
+        "meaning": "menghapus",
+        "example": "Remove the file.",
+        "mastery": 0
+    },
+    {
+        "id": 591,
+        "word": "require",
+        "meaning": "memerlukan",
+        "example": "The job requires skill.",
+        "mastery": 0
+    },
+    {
+        "id": 592,
+        "word": "resolve",
+        "meaning": "menyelesaikan",
+        "example": "They resolved the conflict.",
+        "mastery": 0
+    },
+    {
+        "id": 593,
+        "word": "respond",
+        "meaning": "merespons",
+        "example": "Please respond quickly.",
+        "mastery": 0
+    },
+    {
+        "id": 594,
+        "word": "restore",
+        "meaning": "memulihkan",
+        "example": "They restored the building.",
+        "mastery": 0
+    },
+    {
+        "id": 595,
+        "word": "restrict",
+        "meaning": "membatasi",
+        "example": "Rules restrict access.",
+        "mastery": 0
+    },
+    {
+        "id": 596,
+        "word": "retain",
+        "meaning": "mempertahankan",
+        "example": "Good habits retain success.",
+        "mastery": 0
+    },
+    {
+        "id": 597,
+        "word": "reveal",
+        "meaning": "mengungkapkan",
+        "example": "The report reveals truth.",
+        "mastery": 0
+    },
+    {
+        "id": 598,
+        "word": "revise",
+        "meaning": "merevisi",
+        "example": "Revise the document.",
+        "mastery": 0
+    },
+    {
+        "id": 599,
+        "word": "reward",
+        "meaning": "hadiah",
+        "example": "Hard work brings reward.",
+        "mastery": 0
+    },
+    {
+        "id": 600,
+        "word": "risk",
+        "meaning": "risiko",
+        "example": "Investing has risk.",
+        "mastery": 0
+    },
+    {
+        "id": 601,
+        "word": "satisfy",
+        "meaning": "memuaskan",
+        "example": "The result satisfied everyone.",
+        "mastery": 0
+    },
+    {
+        "id": 602,
+        "word": "secure",
+        "meaning": "mengamankan",
+        "example": "They secured the building.",
+        "mastery": 0
+    },
+    {
+        "id": 603,
+        "word": "select",
+        "meaning": "memilih",
+        "example": "Select the correct answer.",
+        "mastery": 0
+    },
+    {
+        "id": 604,
+        "word": "sensitive",
+        "meaning": "sensitif",
+        "example": "This topic is sensitive.",
+        "mastery": 0
+    },
+    {
+        "id": 605,
+        "word": "separate",
+        "meaning": "memisahkan",
+        "example": "Separate the files.",
+        "mastery": 0
+    },
+    {
+        "id": 606,
+        "word": "sequence",
+        "meaning": "urutan",
+        "example": "Follow the sequence carefully.",
+        "mastery": 0
+    },
+    {
+        "id": 607,
+        "word": "serious",
+        "meaning": "serius",
+        "example": "He is serious about his career.",
+        "mastery": 0
+    },
+    {
+        "id": 608,
+        "word": "shift",
+        "meaning": "pergeseran",
+        "example": "There was a shift in policy.",
+        "mastery": 0
+    },
+    {
+        "id": 609,
+        "word": "significant",
+        "meaning": "signifikan",
+        "example": "This discovery is significant.",
+        "mastery": 0
+    },
+    {
+        "id": 610,
+        "word": "similar",
+        "meaning": "mirip",
+        "example": "These two phones are similar.",
+        "mastery": 0
+    },
+    {
+        "id": 611,
+        "word": "simplify",
+        "meaning": "menyederhanakan",
+        "example": "Let's simplify the process.",
+        "mastery": 0
+    },
+    {
+        "id": 612,
+        "word": "simulate",
+        "meaning": "mensimulasikan",
+        "example": "The software simulates reality.",
+        "mastery": 0
+    },
+    {
+        "id": 613,
+        "word": "solve",
+        "meaning": "memecahkan",
+        "example": "He solved the problem.",
+        "mastery": 0
+    },
+    {
+        "id": 614,
+        "word": "source",
+        "meaning": "sumber",
+        "example": "Water is the source of life.",
+        "mastery": 0
+    },
+    {
+        "id": 615,
+        "word": "specific",
+        "meaning": "spesifik",
+        "example": "Give a specific example.",
+        "mastery": 0
+    },
+    {
+        "id": 616,
+        "word": "stable",
+        "meaning": "stabil",
+        "example": "The system is stable.",
+        "mastery": 0
+    },
+    {
+        "id": 617,
+        "word": "status",
+        "meaning": "status",
+        "example": "Check the order status.",
+        "mastery": 0
+    },
+    {
+        "id": 618,
+        "word": "strategy",
+        "meaning": "strategi",
+        "example": "They planned a strategy.",
+        "mastery": 0
+    },
+    {
+        "id": 619,
+        "word": "strength",
+        "meaning": "kekuatan",
+        "example": "Unity gives strength.",
+        "mastery": 0
+    },
+    {
+        "id": 620,
+        "word": "structure",
+        "meaning": "struktur",
+        "example": "The building has a strong structure.",
+        "mastery": 0
+    },
+    {
+        "id": 621,
+        "word": "submit",
+        "meaning": "mengirimkan",
+        "example": "Submit your assignment.",
+        "mastery": 0
+    },
+    {
+        "id": 622,
+        "word": "succeed",
+        "meaning": "berhasil",
+        "example": "He succeeded in business.",
+        "mastery": 0
+    },
+    {
+        "id": 623,
+        "word": "sufficient",
+        "meaning": "cukup",
+        "example": "This amount is sufficient.",
+        "mastery": 0
+    },
+    {
+        "id": 624,
+        "word": "suggest",
+        "meaning": "menyarankan",
+        "example": "I suggest a new idea.",
+        "mastery": 0
+    },
+    {
+        "id": 625,
+        "word": "support",
+        "meaning": "mendukung",
+        "example": "Friends support each other.",
+        "mastery": 0
+    },
+    {
+        "id": 626,
+        "word": "suppose",
+        "meaning": "mengira",
+        "example": "I suppose he is busy.",
+        "mastery": 0
+    },
+    {
+        "id": 627,
+        "word": "survive",
+        "meaning": "bertahan hidup",
+        "example": "Animals survive in harsh climates.",
+        "mastery": 0
+    },
+    {
+        "id": 628,
+        "word": "sustain",
+        "meaning": "mempertahankan",
+        "example": "Plants sustain life.",
+        "mastery": 0
+    },
+    {
+        "id": 629,
+        "word": "symbol",
+        "meaning": "simbol",
+        "example": "The dove is a symbol of peace.",
+        "mastery": 0
+    },
+    {
+        "id": 630,
+        "word": "systematic",
+        "meaning": "sistematis",
+        "example": "Use a systematic approach.",
+        "mastery": 0
+    },
+    {
+        "id": 631,
+        "word": "target",
+        "meaning": "target",
+        "example": "The company reached its target.",
+        "mastery": 0
+    },
+    {
+        "id": 632,
+        "word": "task",
+        "meaning": "tugas",
+        "example": "Finish your task.",
+        "mastery": 0
+    },
+    {
+        "id": 633,
+        "word": "technique",
+        "meaning": "teknik",
+        "example": "He mastered the technique.",
+        "mastery": 0
+    },
+    {
+        "id": 634,
+        "word": "temporary",
+        "meaning": "sementara",
+        "example": "This solution is temporary.",
+        "mastery": 0
+    },
+    {
+        "id": 635,
+        "word": "tend",
+        "meaning": "cenderung",
+        "example": "People tend to worry.",
+        "mastery": 0
+    },
+    {
+        "id": 636,
+        "word": "theory",
+        "meaning": "teori",
+        "example": "The theory explains gravity.",
+        "mastery": 0
+    },
+    {
+        "id": 637,
+        "word": "threat",
+        "meaning": "ancaman",
+        "example": "Cyber attacks are a threat.",
+        "mastery": 0
+    },
+    {
+        "id": 638,
+        "word": "tolerate",
+        "meaning": "menoleransi",
+        "example": "We must tolerate differences.",
+        "mastery": 0
+    },
+    {
+        "id": 639,
+        "word": "trace",
+        "meaning": "jejak",
+        "example": "Police traced the signal.",
+        "mastery": 0
+    },
+    {
+        "id": 640,
+        "word": "transfer",
+        "meaning": "memindahkan",
+        "example": "Transfer the money.",
+        "mastery": 0
+    },
+    {
+        "id": 641,
+        "word": "transform",
+        "meaning": "mengubah",
+        "example": "Education transforms lives.",
+        "mastery": 0
+    },
+    {
+        "id": 642,
+        "word": "transition",
+        "meaning": "transisi",
+        "example": "The company is in transition.",
+        "mastery": 0
+    },
+    {
+        "id": 643,
+        "word": "translate",
+        "meaning": "menerjemahkan",
+        "example": "Translate the sentence.",
+        "mastery": 0
+    },
+    {
+        "id": 644,
+        "word": "transport",
+        "meaning": "transportasi",
+        "example": "Public transport is useful.",
+        "mastery": 0
+    },
+    {
+        "id": 645,
+        "word": "trend",
+        "meaning": "tren",
+        "example": "Fashion trends change.",
+        "mastery": 0
+    },
+    {
+        "id": 646,
+        "word": "trigger",
+        "meaning": "memicu",
+        "example": "Stress triggers headaches.",
+        "mastery": 0
+    },
+    {
+        "id": 647,
+        "word": "ultimate",
+        "meaning": "terakhir",
+        "example": "Victory was the ultimate goal.",
+        "mastery": 0
+    },
+    {
+        "id": 648,
+        "word": "undergo",
+        "meaning": "mengalami",
+        "example": "He underwent surgery.",
+        "mastery": 0
+    },
+    {
+        "id": 649,
+        "word": "undertake",
+        "meaning": "melakukan",
+        "example": "They undertook the project.",
+        "mastery": 0
+    },
+    {
+        "id": 650,
+        "word": "unique",
+        "meaning": "unik",
+        "example": "Each person is unique.",
+        "mastery": 0
+    },
+    {
+        "id": 651,
+        "word": "update",
+        "meaning": "memperbarui",
+        "example": "Update the software.",
+        "mastery": 0
+    },
+    {
+        "id": 652,
+        "word": "upgrade",
+        "meaning": "meningkatkan",
+        "example": "They upgraded the system.",
+        "mastery": 0
+    },
+    {
+        "id": 653,
+        "word": "urgent",
+        "meaning": "mendesak",
+        "example": "This task is urgent.",
+        "mastery": 0
+    },
+    {
+        "id": 654,
+        "word": "utilize",
+        "meaning": "memanfaatkan",
+        "example": "Utilize your skills.",
+        "mastery": 0
+    },
+    {
+        "id": 655,
+        "word": "valid",
+        "meaning": "valid",
+        "example": "Your ticket is valid.",
+        "mastery": 0
+    },
+    {
+        "id": 656,
+        "word": "vary",
+        "meaning": "bervariasi",
+        "example": "Prices vary by location.",
+        "mastery": 0
+    },
+    {
+        "id": 657,
+        "word": "vast",
+        "meaning": "luas",
+        "example": "The desert is vast.",
+        "mastery": 0
+    },
+    {
+        "id": 658,
+        "word": "verify",
+        "meaning": "memverifikasi",
+        "example": "Verify your account.",
+        "mastery": 0
+    },
+    {
+        "id": 659,
+        "word": "vital",
+        "meaning": "sangat penting",
+        "example": "Water is vital.",
+        "mastery": 0
+    },
+    {
+        "id": 660,
+        "word": "volume",
+        "meaning": "volume",
+        "example": "Increase the volume.",
+        "mastery": 0
+    },
+    {
+        "id": 661,
+        "word": "warn",
+        "meaning": "memperingatkan",
+        "example": "They warned the public.",
+        "mastery": 0
+    },
+    {
+        "id": 662,
+        "word": "witness",
+        "meaning": "saksi",
+        "example": "He witnessed the accident.",
+        "mastery": 0
+    },
+    {
+        "id": 663,
+        "word": "withdraw",
+        "meaning": "menarik",
+        "example": "Withdraw money from ATM.",
+        "mastery": 0
+    },
+    {
+        "id": 664,
+        "word": "yield",
+        "meaning": "menghasilkan",
+        "example": "The farm yields crops.",
+        "mastery": 0
+    },
+    {
+        "id": 665,
+        "word": "zone",
+        "meaning": "zona",
+        "example": "This is a safe zone.",
+        "mastery": 0
+    },
+    {
+        "id": 666,
+        "word": "accurate",
+        "meaning": "akurat",
+        "example": "The data is accurate.",
+        "mastery": 0
+    },
+    {
+        "id": 667,
+        "word": "adaptation",
+        "meaning": "adaptasi",
+        "example": "Animals show adaptation.",
+        "mastery": 0
+    },
+    {
+        "id": 668,
+        "word": "advocate",
+        "meaning": "mendukung",
+        "example": "He advocates change.",
+        "mastery": 0
+    },
+    {
+        "id": 669,
+        "word": "allocate",
+        "meaning": "mengalokasikan",
+        "example": "They allocated funds.",
+        "mastery": 0
+    },
+    {
+        "id": 670,
+        "word": "ambition",
+        "meaning": "ambisi",
+        "example": "She has big ambition.",
+        "mastery": 0
+    },
+    {
+        "id": 671,
+        "word": "analyze",
+        "meaning": "menganalisis",
+        "example": "Analyze the results.",
+        "mastery": 0
+    },
+    {
+        "id": 672,
+        "word": "annual",
+        "meaning": "tahunan",
+        "example": "The annual meeting starts today.",
+        "mastery": 0
+    },
+    {
+        "id": 673,
+        "word": "apparent",
+        "meaning": "jelas",
+        "example": "The reason is apparent.",
+        "mastery": 0
+    },
+    {
+        "id": 674,
+        "word": "approximate",
+        "meaning": "perkiraan",
+        "example": "Give an approximate number.",
+        "mastery": 0
+    },
+    {
+        "id": 675,
+        "word": "arbitrary",
+        "meaning": "sewenang-wenang",
+        "example": "The rule seems arbitrary.",
+        "mastery": 0
+    },
+    {
+        "id": 676,
+        "word": "aspect",
+        "meaning": "aspek",
+        "example": "Consider every aspect.",
+        "mastery": 0
+    },
+    {
+        "id": 677,
+        "word": "assess",
+        "meaning": "menilai",
+        "example": "Teachers assess students.",
+        "mastery": 0
+    },
+    {
+        "id": 678,
+        "word": "assign",
+        "meaning": "menugaskan",
+        "example": "The teacher assigned homework.",
+        "mastery": 0
+    },
+    {
+        "id": 679,
+        "word": "assistive",
+        "meaning": "membantu",
+        "example": "Assistive tools help people.",
+        "mastery": 0
+    },
+    {
+        "id": 680,
+        "word": "assumption",
+        "meaning": "asumsi",
+        "example": "Your assumption is wrong.",
+        "mastery": 0
+    },
+    {
+        "id": 681,
+        "word": "attitude",
+        "meaning": "sikap",
+        "example": "A good attitude helps.",
+        "mastery": 0
+    },
+    {
+        "id": 682,
+        "word": "attribute",
+        "meaning": "atribut",
+        "example": "Confidence is an attribute.",
+        "mastery": 0
+    },
+    {
+        "id": 683,
+        "word": "authorize",
+        "meaning": "mengizinkan",
+        "example": "The manager authorized it.",
+        "mastery": 0
+    },
+    {
+        "id": 684,
+        "word": "automate",
+        "meaning": "mengotomatisasi",
+        "example": "Automation automates tasks.",
+        "mastery": 0
+    },
+    {
+        "id": 685,
+        "word": "awareness",
+        "meaning": "kesadaran",
+        "example": "Raise public awareness.",
+        "mastery": 0
+    },
+    {
+        "id": 686,
+        "word": "baseline",
+        "meaning": "dasar awal",
+        "example": "Set a baseline value.",
+        "mastery": 0
+    },
+    {
+        "id": 687,
+        "word": "bias",
+        "meaning": "bias",
+        "example": "Avoid bias in judgment.",
+        "mastery": 0
+    },
+    {
+        "id": 688,
+        "word": "capable",
+        "meaning": "mampu",
+        "example": "She is capable.",
+        "mastery": 0
+    },
+    {
+        "id": 689,
+        "word": "capacity",
+        "meaning": "kapasitas",
+        "example": "The hall has large capacity.",
+        "mastery": 0
+    },
+    {
+        "id": 690,
+        "word": "category",
+        "meaning": "kategori",
+        "example": "Sort items by category.",
+        "mastery": 0
+    },
+    {
+        "id": 691,
+        "word": "coherent",
+        "meaning": "koheren",
+        "example": "His argument is coherent.",
+        "mastery": 0
+    },
+    {
+        "id": 692,
+        "word": "collaborate",
+        "meaning": "berkolaborasi",
+        "example": "Teams collaborate online.",
+        "mastery": 0
+    },
+    {
+        "id": 693,
+        "word": "commence",
+        "meaning": "memulai",
+        "example": "The ceremony commenced.",
+        "mastery": 0
+    },
+    {
+        "id": 694,
+        "word": "compatible",
+        "meaning": "kompatibel",
+        "example": "Devices are compatible.",
+        "mastery": 0
+    },
+    {
+        "id": 695,
+        "word": "competent",
+        "meaning": "kompeten",
+        "example": "She is a competent leader.",
+        "mastery": 0
+    },
+    {
+        "id": 696,
+        "word": "compile",
+        "meaning": "mengompilasi",
+        "example": "Compile the data.",
+        "mastery": 0
+    },
+    {
+        "id": 697,
+        "word": "complement",
+        "meaning": "melengkapi",
+        "example": "The colors complement each other.",
+        "mastery": 0
+    },
+    {
+        "id": 698,
+        "word": "comply",
+        "meaning": "mematuhi",
+        "example": "Comply with the rules.",
+        "mastery": 0
+    },
+    {
+        "id": 699,
+        "word": "component",
+        "meaning": "komponen",
+        "example": "Each component matters.",
+        "mastery": 0
+    },
+    {
+        "id": 700,
+        "word": "compound",
+        "meaning": "gabungan",
+        "example": "Water is a compound.",
+        "mastery": 0
+    },
+    {
+        "id": 701,
+        "word": "concept",
+        "meaning": "konsep",
+        "example": "Understand the concept.",
+        "mastery": 0
+    },
+    {
+        "id": 702,
+        "word": "conclude",
+        "meaning": "menyimpulkan",
+        "example": "The study concluded.",
+        "mastery": 0
+    },
+    {
+        "id": 703,
+        "word": "conduct",
+        "meaning": "melakukan",
+        "example": "They conducted research.",
+        "mastery": 0
+    },
+    {
+        "id": 704,
+        "word": "configure",
+        "meaning": "mengonfigurasi",
+        "example": "Configure the device.",
+        "mastery": 0
+    },
+    {
+        "id": 705,
+        "word": "conscious",
+        "meaning": "sadar",
+        "example": "He became conscious.",
+        "mastery": 0
+    },
+    {
+        "id": 706,
+        "word": "consequence",
+        "meaning": "konsekuensi",
+        "example": "Actions have consequences.",
+        "mastery": 0
+    },
+    {
+        "id": 707,
+        "word": "consistent",
+        "meaning": "konsisten",
+        "example": "Be consistent in practice.",
+        "mastery": 0
+    },
+    {
+        "id": 708,
+        "word": "constraint",
+        "meaning": "kendala",
+        "example": "Budget is a constraint.",
+        "mastery": 0
+    },
+    {
+        "id": 709,
+        "word": "construct",
+        "meaning": "membangun",
+        "example": "They constructed a bridge.",
+        "mastery": 0
+    },
+    {
+        "id": 710,
+        "word": "consult",
+        "meaning": "berkonsultasi",
+        "example": "Consult an expert.",
+        "mastery": 0
+    },
+    {
+        "id": 711,
+        "word": "context",
+        "meaning": "konteks",
+        "example": "Understand the context.",
+        "mastery": 0
+    },
+    {
+        "id": 712,
+        "word": "contract",
+        "meaning": "kontrak",
+        "example": "They signed a contract.",
+        "mastery": 0
+    },
+    {
+        "id": 713,
+        "word": "contrast",
+        "meaning": "perbedaan",
+        "example": "Notice the contrast.",
+        "mastery": 0
+    },
+    {
+        "id": 714,
+        "word": "convert",
+        "meaning": "mengubah",
+        "example": "Convert the file.",
+        "mastery": 0
+    },
+    {
+        "id": 715,
+        "word": "coordinate",
+        "meaning": "mengkoordinasikan",
+        "example": "Coordinate the team.",
+        "mastery": 0
+    },
+    {
+        "id": 716,
+        "word": "correlate",
+        "meaning": "berkorelasi",
+        "example": "These factors correlate.",
+        "mastery": 0
+    },
+    {
+        "id": 717,
+        "word": "credible",
+        "meaning": "kredibel",
+        "example": "The source is credible.",
+        "mastery": 0
+    },
+    {
+        "id": 718,
+        "word": "criteria",
+        "meaning": "kriteria",
+        "example": "Meet the criteria.",
+        "mastery": 0
+    },
+    {
+        "id": 719,
+        "word": "crisis",
+        "meaning": "krisis",
+        "example": "The country faced crisis.",
+        "mastery": 0
+    },
+    {
+        "id": 720,
+        "word": "crucial",
+        "meaning": "sangat penting",
+        "example": "Timing is crucial.",
+        "mastery": 0
+    },
+    {
+        "id": 721,
+        "word": "cumulative",
+        "meaning": "kumulatif",
+        "example": "The effect is cumulative.",
+        "mastery": 0
+    },
+    {
+        "id": 722,
+        "word": "cycle",
+        "meaning": "siklus",
+        "example": "Nature follows cycles.",
+        "mastery": 0
+    },
+    {
+        "id": 723,
+        "word": "data",
+        "meaning": "data",
+        "example": "Analyze the data.",
+        "mastery": 0
+    },
+    {
+        "id": 724,
+        "word": "decade",
+        "meaning": "dekade",
+        "example": "A decade is ten years.",
+        "mastery": 0
+    },
+    {
+        "id": 725,
+        "word": "deduce",
+        "meaning": "menyimpulkan",
+        "example": "Deduce the answer.",
+        "mastery": 0
+    },
+    {
+        "id": 726,
+        "word": "define",
+        "meaning": "mendefinisikan",
+        "example": "Define the term.",
+        "mastery": 0
+    },
+    {
+        "id": 727,
+        "word": "demonstration",
+        "meaning": "demonstrasi",
+        "example": "They held a demonstration.",
+        "mastery": 0
+    },
+    {
+        "id": 728,
+        "word": "density",
+        "meaning": "kepadatan",
+        "example": "Population density rises.",
+        "mastery": 0
+    },
+    {
+        "id": 729,
+        "word": "derive",
+        "meaning": "menurunkan",
+        "example": "Meaning derives from context.",
+        "mastery": 0
+    },
+    {
+        "id": 730,
+        "word": "designate",
+        "meaning": "menunjuk",
+        "example": "They designated a leader.",
+        "mastery": 0
+    },
+    {
+        "id": 731,
+        "word": "detective",
+        "meaning": "detektif",
+        "example": "The detective solved it.",
+        "mastery": 0
+    },
+    {
+        "id": 732,
+        "word": "deviate",
+        "meaning": "menyimpang",
+        "example": "Don't deviate from plan.",
+        "mastery": 0
+    },
+    {
+        "id": 733,
+        "word": "dimension",
+        "meaning": "dimensi",
+        "example": "The object has three dimensions.",
+        "mastery": 0
+    },
+    {
+        "id": 734,
+        "word": "discrete",
+        "meaning": "terpisah",
+        "example": "The values are discrete.",
+        "mastery": 0
+    },
+    {
+        "id": 735,
+        "word": "display",
+        "meaning": "menampilkan",
+        "example": "Display the message.",
+        "mastery": 0
+    },
+    {
+        "id": 736,
+        "word": "distinct",
+        "meaning": "jelas berbeda",
+        "example": "The sound is distinct.",
+        "mastery": 0
+    },
+    {
+        "id": 737,
+        "word": "distort",
+        "meaning": "mendistorsi",
+        "example": "The lens distorts images.",
+        "mastery": 0
+    },
+    {
+        "id": 738,
+        "word": "document",
+        "meaning": "dokumen",
+        "example": "Save the document.",
+        "mastery": 0
+    },
+    {
+        "id": 739,
+        "word": "domain",
+        "meaning": "domain",
+        "example": "Buy a domain name.",
+        "mastery": 0
+    },
+    {
+        "id": 740,
+        "word": "draft",
+        "meaning": "draf",
+        "example": "Write a draft.",
+        "mastery": 0
+    },
+    {
+        "id": 741,
+        "word": "dynamic",
+        "meaning": "dinamis",
+        "example": "Markets are dynamic.",
+        "mastery": 0
+    },
+    {
+        "id": 742,
+        "word": "element",
+        "meaning": "elemen",
+        "example": "Fire is an element.",
+        "mastery": 0
+    },
+    {
+        "id": 743,
+        "word": "emerge",
+        "meaning": "muncul",
+        "example": "New trends emerge.",
+        "mastery": 0
+    },
+    {
+        "id": 744,
+        "word": "emphasis",
+        "meaning": "penekanan",
+        "example": "Place emphasis on quality.",
+        "mastery": 0
+    },
+    {
+        "id": 745,
+        "word": "empirical",
+        "meaning": "empiris",
+        "example": "Use empirical evidence.",
+        "mastery": 0
+    },
+    {
+        "id": 746,
+        "word": "entity",
+        "meaning": "entitas",
+        "example": "The company is a legal entity.",
+        "mastery": 0
+    },
+    {
+        "id": 747,
+        "word": "equivalent",
+        "meaning": "setara",
+        "example": "Two values are equivalent.",
+        "mastery": 0
+    },
+    {
+        "id": 748,
+        "word": "error",
+        "meaning": "kesalahan",
+        "example": "The system shows error.",
+        "mastery": 0
+    },
+    {
+        "id": 749,
+        "word": "establish",
+        "meaning": "mendirikan",
+        "example": "They established rules.",
+        "mastery": 0
+    },
+    {
+        "id": 750,
+        "word": "estimate",
+        "meaning": "perkiraan",
+        "example": "Give an estimate.",
+        "mastery": 0
+    },
+    {
+        "id": 751,
+        "word": "ethic",
+        "meaning": "etika",
+        "example": "Follow work ethic.",
+        "mastery": 0
+    },
+    {
+        "id": 752,
+        "word": "evaluate",
+        "meaning": "mengevaluasi",
+        "example": "Evaluate the project.",
+        "mastery": 0
+    },
+    {
+        "id": 753,
+        "word": "evidence",
+        "meaning": "bukti",
+        "example": "The evidence is clear.",
+        "mastery": 0
+    },
+    {
+        "id": 754,
+        "word": "evolve",
+        "meaning": "berevolusi",
+        "example": "Technology evolves.",
+        "mastery": 0
+    },
+    {
+        "id": 755,
+        "word": "exceed",
+        "meaning": "melebihi",
+        "example": "Sales exceeded expectations.",
+        "mastery": 0
+    },
+    {
+        "id": 756,
+        "word": "exclude",
+        "meaning": "mengecualikan",
+        "example": "Exclude invalid entries.",
+        "mastery": 0
+    },
+    {
+        "id": 757,
+        "word": "expand",
+        "meaning": "memperluas",
+        "example": "The company expands.",
+        "mastery": 0
+    },
+    {
+        "id": 758,
+        "word": "explicit",
+        "meaning": "jelas",
+        "example": "The rule is explicit.",
+        "mastery": 0
+    },
+    {
+        "id": 759,
+        "word": "expose",
+        "meaning": "mengungkap",
+        "example": "The news exposed corruption.",
+        "mastery": 0
+    },
+    {
+        "id": 760,
+        "word": "external",
+        "meaning": "eksternal",
+        "example": "External factors matter.",
+        "mastery": 0
+    },
+    {
+        "id": 761,
+        "word": "facilitate",
+        "meaning": "memfasilitasi",
+        "example": "Teachers facilitate learning.",
+        "mastery": 0
+    },
+    {
+        "id": 762,
+        "word": "factor",
+        "meaning": "faktor",
+        "example": "Many factors influence results.",
+        "mastery": 0
+    },
+    {
+        "id": 763,
+        "word": "feature",
+        "meaning": "fitur",
+        "example": "This phone has new features.",
+        "mastery": 0
+    },
+    {
+        "id": 764,
+        "word": "federal",
+        "meaning": "federal",
+        "example": "Federal law applies.",
+        "mastery": 0
+    },
+    {
+        "id": 765,
+        "word": "finalize",
+        "meaning": "menyelesaikan",
+        "example": "Finalize the plan.",
+        "mastery": 0
+    },
+    {
+        "id": 766,
+        "word": "flexible",
+        "meaning": "fleksibel",
+        "example": "Be flexible in work.",
+        "mastery": 0
+    },
+    {
+        "id": 767,
+        "word": "fluctuate",
+        "meaning": "berfluktuasi",
+        "example": "Prices fluctuate.",
+        "mastery": 0
+    },
+    {
+        "id": 768,
+        "word": "formula",
+        "meaning": "rumus",
+        "example": "Use the formula.",
+        "mastery": 0
+    },
+    {
+        "id": 769,
+        "word": "framework",
+        "meaning": "kerangka",
+        "example": "Build a framework.",
+        "mastery": 0
+    },
+    {
+        "id": 770,
+        "word": "functionality",
+        "meaning": "fungsionalitas",
+        "example": "Check functionality.",
+        "mastery": 0
+    },
+    {
+        "id": 771,
+        "word": "fundamental",
+        "meaning": "mendasar",
+        "example": "Trust is fundamental.",
+        "mastery": 0
+    },
+    {
+        "id": 772,
+        "word": "generate",
+        "meaning": "menghasilkan",
+        "example": "Wind generates energy.",
+        "mastery": 0
+    },
+    {
+        "id": 773,
+        "word": "global",
+        "meaning": "global",
+        "example": "Global markets change.",
+        "mastery": 0
+    },
+    {
+        "id": 774,
+        "word": "guideline",
+        "meaning": "pedoman",
+        "example": "Follow the guideline.",
+        "mastery": 0
+    },
+    {
+        "id": 775,
+        "word": "hypothesis",
+        "meaning": "hipotesis",
+        "example": "Test the hypothesis.",
+        "mastery": 0
+    },
+    {
+        "id": 776,
+        "word": "illustrate",
+        "meaning": "mengilustrasikan",
+        "example": "Illustrate the idea.",
+        "mastery": 0
+    },
+    {
+        "id": 777,
+        "word": "impact",
+        "meaning": "dampak",
+        "example": "Climate impact grows.",
+        "mastery": 0
+    },
+    {
+        "id": 778,
+        "word": "implement",
+        "meaning": "menerapkan",
+        "example": "Implement the policy.",
+        "mastery": 0
+    },
+    {
+        "id": 779,
+        "word": "implication",
+        "meaning": "implikasi",
+        "example": "Consider the implication.",
+        "mastery": 0
+    },
+    {
+        "id": 780,
+        "word": "indicator",
+        "meaning": "indikator",
+        "example": "Growth is an indicator.",
+        "mastery": 0
+    },
+    {
+        "id": 781,
+        "word": "inevitable",
+        "meaning": "tak terhindarkan",
+        "example": "Change is inevitable.",
+        "mastery": 0
+    },
+    {
+        "id": 782,
+        "word": "infrastructure",
+        "meaning": "infrastruktur",
+        "example": "Build infrastructure.",
+        "mastery": 0
+    },
+    {
+        "id": 783,
+        "word": "innovation",
+        "meaning": "inovasi",
+        "example": "Innovation drives progress.",
+        "mastery": 0
+    },
+    {
+        "id": 784,
+        "word": "insight",
+        "meaning": "wawasan",
+        "example": "The book gives insight.",
+        "mastery": 0
+    },
+    {
+        "id": 785,
+        "word": "integrate",
+        "meaning": "mengintegrasikan",
+        "example": "Integrate the system.",
+        "mastery": 0
+    },
+    {
+        "id": 786,
+        "word": "intense",
+        "meaning": "intens",
+        "example": "The debate was intense.",
+        "mastery": 0
+    },
+    {
+        "id": 787,
+        "word": "interaction",
+        "meaning": "interaksi",
+        "example": "Human interaction matters.",
+        "mastery": 0
+    },
+    {
+        "id": 788,
+        "word": "interpret",
+        "meaning": "menafsirkan",
+        "example": "Interpret the results.",
+        "mastery": 0
+    },
+    {
+        "id": 789,
+        "word": "intervene",
+        "meaning": "campur tangan",
+        "example": "They intervened quickly.",
+        "mastery": 0
+    },
+    {
+        "id": 790,
+        "word": "isolate",
+        "meaning": "mengisolasi",
+        "example": "Isolate the problem.",
+        "mastery": 0
+    },
+    {
+        "id": 791,
+        "word": "journal",
+        "meaning": "jurnal",
+        "example": "Publish in a journal.",
+        "mastery": 0
+    },
+    {
+        "id": 792,
+        "word": "layer",
+        "meaning": "lapisan",
+        "example": "Add another layer.",
+        "mastery": 0
+    },
+    {
+        "id": 793,
+        "word": "logic",
+        "meaning": "logika",
+        "example": "Use logic.",
+        "mastery": 0
+    },
+    {
+        "id": 794,
+        "word": "maintain",
+        "meaning": "mempertahankan",
+        "example": "Maintain quality.",
+        "mastery": 0
+    },
+    {
+        "id": 795,
+        "word": "mechanism",
+        "meaning": "mekanisme",
+        "example": "Understand the mechanism.",
+        "mastery": 0
+    },
+    {
+        "id": 796,
+        "word": "methodology",
+        "meaning": "metodologi",
+        "example": "Explain methodology.",
+        "mastery": 0
+    },
+    {
+        "id": 797,
+        "word": "model",
+        "meaning": "model",
+        "example": "Use a mathematical model.",
+        "mastery": 0
+    },
+    {
+        "id": 798,
+        "word": "network",
+        "meaning": "jaringan",
+        "example": "The network is down.",
+        "mastery": 0
+    },
+    {
+        "id": 799,
+        "word": "objective",
+        "meaning": "tujuan",
+        "example": "Reach the objective.",
+        "mastery": 0
+    },
+    {
+        "id": 800,
+        "word": "outcome",
+        "meaning": "hasil",
+        "example": "The outcome was positive.",
+        "mastery": 0
+    },
+    {
+        "id": 801,
+        "word": "ability",
+        "meaning": "kemampuan",
+        "example": "She has the ability to solve problems quickly.",
+        "mastery": 0
+    },
+    {
+        "id": 802,
+        "word": "abroad",
+        "meaning": "ke luar negeri",
+        "example": "He plans to study abroad next year.",
+        "mastery": 0
+    },
+    {
+        "id": 803,
+        "word": "absence",
+        "meaning": "ketidakhadiran",
+        "example": "Her absence was noticed by everyone.",
+        "mastery": 0
+    },
+    {
+        "id": 804,
+        "word": "absolute",
+        "meaning": "mutlak",
+        "example": "This rule is absolute and cannot be broken.",
+        "mastery": 0
+    },
+    {
+        "id": 805,
+        "word": "absorb",
+        "meaning": "menyerap",
+        "example": "Plants absorb water from the soil.",
+        "mastery": 0
+    },
+    {
+        "id": 806,
+        "word": "abstract",
+        "meaning": "abstrak",
+        "example": "The painting has an abstract design.",
+        "mastery": 0
+    },
+    {
+        "id": 807,
+        "word": "academic",
+        "meaning": "akademik",
+        "example": "She has excellent academic performance.",
+        "mastery": 0
+    },
+    {
+        "id": 808,
+        "word": "acceptance",
+        "meaning": "penerimaan",
+        "example": "His acceptance speech was inspiring.",
+        "mastery": 0
+    },
+    {
+        "id": 809,
+        "word": "access",
+        "meaning": "akses",
+        "example": "Students have access to the library.",
+        "mastery": 0
+    },
+    {
+        "id": 810,
+        "word": "accomplish",
+        "meaning": "menyelesaikan",
+        "example": "They accomplished their mission successfully.",
+        "mastery": 0
+    },
+    {
+        "id": 811,
+        "word": "accuracy",
+        "meaning": "ketepatan",
+        "example": "Accuracy is important in science.",
+        "mastery": 0
+    },
+    {
+        "id": 812,
+        "word": "achieve",
+        "meaning": "mencapai",
+        "example": "She worked hard to achieve her dream.",
+        "mastery": 0
+    },
+    {
+        "id": 813,
+        "word": "acquire",
+        "meaning": "memperoleh",
+        "example": "He acquired new skills at work.",
+        "mastery": 0
+    },
+    {
+        "id": 814,
+        "word": "adapt",
+        "meaning": "beradaptasi",
+        "example": "Animals adapt to their environment.",
+        "mastery": 0
+    },
+    {
+        "id": 815,
+        "word": "adequate",
+        "meaning": "memadai",
+        "example": "We have adequate food supplies.",
+        "mastery": 0
+    },
+    {
+        "id": 816,
+        "word": "adjust",
+        "meaning": "menyesuaikan",
+        "example": "You need to adjust the settings.",
+        "mastery": 0
+    },
+    {
+        "id": 817,
+        "word": "administration",
+        "meaning": "administrasi",
+        "example": "The administration manages the school.",
+        "mastery": 0
+    },
+    {
+        "id": 818,
+        "word": "admission",
+        "meaning": "penerimaan",
+        "example": "Admission to the event is free.",
+        "mastery": 0
+    },
+    {
+        "id": 819,
+        "word": "adopt",
+        "meaning": "mengadopsi",
+        "example": "They decided to adopt a child.",
+        "mastery": 0
+    },
+    {
+        "id": 820,
+        "word": "advance",
+        "meaning": "kemajuan",
+        "example": "Technology continues to advance.",
+        "mastery": 0
+    },
+    {
+        "id": 821,
+        "word": "advantage",
+        "meaning": "keuntungan",
+        "example": "Experience is a big advantage.",
+        "mastery": 0
+    },
+    {
+        "id": 822,
+        "word": "adventure",
+        "meaning": "petualangan",
+        "example": "Traveling can be a great adventure.",
+        "mastery": 0
+    },
+    {
+        "id": 823,
+        "word": "affair",
+        "meaning": "urusan",
+        "example": "This is a personal affair.",
+        "mastery": 0
+    },
+    {
+        "id": 824,
+        "word": "affect",
+        "meaning": "mempengaruhi",
+        "example": "Weather can affect mood.",
+        "mastery": 0
+    },
+    {
+        "id": 825,
+        "word": "afford",
+        "meaning": "mampu membeli",
+        "example": "I can't afford a new car.",
+        "mastery": 0
+    },
+    {
+        "id": 826,
+        "word": "agency",
+        "meaning": "agensi",
+        "example": "The travel agency booked our tickets.",
+        "mastery": 0
+    },
+    {
+        "id": 827,
+        "word": "agenda",
+        "meaning": "agenda",
+        "example": "Let's discuss today's agenda.",
+        "mastery": 0
+    },
+    {
+        "id": 828,
+        "word": "aggressive",
+        "meaning": "agresif",
+        "example": "The dog became aggressive.",
+        "mastery": 0
+    },
+    {
+        "id": 829,
+        "word": "aid",
+        "meaning": "bantuan",
+        "example": "They sent aid to the victims.",
+        "mastery": 0
+    },
+    {
+        "id": 830,
+        "word": "aircraft",
+        "meaning": "pesawat",
+        "example": "The aircraft landed safely.",
+        "mastery": 0
+    },
+    {
+        "id": 831,
+        "word": "alarm",
+        "meaning": "alarm",
+        "example": "The alarm woke him up.",
+        "mastery": 0
+    },
+    {
+        "id": 832,
+        "word": "alert",
+        "meaning": "waspada",
+        "example": "Stay alert while driving.",
+        "mastery": 0
+    },
+    {
+        "id": 833,
+        "word": "alien",
+        "meaning": "makhluk asing",
+        "example": "The movie shows an alien invasion.",
+        "mastery": 0
+    },
+    {
+        "id": 834,
+        "word": "alliance",
+        "meaning": "aliansi",
+        "example": "The countries formed an alliance.",
+        "mastery": 0
+    },
+    {
+        "id": 835,
+        "word": "allowance",
+        "meaning": "uang saku",
+        "example": "Parents give children allowance.",
+        "mastery": 0
+    },
+    {
+        "id": 836,
+        "word": "alter",
+        "meaning": "mengubah",
+        "example": "They altered the plan.",
+        "mastery": 0
+    },
+    {
+        "id": 837,
+        "word": "alternative",
+        "meaning": "alternatif",
+        "example": "We need an alternative solution.",
+        "mastery": 0
+    },
+    {
+        "id": 838,
+        "word": "amazing",
+        "meaning": "menakjubkan",
+        "example": "The view is amazing.",
+        "mastery": 0
+    },
+    {
+        "id": 839,
+        "word": "ambition",
+        "meaning": "ambisi",
+        "example": "He has ambition to succeed.",
+        "mastery": 0
+    },
+    {
+        "id": 840,
+        "word": "analysis",
+        "meaning": "analisis",
+        "example": "The report includes detailed analysis.",
+        "mastery": 0
+    },
+    {
+        "id": 841,
+        "word": "ancient",
+        "meaning": "kuno",
+        "example": "They visited ancient ruins.",
+        "mastery": 0
+    },
+    {
+        "id": 842,
+        "word": "anger",
+        "meaning": "kemarahan",
+        "example": "He couldn't hide his anger.",
+        "mastery": 0
+    },
+    {
+        "id": 843,
+        "word": "announce",
+        "meaning": "mengumumkan",
+        "example": "They announced the winner.",
+        "mastery": 0
+    },
+    {
+        "id": 844,
+        "word": "annual",
+        "meaning": "tahunan",
+        "example": "The annual meeting starts tomorrow.",
+        "mastery": 0
+    },
+    {
+        "id": 845,
+        "word": "anxiety",
+        "meaning": "kecemasan",
+        "example": "She felt anxiety before the exam.",
+        "mastery": 0
+    },
+    {
+        "id": 846,
+        "word": "apparent",
+        "meaning": "jelas",
+        "example": "It became apparent that he was right.",
+        "mastery": 0
+    },
+    {
+        "id": 847,
+        "word": "appeal",
+        "meaning": "daya tarik",
+        "example": "The city has great appeal.",
+        "mastery": 0
+    },
+    {
+        "id": 848,
+        "word": "appearance",
+        "meaning": "penampilan",
+        "example": "Her appearance changed a lot.",
+        "mastery": 0
+    },
+    {
+        "id": 849,
+        "word": "application",
+        "meaning": "aplikasi",
+        "example": "Submit your job application.",
+        "mastery": 0
+    },
+    {
+        "id": 850,
+        "word": "appoint",
+        "meaning": "menunjuk",
+        "example": "They appointed a new manager.",
+        "mastery": 0
+    },
+    {
+        "id": 851,
+        "word": "appreciate",
+        "meaning": "menghargai",
+        "example": "I appreciate your help.",
+        "mastery": 0
+    },
+    {
+        "id": 852,
+        "word": "approach",
+        "meaning": "pendekatan",
+        "example": "We need a new approach.",
+        "mastery": 0
+    },
+    {
+        "id": 853,
+        "word": "approval",
+        "meaning": "persetujuan",
+        "example": "The plan needs approval.",
+        "mastery": 0
+    },
+    {
+        "id": 854,
+        "word": "approximate",
+        "meaning": "perkiraan",
+        "example": "The cost is approximate.",
+        "mastery": 0
+    },
+    {
+        "id": 855,
+        "word": "architect",
+        "meaning": "arsitek",
+        "example": "The architect designed the building.",
+        "mastery": 0
+    },
+    {
+        "id": 856,
+        "word": "argument",
+        "meaning": "perdebatan",
+        "example": "They had an argument.",
+        "mastery": 0
+    },
+    {
+        "id": 857,
+        "word": "arise",
+        "meaning": "muncul",
+        "example": "Problems may arise.",
+        "mastery": 0
+    },
+    {
+        "id": 858,
+        "word": "arrangement",
+        "meaning": "pengaturan",
+        "example": "The arrangement looks good.",
+        "mastery": 0
+    },
+    {
+        "id": 859,
+        "word": "artificial",
+        "meaning": "buatan",
+        "example": "The lake is artificial.",
+        "mastery": 0
+    },
+    {
+        "id": 860,
+        "word": "aspect",
+        "meaning": "aspek",
+        "example": "We must consider every aspect.",
+        "mastery": 0
+    },
+    {
+        "id": 861,
+        "word": "assess",
+        "meaning": "menilai",
+        "example": "Teachers assess students' progress.",
+        "mastery": 0
+    },
+    {
+        "id": 862,
+        "word": "asset",
+        "meaning": "aset",
+        "example": "Knowledge is a valuable asset.",
+        "mastery": 0
+    },
+    {
+        "id": 863,
+        "word": "assign",
+        "meaning": "menugaskan",
+        "example": "The boss assigned a new task.",
+        "mastery": 0
+    },
+    {
+        "id": 864,
+        "word": "assist",
+        "meaning": "membantu",
+        "example": "He assisted the customer.",
+        "mastery": 0
+    },
+    {
+        "id": 865,
+        "word": "assume",
+        "meaning": "menganggap",
+        "example": "I assume you are busy.",
+        "mastery": 0
+    },
+    {
+        "id": 866,
+        "word": "assure",
+        "meaning": "meyakinkan",
+        "example": "She assured him everything was fine.",
+        "mastery": 0
+    },
+    {
+        "id": 867,
+        "word": "athlete",
+        "meaning": "atlet",
+        "example": "The athlete trained hard.",
+        "mastery": 0
+    },
+    {
+        "id": 868,
+        "word": "atmosphere",
+        "meaning": "atmosfer",
+        "example": "The atmosphere was friendly.",
+        "mastery": 0
+    },
+    {
+        "id": 869,
+        "word": "attach",
+        "meaning": "melampirkan",
+        "example": "Please attach the file.",
+        "mastery": 0
+    },
+    {
+        "id": 870,
+        "word": "attempt",
+        "meaning": "percobaan",
+        "example": "He made an attempt to help.",
+        "mastery": 0
+    },
+    {
+        "id": 871,
+        "word": "attend",
+        "meaning": "menghadiri",
+        "example": "She will attend the meeting.",
+        "mastery": 0
+    },
+    {
+        "id": 872,
+        "word": "attention",
+        "meaning": "perhatian",
+        "example": "Pay attention to the teacher.",
+        "mastery": 0
+    },
+    {
+        "id": 873,
+        "word": "attitude",
+        "meaning": "sikap",
+        "example": "She has a positive attitude.",
+        "mastery": 0
+    },
+    {
+        "id": 874,
+        "word": "attract",
+        "meaning": "menarik",
+        "example": "The park attracts many tourists.",
+        "mastery": 0
+    },
+    {
+        "id": 875,
+        "word": "audience",
+        "meaning": "penonton",
+        "example": "The audience applauded loudly.",
+        "mastery": 0
+    },
+    {
+        "id": 876,
+        "word": "author",
+        "meaning": "penulis",
+        "example": "The author wrote many books.",
+        "mastery": 0
+    },
+    {
+        "id": 877,
+        "word": "authority",
+        "meaning": "otoritas",
+        "example": "He has authority here.",
+        "mastery": 0
+    },
+    {
+        "id": 878,
+        "word": "available",
+        "meaning": "tersedia",
+        "example": "Tickets are available online.",
+        "mastery": 0
+    },
+    {
+        "id": 879,
+        "word": "average",
+        "meaning": "rata-rata",
+        "example": "The average score is high.",
+        "mastery": 0
+    },
+    {
+        "id": 880,
+        "word": "avoid",
+        "meaning": "menghindari",
+        "example": "Try to avoid mistakes.",
+        "mastery": 0
+    },
+    {
+        "id": 881,
+        "word": "aware",
+        "meaning": "sadar",
+        "example": "He is aware of the problem.",
+        "mastery": 0
+    },
+    {
+        "id": 882,
+        "word": "awful",
+        "meaning": "buruk sekali",
+        "example": "The weather was awful.",
+        "mastery": 0
+    },
+    {
+        "id": 883,
+        "word": "background",
+        "meaning": "latar belakang",
+        "example": "She has a science background.",
+        "mastery": 0
+    },
+    {
+        "id": 884,
+        "word": "balance",
+        "meaning": "keseimbangan",
+        "example": "Life requires balance.",
+        "mastery": 0
+    },
+    {
+        "id": 885,
+        "word": "barrier",
+        "meaning": "penghalang",
+        "example": "Language is sometimes a barrier.",
+        "mastery": 0
+    },
+    {
+        "id": 886,
+        "word": "basic",
+        "meaning": "dasar",
+        "example": "Learn the basic rules.",
+        "mastery": 0
+    },
+    {
+        "id": 887,
+        "word": "battle",
+        "meaning": "pertempuran",
+        "example": "The battle lasted hours.",
+        "mastery": 0
+    },
+    {
+        "id": 888,
+        "word": "behavior",
+        "meaning": "perilaku",
+        "example": "Good behavior is important.",
+        "mastery": 0
+    },
+    {
+        "id": 889,
+        "word": "benefit",
+        "meaning": "manfaat",
+        "example": "Exercise has many benefits.",
+        "mastery": 0
+    },
+    {
+        "id": 890,
+        "word": "beyond",
+        "meaning": "di luar",
+        "example": "The truth is beyond doubt.",
+        "mastery": 0
+    },
+    {
+        "id": 891,
+        "word": "bias",
+        "meaning": "bias",
+        "example": "The report shows bias.",
+        "mastery": 0
+    },
+    {
+        "id": 892,
+        "word": "brief",
+        "meaning": "singkat",
+        "example": "He gave a brief explanation.",
+        "mastery": 0
+    },
+    {
+        "id": 893,
+        "word": "brilliant",
+        "meaning": "brilian",
+        "example": "She had a brilliant idea.",
+        "mastery": 0
+    },
+    {
+        "id": 894,
+        "word": "broad",
+        "meaning": "luas",
+        "example": "They discussed broad topics.",
+        "mastery": 0
+    },
+    {
+        "id": 895,
+        "word": "budget",
+        "meaning": "anggaran",
+        "example": "The project has a small budget.",
+        "mastery": 0
+    },
+    {
+        "id": 896,
+        "word": "burden",
+        "meaning": "beban",
+        "example": "Debt can be a burden.",
+        "mastery": 0
+    },
+    {
+        "id": 897,
+        "word": "capable",
+        "meaning": "mampu",
+        "example": "She is capable of success.",
+        "mastery": 0
+    },
+    {
+        "id": 898,
+        "word": "capacity",
+        "meaning": "kapasitas",
+        "example": "The room has large capacity.",
+        "mastery": 0
+    },
+    {
+        "id": 899,
+        "word": "category",
+        "meaning": "kategori",
+        "example": "This item belongs to a category.",
+        "mastery": 0
+    },
+    {
+        "id": 900,
+        "word": "challenge",
+        "meaning": "tantangan",
+        "example": "Learning a language is a challenge.",
+        "mastery": 0
+    },
+    {
+        "id": 901,
+        "word": "champion",
+        "meaning": "juara",
+        "example": "He became the champion.",
+        "mastery": 0
+    },
+    {
+        "id": 902,
+        "word": "characteristic",
+        "meaning": "karakteristik",
+        "example": "Honesty is a good characteristic.",
+        "mastery": 0
+    },
+    {
+        "id": 903,
+        "word": "circumstance",
+        "meaning": "keadaan",
+        "example": "Under certain circumstances we must act.",
+        "mastery": 0
+    },
+    {
+        "id": 904,
+        "word": "clarify",
+        "meaning": "menjelaskan",
+        "example": "Please clarify your statement.",
+        "mastery": 0
+    },
+    {
+        "id": 905,
+        "word": "client",
+        "meaning": "klien",
+        "example": "The client approved the design.",
+        "mastery": 0
+    },
+    {
+        "id": 906,
+        "word": "climate",
+        "meaning": "iklim",
+        "example": "Climate change is serious.",
+        "mastery": 0
+    },
+    {
+        "id": 907,
+        "word": "collapse",
+        "meaning": "runtuh",
+        "example": "The building collapsed suddenly.",
+        "mastery": 0
+    },
+    {
+        "id": 908,
+        "word": "colleague",
+        "meaning": "rekan kerja",
+        "example": "My colleague helped me.",
+        "mastery": 0
+    },
+    {
+        "id": 909,
+        "word": "comment",
+        "meaning": "komentar",
+        "example": "She made a comment.",
+        "mastery": 0
+    },
+    {
+        "id": 910,
+        "word": "commercial",
+        "meaning": "komersial",
+        "example": "This is a commercial area.",
+        "mastery": 0
+    },
+    {
+        "id": 911,
+        "word": "commit",
+        "meaning": "berkomitmen",
+        "example": "He committed to the project.",
+        "mastery": 0
+    },
+    {
+        "id": 912,
+        "word": "communication",
+        "meaning": "komunikasi",
+        "example": "Communication is essential.",
+        "mastery": 0
+    },
+    {
+        "id": 913,
+        "word": "community",
+        "meaning": "komunitas",
+        "example": "The community works together.",
+        "mastery": 0
+    },
+    {
+        "id": 914,
+        "word": "complex",
+        "meaning": "kompleks",
+        "example": "The problem is complex.",
+        "mastery": 0
+    },
+    {
+        "id": 915,
+        "word": "conclusion",
+        "meaning": "kesimpulan",
+        "example": "They reached a conclusion.",
+        "mastery": 0
+    },
+    {
+        "id": 916,
+        "word": "confidence",
+        "meaning": "kepercayaan diri",
+        "example": "Confidence is important.",
+        "mastery": 0
+    },
+    {
+        "id": 917,
+        "word": "conflict",
+        "meaning": "konflik",
+        "example": "The conflict lasted years.",
+        "mastery": 0
+    },
+    {
+        "id": 918,
+        "word": "consider",
+        "meaning": "mempertimbangkan",
+        "example": "Consider all options.",
+        "mastery": 0
+    },
+    {
+        "id": 919,
+        "word": "consistent",
+        "meaning": "konsisten",
+        "example": "Her work is consistent.",
+        "mastery": 0
+    },
+    {
+        "id": 920,
+        "word": "construct",
+        "meaning": "membangun",
+        "example": "They construct new buildings.",
+        "mastery": 0
+    },
+    {
+        "id": 921,
+        "word": "consume",
+        "meaning": "mengonsumsi",
+        "example": "People consume energy daily.",
+        "mastery": 0
+    },
+    {
+        "id": 922,
+        "word": "contact",
+        "meaning": "kontak",
+        "example": "Contact me later.",
+        "mastery": 0
+    },
+    {
+        "id": 923,
+        "word": "context",
+        "meaning": "konteks",
+        "example": "Understand the context first.",
+        "mastery": 0
+    },
+    {
+        "id": 924,
+        "word": "contribute",
+        "meaning": "berkontribusi",
+        "example": "Everyone should contribute.",
+        "mastery": 0
+    },
+    {
+        "id": 925,
+        "word": "convert",
+        "meaning": "mengubah",
+        "example": "They convert files to PDF.",
+        "mastery": 0
+    },
+    {
+        "id": 926,
+        "word": "convince",
+        "meaning": "meyakinkan",
+        "example": "He convinced them to join.",
+        "mastery": 0
+    },
+    {
+        "id": 927,
+        "word": "cooperate",
+        "meaning": "bekerja sama",
+        "example": "Countries must cooperate.",
+        "mastery": 0
+    },
+    {
+        "id": 928,
+        "word": "core",
+        "meaning": "inti",
+        "example": "Trust is the core value.",
+        "mastery": 0
+    },
+    {
+        "id": 929,
+        "word": "corporate",
+        "meaning": "perusahaan",
+        "example": "Corporate policies are strict.",
+        "mastery": 0
+    },
+    {
+        "id": 930,
+        "word": "crisis",
+        "meaning": "krisis",
+        "example": "The country faced a crisis.",
+        "mastery": 0
+    },
+    {
+        "id": 931,
+        "word": "crucial",
+        "meaning": "sangat penting",
+        "example": "Timing is crucial.",
+        "mastery": 0
+    },
+    {
+        "id": 932,
+        "word": "culture",
+        "meaning": "budaya",
+        "example": "Culture influences behavior.",
+        "mastery": 0
+    },
+    {
+        "id": 933,
+        "word": "curious",
+        "meaning": "penasaran",
+        "example": "Children are curious.",
+        "mastery": 0
+    },
+    {
+        "id": 934,
+        "word": "cycle",
+        "meaning": "siklus",
+        "example": "Water moves in a cycle.",
+        "mastery": 0
+    },
+    {
+        "id": 935,
+        "word": "debate",
+        "meaning": "debat",
+        "example": "They had a debate.",
+        "mastery": 0
+    },
+    {
+        "id": 936,
+        "word": "decline",
+        "meaning": "menurun",
+        "example": "Sales began to decline.",
+        "mastery": 0
+    },
+    {
+        "id": 937,
+        "word": "dedicate",
+        "meaning": "mendedikasikan",
+        "example": "She dedicated her life to teaching.",
+        "mastery": 0
+    },
+    {
+        "id": 938,
+        "word": "define",
+        "meaning": "mendefinisikan",
+        "example": "Define the problem clearly.",
+        "mastery": 0
+    },
+    {
+        "id": 939,
+        "word": "demonstrate",
+        "meaning": "menunjukkan",
+        "example": "He demonstrated the technique.",
+        "mastery": 0
+    },
+    {
+        "id": 940,
+        "word": "deny",
+        "meaning": "menyangkal",
+        "example": "He denied the accusation.",
+        "mastery": 0
+    },
+    {
+        "id": 941,
+        "word": "depend",
+        "meaning": "bergantung",
+        "example": "Success depends on effort.",
+        "mastery": 0
+    },
+    {
+        "id": 942,
+        "word": "desire",
+        "meaning": "keinginan",
+        "example": "She has a strong desire to learn.",
+        "mastery": 0
+    },
+    {
+        "id": 943,
+        "word": "detail",
+        "meaning": "detail",
+        "example": "Explain every detail.",
+        "mastery": 0
+    },
+    {
+        "id": 944,
+        "word": "detect",
+        "meaning": "mendeteksi",
+        "example": "The device detects smoke.",
+        "mastery": 0
+    },
+    {
+        "id": 945,
+        "word": "develop",
+        "meaning": "mengembangkan",
+        "example": "They develop new software.",
+        "mastery": 0
+    },
+    {
+        "id": 946,
+        "word": "device",
+        "meaning": "perangkat",
+        "example": "This device is useful.",
+        "mastery": 0
+    },
+    {
+        "id": 947,
+        "word": "devote",
+        "meaning": "mencurahkan",
+        "example": "He devoted time to study.",
+        "mastery": 0
+    },
+    {
+        "id": 948,
+        "word": "dimension",
+        "meaning": "dimensi",
+        "example": "The box has three dimensions.",
+        "mastery": 0
+    },
+    {
+        "id": 949,
+        "word": "disaster",
+        "meaning": "bencana",
+        "example": "The flood was a disaster.",
+        "mastery": 0
+    },
+    {
+        "id": 950,
+        "word": "discipline",
+        "meaning": "disiplin",
+        "example": "Discipline leads to success.",
+        "mastery": 0
+    },
+    {
+        "id": 951,
+        "word": "discover",
+        "meaning": "menemukan",
+        "example": "Scientists discovered a planet.",
+        "mastery": 0
+    },
+    {
+        "id": 952,
+        "word": "discuss",
+        "meaning": "membahas",
+        "example": "Let's discuss the issue.",
+        "mastery": 0
+    },
+    {
+        "id": 953,
+        "word": "disease",
+        "meaning": "penyakit",
+        "example": "The disease spread quickly.",
+        "mastery": 0
+    },
+    {
+        "id": 954,
+        "word": "display",
+        "meaning": "menampilkan",
+        "example": "The screen displays data.",
+        "mastery": 0
+    },
+    {
+        "id": 955,
+        "word": "distance",
+        "meaning": "jarak",
+        "example": "The distance is far.",
+        "mastery": 0
+    },
+    {
+        "id": 956,
+        "word": "distinct",
+        "meaning": "berbeda jelas",
+        "example": "They have distinct styles.",
+        "mastery": 0
+    },
+    {
+        "id": 957,
+        "word": "distribute",
+        "meaning": "mendistribusikan",
+        "example": "They distribute food.",
+        "mastery": 0
+    },
+    {
+        "id": 958,
+        "word": "diverse",
+        "meaning": "beragam",
+        "example": "The city has diverse culture.",
+        "mastery": 0
+    },
+    {
+        "id": 959,
+        "word": "document",
+        "meaning": "dokumen",
+        "example": "Submit the document.",
+        "mastery": 0
+    },
+    {
+        "id": 960,
+        "word": "domestic",
+        "meaning": "domestik",
+        "example": "Domestic flights are cheaper.",
+        "mastery": 0
+    },
+    {
+        "id": 961,
+        "word": "dominate",
+        "meaning": "mendominasi",
+        "example": "One team dominated the match.",
+        "mastery": 0
+    },
+    {
+        "id": 962,
+        "word": "dramatic",
+        "meaning": "dramatis",
+        "example": "The change was dramatic.",
+        "mastery": 0
+    },
+    {
+        "id": 963,
+        "word": "efficient",
+        "meaning": "efisien",
+        "example": "This machine is efficient.",
+        "mastery": 0
+    },
+    {
+        "id": 964,
+        "word": "element",
+        "meaning": "elemen",
+        "example": "Water is an element.",
+        "mastery": 0
+    },
+    {
+        "id": 965,
+        "word": "eliminate",
+        "meaning": "menghilangkan",
+        "example": "They eliminated errors.",
+        "mastery": 0
+    },
+    {
+        "id": 966,
+        "word": "emerge",
+        "meaning": "muncul",
+        "example": "New ideas emerge daily.",
+        "mastery": 0
+    },
+    {
+        "id": 967,
+        "word": "emotion",
+        "meaning": "emosi",
+        "example": "He showed emotion.",
+        "mastery": 0
+    },
+    {
+        "id": 968,
+        "word": "emphasis",
+        "meaning": "penekanan",
+        "example": "The teacher gave emphasis.",
+        "mastery": 0
+    },
+    {
+        "id": 969,
+        "word": "enable",
+        "meaning": "memungkinkan",
+        "example": "Technology enables communication.",
+        "mastery": 0
+    },
+    {
+        "id": 970,
+        "word": "encounter",
+        "meaning": "menghadapi",
+        "example": "They encountered problems.",
+        "mastery": 0
+    },
+    {
+        "id": 971,
+        "word": "engage",
+        "meaning": "terlibat",
+        "example": "Students engage in discussion.",
+        "mastery": 0
+    },
+    {
+        "id": 972,
+        "word": "enhance",
+        "meaning": "meningkatkan",
+        "example": "Music enhances mood.",
+        "mastery": 0
+    },
+    {
+        "id": 973,
+        "word": "ensure",
+        "meaning": "memastikan",
+        "example": "Ensure safety first.",
+        "mastery": 0
+    },
+    {
+        "id": 974,
+        "word": "establish",
+        "meaning": "mendirikan",
+        "example": "They established a company.",
+        "mastery": 0
+    },
+    {
+        "id": 975,
+        "word": "estimate",
+        "meaning": "memperkirakan",
+        "example": "We estimate the cost.",
+        "mastery": 0
+    },
+    {
+        "id": 976,
+        "word": "evaluate",
+        "meaning": "mengevaluasi",
+        "example": "Teachers evaluate students.",
+        "mastery": 0
+    },
+    {
+        "id": 977,
+        "word": "evidence",
+        "meaning": "bukti",
+        "example": "The police found evidence.",
+        "mastery": 0
+    },
+    {
+        "id": 978,
+        "word": "evolve",
+        "meaning": "berkembang",
+        "example": "Technology evolves quickly.",
+        "mastery": 0
+    },
+    {
+        "id": 979,
+        "word": "examine",
+        "meaning": "memeriksa",
+        "example": "Doctors examine patients.",
+        "mastery": 0
+    },
+    {
+        "id": 980,
+        "word": "exceed",
+        "meaning": "melebihi",
+        "example": "The cost exceeded expectations.",
+        "mastery": 0
+    },
+    {
+        "id": 981,
+        "word": "expand",
+        "meaning": "memperluas",
+        "example": "The company expands globally.",
+        "mastery": 0
+    },
+    {
+        "id": 982,
+        "word": "expectation",
+        "meaning": "harapan",
+        "example": "Expectations were high.",
+        "mastery": 0
+    },
+    {
+        "id": 983,
+        "word": "expert",
+        "meaning": "ahli",
+        "example": "She is an expert.",
+        "mastery": 0
+    },
+    {
+        "id": 984,
+        "word": "explain",
+        "meaning": "menjelaskan",
+        "example": "Explain the concept clearly.",
+        "mastery": 0
+    },
+    {
+        "id": 985,
+        "word": "explore",
+        "meaning": "menjelajah",
+        "example": "They explore new places.",
+        "mastery": 0
+    },
+    {
+        "id": 986,
+        "word": "expose",
+        "meaning": "mengungkapkan",
+        "example": "The report exposed corruption.",
+        "mastery": 0
+    },
+    {
+        "id": 987,
+        "word": "extend",
+        "meaning": "memperpanjang",
+        "example": "They extend the deadline.",
+        "mastery": 0
+    },
+    {
+        "id": 988,
+        "word": "external",
+        "meaning": "eksternal",
+        "example": "External factors affect results.",
+        "mastery": 0
+    },
+    {
+        "id": 989,
+        "word": "factor",
+        "meaning": "faktor",
+        "example": "Many factors influence success.",
+        "mastery": 0
+    },
+    {
+        "id": 990,
+        "word": "feature",
+        "meaning": "fitur",
+        "example": "This phone has many features.",
+        "mastery": 0
+    },
+    {
+        "id": 991,
+        "word": "focus",
+        "meaning": "fokus",
+        "example": "Focus on your goals.",
+        "mastery": 0
+    },
+    {
+        "id": 992,
+        "word": "format",
+        "meaning": "format",
+        "example": "Change the document format.",
+        "mastery": 0
+    },
+    {
+        "id": 993,
+        "word": "framework",
+        "meaning": "kerangka",
+        "example": "The framework is strong.",
+        "mastery": 0
+    },
+    {
+        "id": 994,
+        "word": "function",
+        "meaning": "fungsi",
+        "example": "The function works well.",
+        "mastery": 0
+    },
+    {
+        "id": 995,
+        "word": "generate",
+        "meaning": "menghasilkan",
+        "example": "Solar panels generate energy.",
+        "mastery": 0
+    },
+    {
+        "id": 996,
+        "word": "goal",
+        "meaning": "tujuan",
+        "example": "His goal is success.",
+        "mastery": 0
+    },
+    {
+        "id": 997,
+        "word": "guideline",
+        "meaning": "panduan",
+        "example": "Follow the guideline.",
+        "mastery": 0
+    },
+    {
+        "id": 998,
+        "word": "impact",
+        "meaning": "dampak",
+        "example": "Technology has huge impact.",
+        "mastery": 0
+    },
+    {
+        "id": 999,
+        "word": "improve",
+        "meaning": "meningkatkan",
+        "example": "Practice improves skill.",
+        "mastery": 0
+    },
+    {
+        "id": 1000,
+        "word": "inspire",
+        "meaning": "menginspirasi",
+        "example": "Great leaders inspire people.",
+        "mastery": 0
     }
 ]
