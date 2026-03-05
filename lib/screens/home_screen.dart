@@ -1,7 +1,9 @@
 import 'dart:math';
+import 'dart:ui';
 import 'package:flutter/material.dart';
 import '../models/vocab.dart';
 import '../services/vocab_service.dart';
+import '../widgets/interactive_particle_background.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -67,14 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [Colors.deepPurple.shade50, Colors.white],
-          ),
-        ),
+      body: InteractiveParticleBackground(
         child: FutureBuilder<List<Vocab>>(
           future: _vocabFuture,
           builder: (context, snapshot) {
@@ -166,12 +161,12 @@ class _HomeScreenState extends State<HomeScreen> {
     bool isSelected = _selectedOption == option;
     bool isCorrectOption = option == _currentVocab?.meaning;
     
-    Color buttonColor = Colors.white;
+    Color buttonColor = Colors.white.withOpacity(0.4);
     if (_selectedOption != null) {
       if (isCorrectOption) {
-        buttonColor = Colors.green.shade100;
+        buttonColor = Colors.green.shade100.withOpacity(0.6);
       } else if (isSelected) {
-        buttonColor = Colors.red.shade100;
+        buttonColor = Colors.red.shade100.withOpacity(0.6);
       }
     }
 
@@ -179,25 +174,31 @@ class _HomeScreenState extends State<HomeScreen> {
       padding: const EdgeInsets.only(bottom: 12.0),
       child: SizedBox(
         width: double.infinity,
-        child: OutlinedButton(
-          onPressed: () => _checkAnswer(option),
-          style: OutlinedButton.styleFrom(
-            backgroundColor: buttonColor,
-            padding: const EdgeInsets.symmetric(vertical: 16),
-            side: BorderSide(
-              color: isSelected 
-                  ? (_isCorrect! ? Colors.green : Colors.red) 
-                  : (_selectedOption != null && isCorrectOption ? Colors.green : Colors.deepPurple.shade200),
-              width: isSelected || (_selectedOption != null && isCorrectOption) ? 2 : 1,
-            ),
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-          ),
-          child: Text(
-            option,
-            style: TextStyle(
-              fontSize: 18,
-              color: Colors.black87,
-              fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(15),
+          child: BackdropFilter(
+            filter: ImageFilter.blur(sigmaX: 8, sigmaY: 8),
+            child: OutlinedButton(
+              onPressed: () => _checkAnswer(option),
+              style: OutlinedButton.styleFrom(
+                backgroundColor: buttonColor,
+                padding: const EdgeInsets.symmetric(vertical: 16),
+                side: BorderSide(
+                  color: isSelected 
+                      ? (_isCorrect! ? Colors.green : Colors.red) 
+                      : (_selectedOption != null && isCorrectOption ? Colors.green : Colors.deepPurple.shade200),
+                  width: isSelected || (_selectedOption != null && isCorrectOption) ? 2 : 1.5,
+                ),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+              ),
+              child: Text(
+                option,
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.black87,
+                  fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+                ),
+              ),
             ),
           ),
         ),
