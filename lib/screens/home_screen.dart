@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:confetti/confetti.dart';
 import '../models/vocab.dart';
 import '../services/vocab_service.dart';
 import '../widgets/interactive_particle_background.dart';
@@ -12,9 +13,12 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   final VocabService _vocabService = VocabService();
   late Future<List<Vocab>> _vocabFuture;
+  late ConfettiController _confettiController;
+  late AnimationController _shakeController;
+  late Animation<double> _shakeAnimation;
   
   Vocab? _currentVocab;
   List<String> _options = [];
@@ -25,6 +29,26 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
     _vocabFuture = _vocabService.loadVocabularies();
+    _confettiController = ConfettiController(duration: const Duration(seconds: 1));
+    
+    _shakeController = AnimationController(
+      duration: const Duration(milliseconds: 500),
+      vsync: this,
+    );
+
+    _shakeAnimation = TweenSequence<double>([
+      TweenSequenceItem(tween: Tween(begin: 0.0, end: 10.0), weight: 1),
+      TweenSequenceItem(tween: Tween(begin: 10.0, end: -10.0), weight: 1),
+      TweenSequenceItem(tween: Tween(begin: -10.0, end: 10.0), weight: 1),
+      TweenSequenceItem(tween: Tween(begin: 10.0, end: 0.0), weight: 1),
+    ]).animate(_shakeController);
+  }
+
+  @override
+  void dispose() {
+    _confettiController.dispose();
+    _shakeController.dispose();
+    super.dispose();
   }
 
   // Fungsi internal untuk menghitung data quiz tanpa setState
@@ -60,10 +84,18 @@ class _HomeScreenState extends State<HomeScreen> {
   void _checkAnswer(String selected) {
     if (_selectedOption != null) return;
 
+    bool correct = selected == _currentVocab!.meaning;
+    
     setState(() {
       _selectedOption = selected;
-      _isCorrect = selected == _currentVocab!.meaning;
+      _isCorrect = correct;
     });
+
+    if (correct) {
+      _confettiController.play();
+    } else {
+      _shakeController.forward(from: 0.0);
+    }
   }
 
   @override
@@ -89,11 +121,30 @@ class _HomeScreenState extends State<HomeScreen> {
             }
 
             return SafeArea(
-              child: Center(
-                child: SingleChildScrollView(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 24.0),
-                    child: Container(
+              child: Stack(
+                children: [
+                   Align(
+                    alignment: Alignment.topCenter,
+                    child: ConfettiWidget(
+                      confettiController: _confettiController,
+                      blastDirectionality: BlastDirectionality.explosive,
+                      shouldLoop: false,
+                      colors: const [Colors.green, Colors.blue, Colors.pink, Colors.orange, Colors.purple],
+                    ),
+                  ),
+                  Center(
+                  child: SingleChildScrollView(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                      child: AnimatedBuilder(
+                        animation: _shakeAnimation,
+                        builder: (context, child) {
+                          return Transform.translate(
+                            offset: Offset(_shakeAnimation.value, 0),
+                            child: child,
+                          );
+                        },
+                        child: Container(
                       padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 32.0),
                       decoration: BoxDecoration(
                         color: Colors.white.withOpacity(0.85),
@@ -179,9 +230,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
-            );
-          },
-        ),
+            ),
+            ],
+          ),
+        );
+      },
+    ),
       ),
     );
   }
