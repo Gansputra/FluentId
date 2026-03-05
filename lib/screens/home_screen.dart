@@ -301,13 +301,21 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             child: Container(
                               padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 32.0),
                               decoration: BoxDecoration(
-                                color: Colors.white.withOpacity(0.5),
+                                color: Colors.white.withOpacity(0.9), // Increased opacity for better contrast
                                 borderRadius: BorderRadius.circular(30),
-                                border: Border.all(color: Colors.white.withOpacity(0.4), width: 1.5),
+                                border: Border.all(color: Colors.white.withOpacity(0.8), width: 1.5),
                                 boxShadow: [
+                                  // Main drop shadow
                                   BoxShadow(
-                                    color: Colors.black.withOpacity(0.05),
-                                    blurRadius: 30,
+                                    color: Colors.deepPurple.withOpacity(0.15),
+                                    blurRadius: 40,
+                                    offset: const Offset(0, 20),
+                                    spreadRadius: -10,
+                                  ),
+                                  // Subtle outer glow
+                                  BoxShadow(
+                                    color: Colors.black.withOpacity(0.1),
+                                    blurRadius: 20,
                                     offset: const Offset(0, 10),
                                   ),
                                 ],
@@ -455,22 +463,22 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     bool isSelected = _selectedOption == option;
     bool isCorrectOption = option == _currentVocab?.meaning;
     
-    Color buttonColor = Colors.white.withOpacity(0.3);
-    Color borderColor = Colors.white.withOpacity(0.5);
+    Color buttonColor = Colors.deepPurple.withOpacity(0.05);
+    Color borderColor = Colors.deepPurple.withOpacity(0.15);
     Color textColor = Colors.black87;
 
     if (_selectedOption != null) {
       if (isCorrectOption) {
         buttonColor = Colors.green.withOpacity(0.2);
-        borderColor = Colors.green.withOpacity(0.5);
+        borderColor = Colors.green.withOpacity(0.4);
         textColor = Colors.green.shade700;
       } else if (isSelected) {
         buttonColor = Colors.red.withOpacity(0.2);
-        borderColor = Colors.red.withOpacity(0.5);
+        borderColor = Colors.red.withOpacity(0.4);
         textColor = Colors.red.shade700;
       } else {
-        buttonColor = Colors.white.withOpacity(0.1);
-        borderColor = Colors.white.withOpacity(0.1);
+        buttonColor = Colors.transparent;
+        borderColor = Colors.black12;
         textColor = Colors.black26;
       }
     }
@@ -484,6 +492,14 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           color: buttonColor,
           borderRadius: BorderRadius.circular(20),
           border: Border.all(color: borderColor, width: 2),
+          boxShadow: [
+            if (_selectedOption == null)
+              BoxShadow(
+                color: Colors.black.withOpacity(0.03),
+                blurRadius: 10,
+                offset: const Offset(0, 4),
+              ),
+          ],
         ),
         child: InkWell(
           onTap: () => _checkAnswer(option),
@@ -497,8 +513,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 fontSize: 18,
                 color: textColor,
                 fontWeight: isSelected || (_selectedOption != null && isCorrectOption) 
-                    ? FontWeight.w800 
-                    : FontWeight.w500,
+                    ? FontWeight.w900 
+                    : FontWeight.w600,
               ),
             ),
           ),
