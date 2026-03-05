@@ -2,6 +2,7 @@ import 'dart:math';
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:confetti/confetti.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 import '../models/vocab.dart';
 import '../services/vocab_service.dart';
 import '../widgets/interactive_particle_background.dart';
@@ -19,6 +20,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   late ConfettiController _confettiController;
   late AnimationController _shakeController;
   late Animation<double> _shakeAnimation;
+  late FlutterTts _flutterTts;
   
   Vocab? _currentVocab;
   List<String> _options = [];
@@ -30,6 +32,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     super.initState();
     _vocabFuture = _vocabService.loadVocabularies();
     _confettiController = ConfettiController(duration: const Duration(seconds: 1));
+    _flutterTts = FlutterTts();
+    
+    _initTts();
     
     _shakeController = AnimationController(
       duration: const Duration(milliseconds: 500),
@@ -48,7 +53,18 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   void dispose() {
     _confettiController.dispose();
     _shakeController.dispose();
+    _flutterTts.stop();
     super.dispose();
+  }
+
+  void _initTts() async {
+    await _flutterTts.setLanguage("en-US");
+    await _flutterTts.setPitch(1.0);
+    await _flutterTts.setSpeechRate(0.5);
+  }
+
+  Future<void> _speak(String text) async {
+    await _flutterTts.speak(text);
   }
 
   // Fungsi internal untuk menghitung data quiz tanpa setState
@@ -170,13 +186,25 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             ),
                           ),
                           const SizedBox(height: 16),
-                          Text(
-                            _currentVocab!.word,
-                            textAlign: TextAlign.center,
-                            style: Theme.of(context).textTheme.displayMedium?.copyWith(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black87,
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const SizedBox(width: 48), // Spacer to balance the speaker icon
+                              Expanded(
+                                child: Text(
+                                  _currentVocab!.word,
+                                  textAlign: TextAlign.center,
+                                  style: Theme.of(context).textTheme.displayMedium?.copyWith(
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black87,
+                                      ),
                                 ),
+                              ),
+                              IconButton(
+                                icon: const Icon(Icons.volume_up_rounded, color: Colors.deepPurple, size: 32),
+                                onPressed: () => _speak(_currentVocab!.word),
+                              ),
+                            ],
                           ),
                           const SizedBox(height: 40),
                           ..._options.map((option) => _buildOptionButton(option)),
