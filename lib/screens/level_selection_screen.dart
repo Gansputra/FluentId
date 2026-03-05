@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:fluentid/services/progress_service.dart';
 import '../widgets/interactive_particle_background.dart';
 import 'home_screen.dart';
+import 'sub_level_selection_screen.dart';
 
 class LevelSelectionScreen extends StatefulWidget {
   const LevelSelectionScreen({super.key});
@@ -96,6 +97,7 @@ class _LevelSelectionScreenState extends State<LevelSelectionScreen> {
                   isLocked: false,
                   progress: "$_basicProgress/1000",
                   progressValue: _basicProgress / 1000,
+                  totalVocabs: 1000,
                 ),
                 _buildLevelCard(
                   title: "Advanced",
@@ -107,6 +109,7 @@ class _LevelSelectionScreenState extends State<LevelSelectionScreen> {
                   lockInfo: "Butuh ${_scoreToUnlockAdvanced - _userScore} XP lagi",
                   progress: "$_advancedProgress/500",
                   progressValue: _advancedProgress / 500,
+                  totalVocabs: 500,
                 ),
                 _buildLevelCard(
                   title: "Professional",
@@ -118,6 +121,7 @@ class _LevelSelectionScreenState extends State<LevelSelectionScreen> {
                   lockInfo: "Butuh ${_scoreToUnlockProfessional - _userScore} XP lagi",
                   progress: "$_professionalProgress/200",
                   progressValue: _professionalProgress / 200,
+                  totalVocabs: 200,
                 ),
               ],
             ),
@@ -137,21 +141,37 @@ class _LevelSelectionScreenState extends State<LevelSelectionScreen> {
     String? lockInfo,
     required String progress,
     required double progressValue,
+    required int totalVocabs,
   }) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 20.0),
       child: InkWell(
         onTap: isLocked 
           ? null 
-          : () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => HomeScreen(
-                  levelName: title,
-                  fileName: fileName,
-                ),
-              ),
-            ).then((_) => _loadProgress()),
+          : () {
+              if (title == "Basic") {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SubLevelSelectionScreen(
+                      parentLevelName: title,
+                      fileName: fileName,
+                      totalVocabs: totalVocabs,
+                    ),
+                  ),
+                ).then((_) => _loadProgress());
+              } else {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HomeScreen(
+                      levelName: title,
+                      fileName: fileName,
+                    ),
+                  ),
+                ).then((_) => _loadProgress());
+              }
+            },
         child: ClipRRect(
           borderRadius: BorderRadius.circular(25),
           child: BackdropFilter(

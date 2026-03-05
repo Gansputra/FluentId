@@ -11,11 +11,15 @@ import '../widgets/interactive_particle_background.dart';
 class HomeScreen extends StatefulWidget {
   final String levelName;
   final String fileName;
+  final int? startIndex;
+  final int? endIndex;
   
   const HomeScreen({
     super.key, 
     required this.levelName, 
-    required this.fileName
+    required this.fileName,
+    this.startIndex,
+    this.endIndex,
   });
 
   @override
@@ -40,7 +44,14 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    _vocabFuture = _vocabService.loadVocabularies(widget.fileName);
+    _vocabFuture = _vocabService.loadVocabularies(widget.fileName).then((list) {
+      if (widget.startIndex != null && widget.endIndex != null) {
+        int start = widget.startIndex!.clamp(0, list.length);
+        int end = widget.endIndex!.clamp(0, list.length);
+        return list.sublist(start, end);
+      }
+      return list;
+    });
     _confettiController = ConfettiController(duration: const Duration(seconds: 1));
     _flutterTts = FlutterTts();
     

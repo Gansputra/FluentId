@@ -36,6 +36,20 @@ class ProgressService {
     return masteredList.length;
   }
 
+  // Get mastered count for a range (for sub-levels)
+  Future<int> getMasteredCountInRange(String level, int start, int end) async {
+    final prefs = await SharedPreferences.getInstance();
+    List<String> masteredList = prefs.getStringList('$_masteredKeyPrefix$level') ?? [];
+    int count = 0;
+    for (String idStr in masteredList) {
+      int id = int.tryParse(idStr) ?? -1;
+      if (id >= start && id < end) {
+        count++;
+      }
+    }
+    return count;
+  }
+
   // Check if a word is mastered
   Future<bool> isWordMastered(String level, String wordId) async {
     final prefs = await SharedPreferences.getInstance();
