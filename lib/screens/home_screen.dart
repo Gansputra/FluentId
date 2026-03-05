@@ -89,65 +89,94 @@ class _HomeScreenState extends State<HomeScreen> {
             }
 
             return SafeArea(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Text(
-                      "Apa arti dari kata ini?",
-                      style: TextStyle(fontSize: 18, color: Colors.deepPurple, fontWeight: FontWeight.w500),
-                    ),
-                    const SizedBox(height: 16),
-                    Text(
-                      _currentVocab!.word,
-                      style: Theme.of(context).textTheme.displayMedium?.copyWith(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black87,
+              child: Center(
+                child: SingleChildScrollView(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 32.0),
+                      decoration: BoxDecoration(
+                        color: Colors.white.withOpacity(0.85),
+                        borderRadius: BorderRadius.circular(30),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.1),
+                            blurRadius: 20,
+                            offset: const Offset(0, 10),
                           ),
-                    ),
-                    const SizedBox(height: 40),
-                    ..._options.map((option) => _buildOptionButton(option)),
-                    const SizedBox(height: 40),
-                    if (_selectedOption != null) ...[
-                      Icon(
-                        _isCorrect! ? Icons.check_circle : Icons.cancel,
-                        color: _isCorrect! ? Colors.green : Colors.red,
-                        size: 60,
+                        ],
                       ),
-                      const SizedBox(height: 8),
-                      Text(
-                        _isCorrect! ? "Benar sekali!" : "Oops, kurang tepat!",
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: _isCorrect! ? Colors.green : Colors.red,
-                        ),
-                      ),
-                      if (!_isCorrect!) ...[
-                        const SizedBox(height: 8),
-                        Text(
-                          "Jawaban benar: ${_currentVocab!.meaning}",
-                          style: const TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.black54,
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text(
+                            "Apa arti dari kata ini?",
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.deepPurple,
+                              fontWeight: FontWeight.w500,
+                            ),
                           ),
-                        ),
-                      ],
-                      const SizedBox(height: 24),
-                      ElevatedButton(
-                        onPressed: () => _generateNewQuiz(allVocabs),
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.deepPurple,
-                          foregroundColor: Colors.white,
-                          padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-                        ),
-                        child: const Text("Pertanyaan Selanjutnya", style: TextStyle(fontSize: 16)),
+                          const SizedBox(height: 16),
+                          Text(
+                            _currentVocab!.word,
+                            textAlign: TextAlign.center,
+                            style: Theme.of(context).textTheme.displayMedium?.copyWith(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black87,
+                                ),
+                          ),
+                          const SizedBox(height: 40),
+                          ..._options.map((option) => _buildOptionButton(option)),
+                          if (_selectedOption != null) ...[
+                            const SizedBox(height: 24),
+                            Divider(color: Colors.deepPurple.withOpacity(0.2)),
+                            const SizedBox(height: 24),
+                            Icon(
+                              _isCorrect! ? Icons.check_circle : Icons.cancel,
+                              color: _isCorrect! ? Colors.green : Colors.red,
+                              size: 60,
+                            ),
+                            const SizedBox(height: 8),
+                            Text(
+                              _isCorrect! ? "Benar sekali!" : "Oops, kurang tepat!",
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: _isCorrect! ? Colors.green : Colors.red,
+                              ),
+                            ),
+                            if (!_isCorrect!) ...[
+                              const SizedBox(height: 8),
+                              Text(
+                                "Jawaban benar: ${_currentVocab!.meaning}",
+                                textAlign: TextAlign.center,
+                                style: const TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.black54,
+                                ),
+                              ),
+                            ],
+                            const SizedBox(height: 24),
+                            ElevatedButton(
+                              onPressed: () => _generateNewQuiz(allVocabs),
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.deepPurple,
+                                foregroundColor: Colors.white,
+                                padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+                                elevation: 5,
+                                shadowColor: Colors.deepPurple.withOpacity(0.5),
+                              ),
+                              child: const Text("Pertanyaan Selanjutnya", style: TextStyle(fontSize: 16)),
+                            ),
+                          ],
+                        ],
                       ),
-                    ],
-                  ],
+                    ),
+                  ),
                 ),
               ),
             );
