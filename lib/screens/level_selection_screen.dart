@@ -166,6 +166,7 @@ class _LevelSelectionScreenState extends State<LevelSelectionScreen> {
                   MaterialPageRoute(
                     builder: (context) => HomeScreen(
                       levelName: title,
+                      category: title,
                       fileName: fileName,
                     ),
                   ),

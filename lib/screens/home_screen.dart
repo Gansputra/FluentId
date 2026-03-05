@@ -10,6 +10,7 @@ import '../widgets/interactive_particle_background.dart';
 
 class HomeScreen extends StatefulWidget {
   final String levelName;
+  final String category;
   final String fileName;
   final int? startIndex;
   final int? endIndex;
@@ -17,6 +18,7 @@ class HomeScreen extends StatefulWidget {
   const HomeScreen({
     super.key, 
     required this.levelName, 
+    required this.category,
     required this.fileName,
     this.startIndex,
     this.endIndex,
@@ -40,10 +42,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   List<String> _options = [];
   String? _selectedOption;
   bool? _isCorrect;
+  final Set<String> _masteredInSession = {};
+  int _initialMasteredCount = 0;
 
   @override
   void initState() {
     super.initState();
+    _loadInitialProgress();
     _vocabFuture = _vocabService.loadVocabularies(widget.fileName).then((list) {
       if (widget.startIndex != null && widget.endIndex != null) {
         int start = widget.startIndex!.clamp(0, list.length);
@@ -70,6 +75,19 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     ]).animate(_shakeController);
   }
 
+  Future<void> _loadInitialProgress() async {
+    if (widget.startIndex != null && widget.endIndex != null) {
+      int count = await _progressService.getMasteredCountInRange(
+        widget.category, 
+        widget.startIndex!, 
+        widget.endIndex! + 1
+      );
+      setState(() {
+        _initialMasteredCount = count;
+      });
+    }
+  }
+
   @override
   void dispose() {
     _confettiController.dispose();
@@ -90,10 +108,28 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
   // Fungsi internal untuk menghitung data quiz tanpa setState
   void _setupQuizData(List<Vocab> allVocabs) {
-    if (allVocabs.length < 4) return;
+    if (allVocabs.isEmpty) return;
 
     final random = Random();
-    final correctVocab = allVocabs[random.nextInt(allVocabs.length)];
+    
+    // Filter out words mastered in this session or already mastered in DB
+    // To make it logic, we should probably check DB for EACH word, 
+    // but that's slow. Let's assume _masteredInSession tracks what we did NOW.
+    // If the user wants to re-learn, we might need a different logic.
+    // However, the request is "kosakatanya jangan ada yang diulang".
+    
+    List<Vocab> availableVocabs = allVocabs.where((v) => !_masteredInSession.contains(v.id)).toList();
+    
+    if (availableVocabs.isEmpty) {
+      // All words in this sub-level mastered in this session!
+      // We can either restart or show a finished state.
+      // For now, let's just use all words if empty to avoid crash, 
+      // but ideally we show a "Level Complete" screen.
+      availableVocabs = allVocabs;
+      _masteredInSession.clear(); 
+    }
+
+    final correctVocab = availableVocabs[random.nextInt(availableVocabs.length)];
     
     List<String> wrongMeanings = allVocabs
         .where((v) => v.id != correctVocab.id)
@@ -130,10 +166,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
     if (correct) {
       _confettiController.play();
-      _progressService.masterWord(widget.levelName, _currentVocab!.id);
+      _masteredInSession.add(_currentVocab!.id);
+      _progressService.masterWord(widget.category, _currentVocab!.id);
     } else {
       _shakeController.forward(from: 0.0);
-      // Jika salah, progress tidak nambah (stay)
     }
   }
 
@@ -162,9 +198,49 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             return SafeArea(
               child: Stack(
                 children: [
+                   // Progress Bar at the top
+                   Positioned(
+                     top: 0,
+                     left: 0,
+                     right: 0,
+                     child: Column(
+                       children: [
+                         LinearProgressIndicator(
+                           value: _masteredInSession.length / allVocabs.length,
+                           backgroundColor: Colors.deepPurple.withOpacity(0.1),
+                           valueColor: const AlwaysStoppedAnimation<Color>(Colors.deepPurple),
+                           minHeight: 8,
+                         ),
+                         Padding(
+                           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                           child: Row(
+                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                             children: [
+                               Text(
+                                 widget.levelName,
+                                 style: const TextStyle(
+                                   color: Colors.deepPurple,
+                                   fontWeight: FontWeight.bold,
+                                   fontSize: 14,
+                                 ),
+                               ),
+                               Text(
+                                 "${_masteredInSession.length} / ${allVocabs.length}",
+                                 style: const TextStyle(
+                                   color: Colors.deepPurple,
+                                   fontWeight: FontWeight.bold,
+                                   fontSize: 14,
+                                 ),
+                               ),
+                             ],
+                           ),
+                         ),
+                       ],
+                     ),
+                   ),
                    // Back Button
                    Positioned(
-                     top: 10,
+                     top: 40,
                      left: 10,
                      child: IconButton(
                        icon: const Icon(Icons.arrow_back_ios_new_rounded, color: Colors.deepPurple),

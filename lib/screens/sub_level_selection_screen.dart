@@ -136,6 +136,7 @@ class _SubLevelSelectionScreenState extends State<SubLevelSelectionScreen> {
           MaterialPageRoute(
             builder: (context) => HomeScreen(
               levelName: "${widget.parentLevelName} - Lvl $levelNumber",
+              category: widget.parentLevelName,
               fileName: widget.fileName,
               startIndex: start,
               endIndex: end,
