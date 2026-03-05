@@ -198,53 +198,79 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             return SafeArea(
               child: Stack(
                 children: [
-                   // Progress Bar at the top
+                   // Progress Bar & Info at the top
                    Positioned(
                      top: 0,
                      left: 0,
                      right: 0,
-                     child: Column(
-                       children: [
-                         LinearProgressIndicator(
-                           value: _masteredInSession.length / allVocabs.length,
-                           backgroundColor: Colors.deepPurple.withOpacity(0.1),
-                           valueColor: const AlwaysStoppedAnimation<Color>(Colors.deepPurple),
-                           minHeight: 8,
-                         ),
-                         Padding(
-                           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
-                           child: Row(
-                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                             children: [
-                               Text(
-                                 widget.levelName,
-                                 style: const TextStyle(
-                                   color: Colors.deepPurple,
-                                   fontWeight: FontWeight.bold,
-                                   fontSize: 14,
+                     child: Container(
+                       padding: const EdgeInsets.only(top: 10),
+                       child: Column(
+                         children: [
+                           Padding(
+                             padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 12.0),
+                             child: Row(
+                               children: [
+                                 // Premium Back Button
+                                 Container(
+                                   decoration: BoxDecoration(
+                                     color: Colors.white.withOpacity(0.2),
+                                     borderRadius: BorderRadius.circular(15),
+                                     border: Border.all(color: Colors.white.withOpacity(0.3)),
+                                   ),
+                                   child: IconButton(
+                                     icon: const Icon(Icons.arrow_back_ios_new_rounded, color: Colors.black87, size: 20),
+                                     onPressed: () => Navigator.pop(context),
+                                   ),
                                  ),
-                               ),
-                               Text(
-                                 "${_masteredInSession.length} / ${allVocabs.length}",
-                                 style: const TextStyle(
-                                   color: Colors.deepPurple,
-                                   fontWeight: FontWeight.bold,
-                                   fontSize: 14,
+                                 const SizedBox(width: 16),
+                                 Expanded(
+                                   child: Column(
+                                     crossAxisAlignment: CrossAxisAlignment.start,
+                                     children: [
+                                       Text(
+                                         widget.levelName,
+                                         style: const TextStyle(
+                                           color: Colors.black87,
+                                           fontWeight: FontWeight.bold,
+                                           fontSize: 18,
+                                           letterSpacing: 0.5,
+                                         ),
+                                       ),
+                                       const SizedBox(height: 4),
+                                       ClipRRect(
+                                          borderRadius: BorderRadius.circular(10),
+                                          child: LinearProgressIndicator(
+                                            value: _masteredInSession.length / allVocabs.length,
+                                            backgroundColor: Colors.black.withOpacity(0.05),
+                                            valueColor: const AlwaysStoppedAnimation<Color>(Colors.deepPurple),
+                                            minHeight: 6,
+                                          ),
+                                        ),
+                                     ],
+                                   ),
                                  ),
-                               ),
-                             ],
+                                 const SizedBox(width: 16),
+                                 Container(
+                                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                                   decoration: BoxDecoration(
+                                     color: Colors.deepPurple.withOpacity(0.1),
+                                     borderRadius: BorderRadius.circular(12),
+                                   ),
+                                   child: Text(
+                                     "${_masteredInSession.length}/${allVocabs.length}",
+                                     style: const TextStyle(
+                                       color: Colors.deepPurple,
+                                       fontWeight: FontWeight.bold,
+                                       fontSize: 12,
+                                     ),
+                                   ),
+                                 ),
+                               ],
+                             ),
                            ),
-                         ),
-                       ],
-                     ),
-                   ),
-                   // Back Button
-                   Positioned(
-                     top: 40,
-                     left: 10,
-                     child: IconButton(
-                       icon: const Icon(Icons.arrow_back_ios_new_rounded, color: Colors.deepPurple),
-                       onPressed: () => Navigator.pop(context),
+                         ],
+                       ),
                      ),
                    ),
                    Align(
@@ -268,101 +294,68 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             child: child,
                           );
                         },
-                        child: Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 32.0),
-                      decoration: BoxDecoration(
-                        color: Colors.white.withOpacity(0.85),
-                        borderRadius: BorderRadius.circular(30),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.1),
-                            blurRadius: 20,
-                            offset: const Offset(0, 10),
-                          ),
-                        ],
-                      ),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Text(
-                            "Apa arti dari kata ini?",
-                            style: TextStyle(
-                              fontSize: 18,
-                              color: Colors.deepPurple,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                          const SizedBox(height: 16),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              const SizedBox(width: 48), // Spacer to balance the speaker icon
-                              Expanded(
-                                child: Text(
-                                  _currentVocab!.word,
-                                  textAlign: TextAlign.center,
-                                  style: Theme.of(context).textTheme.displayMedium?.copyWith(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black87,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(30),
+                          child: BackdropFilter(
+                            filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 32.0),
+                              decoration: BoxDecoration(
+                                color: Colors.white.withOpacity(0.5),
+                                borderRadius: BorderRadius.circular(30),
+                                border: Border.all(color: Colors.white.withOpacity(0.4), width: 1.5),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black.withOpacity(0.05),
+                                    blurRadius: 30,
+                                    offset: const Offset(0, 10),
+                                  ),
+                                ],
+                              ),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "APA ARTI DARI KATA INI?",
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color: Colors.deepPurple.withOpacity(0.6),
+                                      fontWeight: FontWeight.w800,
+                                      letterSpacing: 2,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 20),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      const SizedBox(width: 56),
+                                      Expanded(
+                                        child: Text(
+                                          _currentVocab!.word,
+                                          textAlign: TextAlign.center,
+                                          style: const TextStyle(
+                                            fontSize: 42,
+                                            fontWeight: FontWeight.w900,
+                                            color: Colors.black87,
+                                            letterSpacing: -1,
+                                          ),
+                                        ),
                                       ),
-                                ),
+                                      _buildSpeakerButton(),
+                                    ],
+                                  ),
+                                  const SizedBox(height: 48),
+                                  ..._options.map((option) => _buildOptionButton(option)),
+                                  if (_selectedOption != null) ...[
+                                    const SizedBox(height: 32),
+                                    _buildFeedbackSection(allVocabs),
+                                  ],
+                                ],
                               ),
-                              IconButton(
-                                icon: const Icon(Icons.volume_up_rounded, color: Colors.deepPurple, size: 32),
-                                onPressed: () => _speak(_currentVocab!.word),
-                              ),
-                            ],
+                            ),
                           ),
-                          const SizedBox(height: 40),
-                          ..._options.map((option) => _buildOptionButton(option)),
-                          if (_selectedOption != null) ...[
-                            const SizedBox(height: 24),
-                            Divider(color: Colors.deepPurple.withOpacity(0.2)),
-                            const SizedBox(height: 24),
-                            Icon(
-                              _isCorrect! ? Icons.check_circle : Icons.cancel,
-                              color: _isCorrect! ? Colors.green : Colors.red,
-                              size: 60,
-                            ),
-                            const SizedBox(height: 8),
-                            Text(
-                              _isCorrect! ? "Benar sekali!" : "Oops, kurang tepat!",
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                color: _isCorrect! ? Colors.green : Colors.red,
-                              ),
-                            ),
-                            if (!_isCorrect!) ...[
-                              const SizedBox(height: 8),
-                              Text(
-                                "Jawaban benar: ${_currentVocab!.meaning}",
-                                textAlign: TextAlign.center,
-                                style: const TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.black54,
-                                ),
-                              ),
-                            ],
-                            const SizedBox(height: 24),
-                            ElevatedButton(
-                              onPressed: () => _generateNewQuiz(allVocabs),
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.deepPurple,
-                                foregroundColor: Colors.white,
-                                padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
-                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-                                elevation: 5,
-                                shadowColor: Colors.deepPurple.withOpacity(0.5),
-                              ),
-                              child: const Text("Pertanyaan Selanjutnya", style: TextStyle(fontSize: 16)),
-                            ),
-                          ],
-                        ],
-                      ),
-                    ),
+                        ),
                   ),
                 ),
               ),
@@ -376,47 +369,136 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     );
   }
 
+  Widget _buildSpeakerButton() {
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.deepPurple.withOpacity(0.1),
+        shape: BoxShape.circle,
+      ),
+      child: IconButton(
+        icon: const Icon(Icons.volume_up_rounded, color: Colors.deepPurple, size: 28),
+        onPressed: () => _speak(_currentVocab!.word),
+      ),
+    );
+  }
+
+  Widget _buildFeedbackSection(List<Vocab> allVocabs) {
+    return Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              _isCorrect! ? Icons.check_circle_rounded : Icons.error_rounded,
+              color: _isCorrect! ? Colors.green : Colors.red,
+              size: 50,
+            ),
+            const SizedBox(width: 12),
+            Text(
+              _isCorrect! ? "BENAR SEKALI!" : "KURANG TEPAT!",
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.w900,
+                color: _isCorrect! ? Colors.green : Colors.red,
+              ),
+            ),
+          ],
+        ),
+        if (!_isCorrect!) ...[
+          const SizedBox(height: 12),
+          Text(
+            "Jawaban benar: ${_currentVocab!.meaning}",
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.w600,
+              color: Colors.black54,
+            ),
+          ),
+        ],
+        const SizedBox(height: 32),
+        Container(
+          width: double.infinity,
+          height: 60,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            gradient: const LinearGradient(
+              colors: [Colors.deepPurple, Colors.purpleAccent],
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.deepPurple.withOpacity(0.3),
+                blurRadius: 20,
+                offset: const Offset(0, 10),
+              ),
+            ],
+          ),
+          child: ElevatedButton(
+            onPressed: () => _generateNewQuiz(allVocabs),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.transparent,
+              foregroundColor: Colors.white,
+              shadowColor: Colors.transparent,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+            ),
+            child: const Text(
+              "LANJUTKAN",
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w900, letterSpacing: 1.5),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
   Widget _buildOptionButton(String option) {
     bool isSelected = _selectedOption == option;
     bool isCorrectOption = option == _currentVocab?.meaning;
     
-    Color buttonColor = Colors.white.withOpacity(0.4);
+    Color buttonColor = Colors.white.withOpacity(0.3);
+    Color borderColor = Colors.white.withOpacity(0.5);
+    Color textColor = Colors.black87;
+
     if (_selectedOption != null) {
       if (isCorrectOption) {
-        buttonColor = Colors.green.shade100.withOpacity(0.6);
+        buttonColor = Colors.green.withOpacity(0.2);
+        borderColor = Colors.green.withOpacity(0.5);
+        textColor = Colors.green.shade700;
       } else if (isSelected) {
-        buttonColor = Colors.red.shade100.withOpacity(0.6);
+        buttonColor = Colors.red.withOpacity(0.2);
+        borderColor = Colors.red.withOpacity(0.5);
+        textColor = Colors.red.shade700;
+      } else {
+        buttonColor = Colors.white.withOpacity(0.1);
+        borderColor = Colors.white.withOpacity(0.1);
+        textColor = Colors.black26;
       }
     }
 
     return Padding(
-      padding: const EdgeInsets.only(bottom: 12.0),
-      child: SizedBox(
+      padding: const EdgeInsets.only(bottom: 16.0),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 300),
         width: double.infinity,
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(15),
-          child: BackdropFilter(
-            filter: ImageFilter.blur(sigmaX: 8, sigmaY: 8),
-            child: OutlinedButton(
-              onPressed: () => _checkAnswer(option),
-              style: OutlinedButton.styleFrom(
-                backgroundColor: buttonColor,
-                padding: const EdgeInsets.symmetric(vertical: 16),
-                side: BorderSide(
-                  color: isSelected 
-                      ? (_isCorrect! ? Colors.green : Colors.red) 
-                      : (_selectedOption != null && isCorrectOption ? Colors.green : Colors.deepPurple.shade200),
-                  width: isSelected || (_selectedOption != null && isCorrectOption) ? 2 : 1.5,
-                ),
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-              ),
-              child: Text(
-                option,
-                style: TextStyle(
-                  fontSize: 18,
-                  color: Colors.black87,
-                  fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
-                ),
+        decoration: BoxDecoration(
+          color: buttonColor,
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: borderColor, width: 2),
+        ),
+        child: InkWell(
+          onTap: () => _checkAnswer(option),
+          borderRadius: BorderRadius.circular(18),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 24),
+            child: Text(
+              option,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 18,
+                color: textColor,
+                fontWeight: isSelected || (_selectedOption != null && isCorrectOption) 
+                    ? FontWeight.w800 
+                    : FontWeight.w500,
               ),
             ),
           ),
