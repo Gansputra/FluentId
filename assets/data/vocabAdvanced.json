@@ -1,0 +1,1402 @@
+[
+    {
+        "id": 1,
+        "word": "ability",
+        "meaning": "kemampuan",
+        "example": "She has the ability to learn fast.",
+        "mastery": 0
+    },
+    {
+        "id": 2,
+        "word": "able",
+        "meaning": "mampu",
+        "example": "He is able to swim.",
+        "mastery": 0
+    },
+    {
+        "id": 3,
+        "word": "about",
+        "meaning": "tentang",
+        "example": "This book is about history.",
+        "mastery": 0
+    },
+    {
+        "id": 4,
+        "word": "above",
+        "meaning": "di atas",
+        "example": "The lamp is above the table.",
+        "mastery": 0
+    },
+    {
+        "id": 5,
+        "word": "accept",
+        "meaning": "menerima",
+        "example": "I accept your apology.",
+        "mastery": 0
+    },
+    {
+        "id": 6,
+        "word": "according",
+        "meaning": "menurut",
+        "example": "According to him, it's true.",
+        "mastery": 0
+    },
+    {
+        "id": 7,
+        "word": "account",
+        "meaning": "akun",
+        "example": "I created a new account.",
+        "mastery": 0
+    },
+    {
+        "id": 8,
+        "word": "across",
+        "meaning": "melintasi",
+        "example": "He walked across the street.",
+        "mastery": 0
+    },
+    {
+        "id": 9,
+        "word": "act",
+        "meaning": "bertindak",
+        "example": "You must act now.",
+        "mastery": 0
+    },
+    {
+        "id": 10,
+        "word": "action",
+        "meaning": "tindakan",
+        "example": "Her action was brave.",
+        "mastery": 0
+    },
+    {
+        "id": 11,
+        "word": "activity",
+        "meaning": "aktivitas",
+        "example": "Reading is a good activity.",
+        "mastery": 0
+    },
+    {
+        "id": 12,
+        "word": "actually",
+        "meaning": "sebenarnya",
+        "example": "Actually, I agree with you.",
+        "mastery": 0
+    },
+    {
+        "id": 13,
+        "word": "add",
+        "meaning": "menambahkan",
+        "example": "Add some sugar.",
+        "mastery": 0
+    },
+    {
+        "id": 14,
+        "word": "address",
+        "meaning": "alamat",
+        "example": "What is your address?",
+        "mastery": 0
+    },
+    {
+        "id": 15,
+        "word": "admit",
+        "meaning": "mengakui",
+        "example": "He admitted his mistake.",
+        "mastery": 0
+    },
+    {
+        "id": 16,
+        "word": "adult",
+        "meaning": "orang dewasa",
+        "example": "He is an adult now.",
+        "mastery": 0
+    },
+    {
+        "id": 17,
+        "word": "affect",
+        "meaning": "mempengaruhi",
+        "example": "Weather affects mood.",
+        "mastery": 0
+    },
+    {
+        "id": 18,
+        "word": "after",
+        "meaning": "setelah",
+        "example": "Call me after dinner.",
+        "mastery": 0
+    },
+    {
+        "id": 19,
+        "word": "again",
+        "meaning": "lagi",
+        "example": "Try again.",
+        "mastery": 0
+    },
+    {
+        "id": 20,
+        "word": "against",
+        "meaning": "melawan",
+        "example": "They fought against injustice.",
+        "mastery": 0
+    },
+    {
+        "id": 21,
+        "word": "age",
+        "meaning": "usia",
+        "example": "What is your age?",
+        "mastery": 0
+    },
+    {
+        "id": 22,
+        "word": "ago",
+        "meaning": "yang lalu",
+        "example": "He left two days ago.",
+        "mastery": 0
+    },
+    {
+        "id": 23,
+        "word": "agree",
+        "meaning": "setuju",
+        "example": "I agree with you.",
+        "mastery": 0
+    },
+    {
+        "id": 24,
+        "word": "air",
+        "meaning": "udara",
+        "example": "The air is fresh.",
+        "mastery": 0
+    },
+    {
+        "id": 25,
+        "word": "all",
+        "meaning": "semua",
+        "example": "All students passed.",
+        "mastery": 0
+    },
+    {
+        "id": 26,
+        "word": "allow",
+        "meaning": "mengizinkan",
+        "example": "They allow pets here.",
+        "mastery": 0
+    },
+    {
+        "id": 27,
+        "word": "almost",
+        "meaning": "hampir",
+        "example": "I almost forgot.",
+        "mastery": 0
+    },
+    {
+        "id": 28,
+        "word": "alone",
+        "meaning": "sendiri",
+        "example": "She lives alone.",
+        "mastery": 0
+    },
+    {
+        "id": 29,
+        "word": "along",
+        "meaning": "sepanjang",
+        "example": "Walk along the road.",
+        "mastery": 0
+    },
+    {
+        "id": 30,
+        "word": "already",
+        "meaning": "sudah",
+        "example": "I already ate.",
+        "mastery": 0
+    },
+    {
+        "id": 31,
+        "word": "also",
+        "meaning": "juga",
+        "example": "She also likes coffee.",
+        "mastery": 0
+    },
+    {
+        "id": 32,
+        "word": "although",
+        "meaning": "meskipun",
+        "example": "Although tired, he worked.",
+        "mastery": 0
+    },
+    {
+        "id": 33,
+        "word": "always",
+        "meaning": "selalu",
+        "example": "She always smiles.",
+        "mastery": 0
+    },
+    {
+        "id": 34,
+        "word": "among",
+        "meaning": "di antara",
+        "example": "He sat among friends.",
+        "mastery": 0
+    },
+    {
+        "id": 35,
+        "word": "amount",
+        "meaning": "jumlah",
+        "example": "The amount is small.",
+        "mastery": 0
+    },
+    {
+        "id": 36,
+        "word": "animal",
+        "meaning": "hewan",
+        "example": "The dog is a loyal animal.",
+        "mastery": 0
+    },
+    {
+        "id": 37,
+        "word": "another",
+        "meaning": "yang lain",
+        "example": "Give me another chance.",
+        "mastery": 0
+    },
+    {
+        "id": 38,
+        "word": "answer",
+        "meaning": "jawaban",
+        "example": "What is your answer?",
+        "mastery": 0
+    },
+    {
+        "id": 39,
+        "word": "any",
+        "meaning": "apa pun",
+        "example": "Do you have any idea?",
+        "mastery": 0
+    },
+    {
+        "id": 40,
+        "word": "appear",
+        "meaning": "muncul",
+        "example": "He appeared suddenly.",
+        "mastery": 0
+    },
+    {
+        "id": 41,
+        "word": "apply",
+        "meaning": "menerapkan",
+        "example": "Apply this rule.",
+        "mastery": 0
+    },
+    {
+        "id": 42,
+        "word": "area",
+        "meaning": "area",
+        "example": "This area is safe.",
+        "mastery": 0
+    },
+    {
+        "id": 43,
+        "word": "argue",
+        "meaning": "berdebat",
+        "example": "They argue often.",
+        "mastery": 0
+    },
+    {
+        "id": 44,
+        "word": "arm",
+        "meaning": "lengan",
+        "example": "My arm hurts.",
+        "mastery": 0
+    },
+    {
+        "id": 45,
+        "word": "around",
+        "meaning": "sekitar",
+        "example": "Look around you.",
+        "mastery": 0
+    },
+    {
+        "id": 46,
+        "word": "arrive",
+        "meaning": "tiba",
+        "example": "They arrived early.",
+        "mastery": 0
+    },
+    {
+        "id": 47,
+        "word": "art",
+        "meaning": "seni",
+        "example": "She loves art.",
+        "mastery": 0
+    },
+    {
+        "id": 48,
+        "word": "ask",
+        "meaning": "bertanya",
+        "example": "Ask the teacher.",
+        "mastery": 0
+    },
+    {
+        "id": 49,
+        "word": "attack",
+        "meaning": "menyerang",
+        "example": "The dog attacked.",
+        "mastery": 0
+    },
+    {
+        "id": 50,
+        "word": "attention",
+        "meaning": "perhatian",
+        "example": "Pay attention.",
+        "mastery": 0
+    },
+    {
+        "id": 51,
+        "word": "author",
+        "meaning": "penulis",
+        "example": "He is the author of this book.",
+        "mastery": 0
+    },
+    {
+        "id": 52,
+        "word": "available",
+        "meaning": "tersedia",
+        "example": "The room is available.",
+        "mastery": 0
+    },
+    {
+        "id": 53,
+        "word": "avoid",
+        "meaning": "menghindari",
+        "example": "Avoid bad habits.",
+        "mastery": 0
+    },
+    {
+        "id": 54,
+        "word": "away",
+        "meaning": "pergi",
+        "example": "He went away.",
+        "mastery": 0
+    },
+    {
+        "id": 55,
+        "word": "baby",
+        "meaning": "bayi",
+        "example": "The baby is sleeping.",
+        "mastery": 0
+    },
+    {
+        "id": 56,
+        "word": "back",
+        "meaning": "kembali",
+        "example": "Come back soon.",
+        "mastery": 0
+    },
+    {
+        "id": 57,
+        "word": "bad",
+        "meaning": "buruk",
+        "example": "That was a bad idea.",
+        "mastery": 0
+    },
+    {
+        "id": 58,
+        "word": "bag",
+        "meaning": "tas",
+        "example": "My bag is heavy.",
+        "mastery": 0
+    },
+    {
+        "id": 59,
+        "word": "ball",
+        "meaning": "bola",
+        "example": "Kick the ball.",
+        "mastery": 0
+    },
+    {
+        "id": 60,
+        "word": "bank",
+        "meaning": "bank",
+        "example": "I work at a bank.",
+        "mastery": 0
+    },
+    {
+        "id": 61,
+        "word": "base",
+        "meaning": "dasar",
+        "example": "This is the base of the tower.",
+        "mastery": 0
+    },
+    {
+        "id": 62,
+        "word": "be",
+        "meaning": "menjadi",
+        "example": "I want to be strong.",
+        "mastery": 0
+    },
+    {
+        "id": 63,
+        "word": "beat",
+        "meaning": "mengalahkan",
+        "example": "They beat the enemy.",
+        "mastery": 0
+    },
+    {
+        "id": 64,
+        "word": "beautiful",
+        "meaning": "indah",
+        "example": "The view is beautiful.",
+        "mastery": 0
+    },
+    {
+        "id": 65,
+        "word": "because",
+        "meaning": "karena",
+        "example": "I stayed because it rained.",
+        "mastery": 0
+    },
+    {
+        "id": 66,
+        "word": "become",
+        "meaning": "menjadi",
+        "example": "He became famous.",
+        "mastery": 0
+    },
+    {
+        "id": 67,
+        "word": "bed",
+        "meaning": "tempat tidur",
+        "example": "Go to bed.",
+        "mastery": 0
+    },
+    {
+        "id": 68,
+        "word": "before",
+        "meaning": "sebelum",
+        "example": "Wash hands before eating.",
+        "mastery": 0
+    },
+    {
+        "id": 69,
+        "word": "begin",
+        "meaning": "memulai",
+        "example": "Let's begin now.",
+        "mastery": 0
+    },
+    {
+        "id": 70,
+        "word": "behind",
+        "meaning": "di belakang",
+        "example": "He stood behind me.",
+        "mastery": 0
+    },
+    {
+        "id": 71,
+        "word": "believe",
+        "meaning": "percaya",
+        "example": "I believe you.",
+        "mastery": 0
+    },
+    {
+        "id": 72,
+        "word": "best",
+        "meaning": "terbaik",
+        "example": "Do your best.",
+        "mastery": 0
+    },
+    {
+        "id": 73,
+        "word": "better",
+        "meaning": "lebih baik",
+        "example": "I feel better now.",
+        "mastery": 0
+    },
+    {
+        "id": 74,
+        "word": "between",
+        "meaning": "di antara dua",
+        "example": "Sit between us.",
+        "mastery": 0
+    },
+    {
+        "id": 75,
+        "word": "big",
+        "meaning": "besar",
+        "example": "That house is big.",
+        "mastery": 0
+    },
+    {
+        "id": 76,
+        "word": "bill",
+        "meaning": "tagihan",
+        "example": "Pay the bill.",
+        "mastery": 0
+    },
+    {
+        "id": 77,
+        "word": "bird",
+        "meaning": "burung",
+        "example": "The bird can fly.",
+        "mastery": 0
+    },
+    {
+        "id": 78,
+        "word": "black",
+        "meaning": "hitam",
+        "example": "She wore black.",
+        "mastery": 0
+    },
+    {
+        "id": 79,
+        "word": "blood",
+        "meaning": "darah",
+        "example": "Blood is red.",
+        "mastery": 0
+    },
+    {
+        "id": 80,
+        "word": "blue",
+        "meaning": "biru",
+        "example": "The sky is blue.",
+        "mastery": 0
+    },
+    {
+        "id": 81,
+        "word": "board",
+        "meaning": "papan",
+        "example": "Write on the board.",
+        "mastery": 0
+    },
+    {
+        "id": 82,
+        "word": "body",
+        "meaning": "tubuh",
+        "example": "Exercise your body.",
+        "mastery": 0
+    },
+    {
+        "id": 83,
+        "word": "book",
+        "meaning": "buku",
+        "example": "Read a book.",
+        "mastery": 0
+    },
+    {
+        "id": 84,
+        "word": "born",
+        "meaning": "lahir",
+        "example": "She was born in 2000.",
+        "mastery": 0
+    },
+    {
+        "id": 85,
+        "word": "both",
+        "meaning": "keduanya",
+        "example": "Both are correct.",
+        "mastery": 0
+    },
+    {
+        "id": 86,
+        "word": "boy",
+        "meaning": "anak laki-laki",
+        "example": "The boy is happy.",
+        "mastery": 0
+    },
+    {
+        "id": 87,
+        "word": "break",
+        "meaning": "istirahat",
+        "example": "Take a break.",
+        "mastery": 0
+    },
+    {
+        "id": 88,
+        "word": "bring",
+        "meaning": "membawa",
+        "example": "Bring your phone.",
+        "mastery": 0
+    },
+    {
+        "id": 89,
+        "word": "brother",
+        "meaning": "saudara laki-laki",
+        "example": "My brother is tall.",
+        "mastery": 0
+    },
+    {
+        "id": 90,
+        "word": "build",
+        "meaning": "membangun",
+        "example": "They build houses.",
+        "mastery": 0
+    },
+    {
+        "id": 91,
+        "word": "business",
+        "meaning": "bisnis",
+        "example": "She runs a business.",
+        "mastery": 0
+    },
+    {
+        "id": 92,
+        "word": "buy",
+        "meaning": "membeli",
+        "example": "I will buy it.",
+        "mastery": 0
+    },
+    {
+        "id": 93,
+        "word": "call",
+        "meaning": "memanggil",
+        "example": "Call me tonight.",
+        "mastery": 0
+    },
+    {
+        "id": 94,
+        "word": "camera",
+        "meaning": "kamera",
+        "example": "This camera is new.",
+        "mastery": 0
+    },
+    {
+        "id": 95,
+        "word": "can",
+        "meaning": "bisa",
+        "example": "I can help you.",
+        "mastery": 0
+    },
+    {
+        "id": 96,
+        "word": "car",
+        "meaning": "mobil",
+        "example": "The car is fast.",
+        "mastery": 0
+    },
+    {
+        "id": 97,
+        "word": "care",
+        "meaning": "peduli",
+        "example": "I care about you.",
+        "mastery": 0
+    },
+    {
+        "id": 98,
+        "word": "carry",
+        "meaning": "membawa",
+        "example": "Carry this bag.",
+        "mastery": 0
+    },
+    {
+        "id": 99,
+        "word": "case",
+        "meaning": "kasus",
+        "example": "This case is serious.",
+        "mastery": 0
+    },
+    {
+        "id": 100,
+        "word": "catch",
+        "meaning": "menangkap",
+        "example": "Catch the ball.",
+        "mastery": 0
+    },
+    {
+        "id": 101,
+        "word": "cause",
+        "meaning": "menyebabkan",
+        "example": "Smoking causes cancer.",
+        "mastery": 0
+    },
+    {
+        "id": 102,
+        "word": "cell",
+        "meaning": "sel",
+        "example": "The body has many cells.",
+        "mastery": 0
+    },
+    {
+        "id": 103,
+        "word": "center",
+        "meaning": "pusat",
+        "example": "Meet at the center.",
+        "mastery": 0
+    },
+    {
+        "id": 104,
+        "word": "century",
+        "meaning": "abad",
+        "example": "This happened last century.",
+        "mastery": 0
+    },
+    {
+        "id": 105,
+        "word": "certain",
+        "meaning": "pasti",
+        "example": "I am certain.",
+        "mastery": 0
+    },
+    {
+        "id": 106,
+        "word": "chair",
+        "meaning": "kursi",
+        "example": "Sit on the chair.",
+        "mastery": 0
+    },
+    {
+        "id": 107,
+        "word": "chance",
+        "meaning": "kesempatan",
+        "example": "Give me a chance.",
+        "mastery": 0
+    },
+    {
+        "id": 108,
+        "word": "change",
+        "meaning": "mengubah",
+        "example": "Change your mindset.",
+        "mastery": 0
+    },
+    {
+        "id": 109,
+        "word": "check",
+        "meaning": "memeriksa",
+        "example": "Check your answer.",
+        "mastery": 0
+    },
+    {
+        "id": 110,
+        "word": "child",
+        "meaning": "anak",
+        "example": "The child is crying.",
+        "mastery": 0
+    },
+    {
+        "id": 111,
+        "word": "choose",
+        "meaning": "memilih",
+        "example": "Choose wisely.",
+        "mastery": 0
+    },
+    {
+        "id": 112,
+        "word": "city",
+        "meaning": "kota",
+        "example": "This city is crowded.",
+        "mastery": 0
+    },
+    {
+        "id": 113,
+        "word": "class",
+        "meaning": "kelas",
+        "example": "The class starts at 8.",
+        "mastery": 0
+    },
+    {
+        "id": 114,
+        "word": "clear",
+        "meaning": "jelas",
+        "example": "The sky is clear.",
+        "mastery": 0
+    },
+    {
+        "id": 115,
+        "word": "close",
+        "meaning": "menutup",
+        "example": "Close the door.",
+        "mastery": 0
+    },
+    {
+        "id": 116,
+        "word": "cold",
+        "meaning": "dingin",
+        "example": "It is cold today.",
+        "mastery": 0
+    },
+    {
+        "id": 117,
+        "word": "college",
+        "meaning": "kampus",
+        "example": "She goes to college.",
+        "mastery": 0
+    },
+    {
+        "id": 118,
+        "word": "color",
+        "meaning": "warna",
+        "example": "What color is this?",
+        "mastery": 0
+    },
+    {
+        "id": 119,
+        "word": "come",
+        "meaning": "datang",
+        "example": "Come here.",
+        "mastery": 0
+    },
+    {
+        "id": 120,
+        "word": "common",
+        "meaning": "umum",
+        "example": "This is common.",
+        "mastery": 0
+    },
+    {
+        "id": 121,
+        "word": "company",
+        "meaning": "perusahaan",
+        "example": "He works at a company.",
+        "mastery": 0
+    },
+    {
+        "id": 122,
+        "word": "compare",
+        "meaning": "membandingkan",
+        "example": "Compare the results.",
+        "mastery": 0
+    },
+    {
+        "id": 123,
+        "word": "complete",
+        "meaning": "menyelesaikan",
+        "example": "Complete the task.",
+        "mastery": 0
+    },
+    {
+        "id": 124,
+        "word": "computer",
+        "meaning": "komputer",
+        "example": "My computer is slow.",
+        "mastery": 0
+    },
+    {
+        "id": 125,
+        "word": "concern",
+        "meaning": "kekhawatiran",
+        "example": "That is my concern.",
+        "mastery": 0
+    },
+    {
+        "id": 126,
+        "word": "condition",
+        "meaning": "kondisi",
+        "example": "The condition is stable.",
+        "mastery": 0
+    },
+    {
+        "id": 127,
+        "word": "consider",
+        "meaning": "mempertimbangkan",
+        "example": "Consider this option.",
+        "mastery": 0
+    },
+    {
+        "id": 128,
+        "word": "continue",
+        "meaning": "melanjutkan",
+        "example": "Continue your work.",
+        "mastery": 0
+    },
+    {
+        "id": 129,
+        "word": "control",
+        "meaning": "mengendalikan",
+        "example": "Control your anger.",
+        "mastery": 0
+    },
+    {
+        "id": 130,
+        "word": "cost",
+        "meaning": "biaya",
+        "example": "The cost is high.",
+        "mastery": 0
+    },
+    {
+        "id": 131,
+        "word": "could",
+        "meaning": "bisa (lampau)",
+        "example": "I could run fast.",
+        "mastery": 0
+    },
+    {
+        "id": 132,
+        "word": "country",
+        "meaning": "negara",
+        "example": "Indonesia is my country.",
+        "mastery": 0
+    },
+    {
+        "id": 133,
+        "word": "course",
+        "meaning": "kursus",
+        "example": "She took a course.",
+        "mastery": 0
+    },
+    {
+        "id": 134,
+        "word": "cover",
+        "meaning": "menutupi",
+        "example": "Cover the food.",
+        "mastery": 0
+    },
+    {
+        "id": 135,
+        "word": "create",
+        "meaning": "menciptakan",
+        "example": "Create something new.",
+        "mastery": 0
+    },
+    {
+        "id": 136,
+        "word": "culture",
+        "meaning": "budaya",
+        "example": "Every country has culture.",
+        "mastery": 0
+    },
+    {
+        "id": 137,
+        "word": "cut",
+        "meaning": "memotong",
+        "example": "Cut the paper.",
+        "mastery": 0
+    },
+    {
+        "id": 138,
+        "word": "dark",
+        "meaning": "gelap",
+        "example": "It is dark outside.",
+        "mastery": 0
+    },
+    {
+        "id": 139,
+        "word": "data",
+        "meaning": "data",
+        "example": "The data is correct.",
+        "mastery": 0
+    },
+    {
+        "id": 140,
+        "word": "day",
+        "meaning": "hari",
+        "example": "Today is a good day.",
+        "mastery": 0
+    },
+    {
+        "id": 141,
+        "word": "dead",
+        "meaning": "mati",
+        "example": "The plant is dead.",
+        "mastery": 0
+    },
+    {
+        "id": 142,
+        "word": "deal",
+        "meaning": "kesepakatan",
+        "example": "We made a deal.",
+        "mastery": 0
+    },
+    {
+        "id": 143,
+        "word": "decide",
+        "meaning": "memutuskan",
+        "example": "Decide quickly.",
+        "mastery": 0
+    },
+    {
+        "id": 144,
+        "word": "deep",
+        "meaning": "dalam",
+        "example": "The water is deep.",
+        "mastery": 0
+    },
+    {
+        "id": 145,
+        "word": "develop",
+        "meaning": "mengembangkan",
+        "example": "Develop your skills.",
+        "mastery": 0
+    },
+    {
+        "id": 146,
+        "word": "die",
+        "meaning": "meninggal",
+        "example": "Many soldiers died.",
+        "mastery": 0
+    },
+    {
+        "id": 147,
+        "word": "difference",
+        "meaning": "perbedaan",
+        "example": "See the difference.",
+        "mastery": 0
+    },
+    {
+        "id": 148,
+        "word": "different",
+        "meaning": "berbeda",
+        "example": "We are different.",
+        "mastery": 0
+    },
+    {
+        "id": 149,
+        "word": "difficult",
+        "meaning": "sulit",
+        "example": "This test is difficult.",
+        "mastery": 0
+    },
+    {
+        "id": 150,
+        "word": "direction",
+        "meaning": "arah",
+        "example": "Follow this direction.",
+        "mastery": 0
+    },
+    {
+        "id": 151,
+        "word": "doctor",
+        "meaning": "dokter",
+        "example": "See a doctor.",
+        "mastery": 0
+    },
+    {
+        "id": 152,
+        "word": "dog",
+        "meaning": "anjing",
+        "example": "The dog barked.",
+        "mastery": 0
+    },
+    {
+        "id": 153,
+        "word": "door",
+        "meaning": "pintu",
+        "example": "Open the door.",
+        "mastery": 0
+    },
+    {
+        "id": 154,
+        "word": "down",
+        "meaning": "ke bawah",
+        "example": "Sit down.",
+        "mastery": 0
+    },
+    {
+        "id": 155,
+        "word": "draw",
+        "meaning": "menggambar",
+        "example": "Draw a circle.",
+        "mastery": 0
+    },
+    {
+        "id": 156,
+        "word": "dream",
+        "meaning": "mimpi",
+        "example": "I had a dream.",
+        "mastery": 0
+    },
+    {
+        "id": 157,
+        "word": "drive",
+        "meaning": "mengemudi",
+        "example": "Drive carefully.",
+        "mastery": 0
+    },
+    {
+        "id": 158,
+        "word": "during",
+        "meaning": "selama",
+        "example": "During the meeting.",
+        "mastery": 0
+    },
+    {
+        "id": 159,
+        "word": "each",
+        "meaning": "setiap",
+        "example": "Each student passed.",
+        "mastery": 0
+    },
+    {
+        "id": 160,
+        "word": "early",
+        "meaning": "awal",
+        "example": "Wake up early.",
+        "mastery": 0
+    },
+    {
+        "id": 161,
+        "word": "east",
+        "meaning": "timur",
+        "example": "The sun rises in the east.",
+        "mastery": 0
+    },
+    {
+        "id": 162,
+        "word": "easy",
+        "meaning": "mudah",
+        "example": "This is easy.",
+        "mastery": 0
+    },
+    {
+        "id": 163,
+        "word": "eat",
+        "meaning": "makan",
+        "example": "Eat your food.",
+        "mastery": 0
+    },
+    {
+        "id": 164,
+        "word": "education",
+        "meaning": "pendidikan",
+        "example": "Education is important.",
+        "mastery": 0
+    },
+    {
+        "id": 165,
+        "word": "effect",
+        "meaning": "efek",
+        "example": "The effect was clear.",
+        "mastery": 0
+    },
+    {
+        "id": 166,
+        "word": "effort",
+        "meaning": "usaha",
+        "example": "Make an effort.",
+        "mastery": 0
+    },
+    {
+        "id": 167,
+        "word": "enough",
+        "meaning": "cukup",
+        "example": "That is enough.",
+        "mastery": 0
+    },
+    {
+        "id": 168,
+        "word": "enter",
+        "meaning": "masuk",
+        "example": "Enter the room.",
+        "mastery": 0
+    },
+    {
+        "id": 169,
+        "word": "even",
+        "meaning": "bahkan",
+        "example": "Even he knows.",
+        "mastery": 0
+    },
+    {
+        "id": 170,
+        "word": "event",
+        "meaning": "acara",
+        "example": "The event was fun.",
+        "mastery": 0
+    },
+    {
+        "id": 171,
+        "word": "ever",
+        "meaning": "pernah",
+        "example": "Have you ever tried?",
+        "mastery": 0
+    },
+    {
+        "id": 172,
+        "word": "every",
+        "meaning": "setiap",
+        "example": "Every day is new.",
+        "mastery": 0
+    },
+    {
+        "id": 173,
+        "word": "example",
+        "meaning": "contoh",
+        "example": "Give me an example.",
+        "mastery": 0
+    },
+    {
+        "id": 174,
+        "word": "eye",
+        "meaning": "mata",
+        "example": "Close your eyes.",
+        "mastery": 0
+    },
+    {
+        "id": 175,
+        "word": "face",
+        "meaning": "wajah",
+        "example": "Wash your face.",
+        "mastery": 0
+    },
+    {
+        "id": 176,
+        "word": "fact",
+        "meaning": "fakta",
+        "example": "That is a fact.",
+        "mastery": 0
+    },
+    {
+        "id": 177,
+        "word": "family",
+        "meaning": "keluarga",
+        "example": "I love my family.",
+        "mastery": 0
+    },
+    {
+        "id": 178,
+        "word": "far",
+        "meaning": "jauh",
+        "example": "The school is far.",
+        "mastery": 0
+    },
+    {
+        "id": 179,
+        "word": "fast",
+        "meaning": "cepat",
+        "example": "He runs fast.",
+        "mastery": 0
+    },
+    {
+        "id": 180,
+        "word": "father",
+        "meaning": "ayah",
+        "example": "My father works hard.",
+        "mastery": 0
+    },
+    {
+        "id": 181,
+        "word": "feel",
+        "meaning": "merasakan",
+        "example": "I feel happy.",
+        "mastery": 0
+    },
+    {
+        "id": 182,
+        "word": "few",
+        "meaning": "sedikit",
+        "example": "Only a few came.",
+        "mastery": 0
+    },
+    {
+        "id": 183,
+        "word": "field",
+        "meaning": "lapangan",
+        "example": "The field is green.",
+        "mastery": 0
+    },
+    {
+        "id": 184,
+        "word": "fight",
+        "meaning": "bertarung",
+        "example": "They fight often.",
+        "mastery": 0
+    },
+    {
+        "id": 185,
+        "word": "figure",
+        "meaning": "angka",
+        "example": "Check the figure.",
+        "mastery": 0
+    },
+    {
+        "id": 186,
+        "word": "fill",
+        "meaning": "mengisi",
+        "example": "Fill the bottle.",
+        "mastery": 0
+    },
+    {
+        "id": 187,
+        "word": "finally",
+        "meaning": "akhirnya",
+        "example": "Finally, we won.",
+        "mastery": 0
+    },
+    {
+        "id": 188,
+        "word": "find",
+        "meaning": "menemukan",
+        "example": "Find the answer.",
+        "mastery": 0
+    },
+    {
+        "id": 189,
+        "word": "fine",
+        "meaning": "baik",
+        "example": "I am fine.",
+        "mastery": 0
+    },
+    {
+        "id": 190,
+        "word": "finish",
+        "meaning": "menyelesaikan",
+        "example": "Finish your homework.",
+        "mastery": 0
+    },
+    {
+        "id": 191,
+        "word": "fire",
+        "meaning": "api",
+        "example": "The fire is hot.",
+        "mastery": 0
+    },
+    {
+        "id": 192,
+        "word": "first",
+        "meaning": "pertama",
+        "example": "This is my first try.",
+        "mastery": 0
+    },
+    {
+        "id": 193,
+        "word": "fish",
+        "meaning": "ikan",
+        "example": "I like fish.",
+        "mastery": 0
+    },
+    {
+        "id": 194,
+        "word": "five",
+        "meaning": "lima",
+        "example": "I have five books.",
+        "mastery": 0
+    },
+    {
+        "id": 195,
+        "word": "floor",
+        "meaning": "lantai",
+        "example": "The floor is clean.",
+        "mastery": 0
+    },
+    {
+        "id": 196,
+        "word": "follow",
+        "meaning": "mengikuti",
+        "example": "Follow me.",
+        "mastery": 0
+    },
+    {
+        "id": 197,
+        "word": "food",
+        "meaning": "makanan",
+        "example": "The food is delicious.",
+        "mastery": 0
+    },
+    {
+        "id": 198,
+        "word": "foot",
+        "meaning": "kaki",
+        "example": "My foot hurts.",
+        "mastery": 0
+    },
+    {
+        "id": 199,
+        "word": "force",
+        "meaning": "kekuatan",
+        "example": "Use full force.",
+        "mastery": 0
+    },
+    {
+        "id": 200,
+        "word": "forget",
+        "meaning": "lupa",
+        "example": "Don't forget me.",
+        "mastery": 0
+    }
+]

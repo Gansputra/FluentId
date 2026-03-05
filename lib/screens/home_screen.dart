@@ -8,7 +8,14 @@ import '../services/vocab_service.dart';
 import '../widgets/interactive_particle_background.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  final String levelName;
+  final String fileName;
+  
+  const HomeScreen({
+    super.key, 
+    required this.levelName, 
+    required this.fileName
+  });
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -30,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    _vocabFuture = _vocabService.loadVocabularies();
+    _vocabFuture = _vocabService.loadVocabularies(widget.fileName);
     _confettiController = ConfettiController(duration: const Duration(seconds: 1));
     _flutterTts = FlutterTts();
     
@@ -139,6 +146,15 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             return SafeArea(
               child: Stack(
                 children: [
+                   // Back Button
+                   Positioned(
+                     top: 10,
+                     left: 10,
+                     child: IconButton(
+                       icon: const Icon(Icons.arrow_back_ios_new_rounded, color: Colors.deepPurple),
+                       onPressed: () => Navigator.pop(context),
+                     ),
+                   ),
                    Align(
                     alignment: Alignment.topCenter,
                     child: ConfettiWidget(
