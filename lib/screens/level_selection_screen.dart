@@ -66,6 +66,7 @@ class _LevelSelectionScreenState extends State<LevelSelectionScreen> {
                   color: Colors.blue,
                   fileName: "vocabBasic.json",
                   isLocked: false,
+                  progress: "0/1000",
                 ),
                 _buildLevelCard(
                   title: "Advanced",
@@ -75,6 +76,7 @@ class _LevelSelectionScreenState extends State<LevelSelectionScreen> {
                   fileName: "vocabAdvanced.json",
                   isLocked: _userScore < _scoreToUnlockAdvanced,
                   lockInfo: "Butuh ${_scoreToUnlockAdvanced - _userScore} XP lagi",
+                  progress: "0/500",
                 ),
                 _buildLevelCard(
                   title: "Professional",
@@ -84,6 +86,7 @@ class _LevelSelectionScreenState extends State<LevelSelectionScreen> {
                   fileName: "vocabProfessional.json",
                   isLocked: _userScore < _scoreToUnlockProfessional,
                   lockInfo: "Butuh ${_scoreToUnlockProfessional - _userScore} XP lagi",
+                  progress: "0/200",
                 ),
               ],
             ),
@@ -101,6 +104,7 @@ class _LevelSelectionScreenState extends State<LevelSelectionScreen> {
     required String fileName,
     required bool isLocked,
     String? lockInfo,
+    required String progress,
   }) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 20.0),
@@ -153,14 +157,29 @@ class _LevelSelectionScreenState extends State<LevelSelectionScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          title,
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: isLocked ? Colors.grey : Colors.black87,
-                          ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              title,
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: isLocked ? Colors.grey : Colors.black87,
+                              ),
+                            ),
+                            if (!isLocked)
+                              Text(
+                                progress,
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold,
+                                  color: color.withOpacity(0.8),
+                                ),
+                              ),
+                          ],
                         ),
+                        const SizedBox(height: 4),
                         Text(
                           isLocked ? (lockInfo ?? "Terkunci") : subtitle,
                           style: TextStyle(
@@ -168,11 +187,25 @@ class _LevelSelectionScreenState extends State<LevelSelectionScreen> {
                             color: isLocked ? Colors.grey.shade600 : Colors.black54,
                           ),
                         ),
+                        if (!isLocked) ...[
+                          const SizedBox(height: 12),
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: LinearProgressIndicator(
+                              value: 0, // Placeholder for actual progress
+                              backgroundColor: color.withOpacity(0.1),
+                              valueColor: AlwaysStoppedAnimation<Color>(color),
+                              minHeight: 6,
+                            ),
+                          ),
+                        ],
                       ],
                     ),
                   ),
-                  if (!isLocked)
+                  if (!isLocked) ...[
+                    const SizedBox(width: 12),
                     const Icon(Icons.arrow_forward_ios_rounded, color: Colors.black26, size: 18),
+                  ],
                 ],
               ),
             ),
