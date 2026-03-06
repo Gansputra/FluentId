@@ -123,6 +123,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   progress: _basicProgress,
                   color: Colors.blue,
                   onTap: () => _navigateToLevel("Basic", "vocabBasic.json", 1000),
+                  isLocked: false,
                 ),
                 CategoryCard(
                   title: "Advanced",
@@ -131,6 +132,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   progress: _advancedProgress,
                   color: Colors.orange,
                   onTap: () => _navigateToLevel("Advanced", "vocabAdvanced.json", 500),
+                  isLocked: _basicProgress < 1.0,
                 ),
                 CategoryCard(
                   title: "Professional",
@@ -139,7 +141,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   progress: _professionalProgress,
                   color: AppColors.accent,
                   onTap: () => _navigateToLevel("Professional", "vocabProfessional.json", 200),
+                  isLocked: _advancedProgress < 1.0 || _basicProgress < 1.0,
                 ),
+
                 const SizedBox(height: 40),
               ],
             ),
