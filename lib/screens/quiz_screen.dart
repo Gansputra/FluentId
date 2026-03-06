@@ -228,90 +228,94 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
                         transitionBuilder: (Widget child, Animation<double> animation) {
                            return FadeTransition(opacity: animation, child: ScaleTransition(scale: animation, child: child));
                         },
-                        child: Column(
+                        child: SingleChildScrollView(
                           key: ValueKey<String>(_currentVocab!.id),
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "What is the meaning of:",
-                              style: AppStyles.subtitle.copyWith(letterSpacing: 1.2),
-                            ),
-                            const SizedBox(height: 16),
-                            Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(32),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.black.withOpacity(0.05),
-                                    blurRadius: 20,
-                                    offset: const Offset(0, 10),
-                                  ),
-                                ],
-                              ),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  Text(_currentVocab!.word, style: AppStyles.h1.copyWith(fontSize: 40)),
-                                  const SizedBox(width: 16),
-                                  InkWell(
-                                    onTap: () => _flutterTts.speak(_currentVocab!.word),
-                                    child: const Icon(Icons.volume_up_rounded, color: AppColors.primary, size: 32),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            AnimatedSize(
-                              duration: const Duration(milliseconds: 300),
-                              child: _isCorrect == true ? Container(
-                                margin: const EdgeInsets.only(top: 24),
-                                padding: const EdgeInsets.all(16),
-                                decoration: BoxDecoration(
-                                  color: Colors.green.withOpacity(0.05),
-                                  borderRadius: BorderRadius.circular(16),
-                                  border: Border.all(color: Colors.green.withOpacity(0.2)),
+                          child: Center(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "What is the meaning of:",
+                                  style: AppStyles.subtitle.copyWith(letterSpacing: 1.2),
                                 ),
-                                child: Column(
-                                  children: [
-                                    Text(
-                                      _currentVocab!.meaning,
-                                      style: AppStyles.h2.copyWith(color: Colors.green.shade700),
-                                    ),
-                                    const SizedBox(height: 8),
-                                    Text(
-                                      "\"${_currentVocab!.example}\"",
-                                      style: AppStyles.body.copyWith(
-                                        fontStyle: FontStyle.italic,
-                                        color: AppColors.textSecondary,
-                                        fontSize: 15,
+                                const SizedBox(height: 16),
+                                Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(32),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.black.withOpacity(0.05),
+                                        blurRadius: 20,
+                                        offset: const Offset(0, 10),
                                       ),
-                                      textAlign: TextAlign.center,
+                                    ],
+                                  ),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Text(_currentVocab!.word, style: AppStyles.h1.copyWith(fontSize: 40)),
+                                      const SizedBox(width: 16),
+                                      InkWell(
+                                        onTap: () => _flutterTts.speak(_currentVocab!.word),
+                                        child: const Icon(Icons.volume_up_rounded, color: AppColors.primary, size: 32),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                AnimatedSize(
+                                  duration: const Duration(milliseconds: 300),
+                                  child: _isCorrect == true ? Container(
+                                    margin: const EdgeInsets.only(top: 24),
+                                    padding: const EdgeInsets.all(16),
+                                    decoration: BoxDecoration(
+                                      color: Colors.green.withOpacity(0.05),
+                                      borderRadius: BorderRadius.circular(16),
+                                      border: Border.all(color: Colors.green.withOpacity(0.2)),
                                     ),
-                                    if (_currentVocab!.exampleTranslation != null)
-                                      Padding(
-                                        padding: const EdgeInsets.only(top: 4.0),
-                                        child: Text(
-                                          _currentVocab!.exampleTranslation!,
-                                          style: AppStyles.subtitle.copyWith(
-                                            color: Colors.green.shade600,
-                                            fontWeight: FontWeight.w500,
+                                    child: Column(
+                                      children: [
+                                        Text(
+                                          _currentVocab!.meaning,
+                                          style: AppStyles.h2.copyWith(color: Colors.green.shade700),
+                                        ),
+                                        const SizedBox(height: 8),
+                                        Text(
+                                          "\"${_currentVocab!.example}\"",
+                                          style: AppStyles.body.copyWith(
+                                            fontStyle: FontStyle.italic,
+                                            color: AppColors.textSecondary,
+                                            fontSize: 15,
                                           ),
                                           textAlign: TextAlign.center,
                                         ),
-                                      ),
-                                  ],
+                                        if (_currentVocab!.exampleTranslation != null)
+                                          Padding(
+                                            padding: const EdgeInsets.only(top: 4.0),
+                                            child: Text(
+                                              _currentVocab!.exampleTranslation!,
+                                              style: AppStyles.subtitle.copyWith(
+                                                color: Colors.green.shade600,
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                              textAlign: TextAlign.center,
+                                            ),
+                                          ),
+                                      ],
+                                    ),
+                                  ) : const SizedBox(width: double.infinity),
                                 ),
-                              ) : const SizedBox(width: double.infinity),
+                                const SizedBox(height: 32),
+                                ..._options.map((opt) => QuizOptionCard(
+                                  option: opt,
+                                  isSelected: _selectedOption == opt,
+                                  isCorrect: _selectedOption == opt ? _isCorrect : null,
+                                  onTap: () => _checkAnswer(opt, allVocabs),
+                                )),
+                              ],
                             ),
-                            const SizedBox(height: 32),
-                            ..._options.map((opt) => QuizOptionCard(
-                              option: opt,
-                              isSelected: _selectedOption == opt,
-                              isCorrect: _selectedOption == opt ? _isCorrect : null,
-                              onTap: () => _checkAnswer(opt, allVocabs),
-                            )),
-                          ],
+                          ),
                         ),
                       ),
                     ),
