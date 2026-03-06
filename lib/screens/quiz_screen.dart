@@ -52,7 +52,15 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
     _flutterTts = FlutterTts();
     _initTts();
     
-    _vocabFuture = _vocabService.loadVocabularies(widget.fileName).then((list) {
+    _vocabFuture = Future.wait([
+      _vocabService.loadVocabularies(widget.fileName),
+      _progressService.getMasteredWords(widget.category),
+    ]).then((results) {
+      final list = results[0] as List<Vocab>;
+      final mastered = results[1] as List<String>;
+      
+      _masteredInSession.addAll(mastered);
+
       if (widget.startIndex != null && widget.endIndex != null) {
         int start = widget.startIndex!.clamp(0, list.length);
         int end = (widget.endIndex! + 1).clamp(0, list.length);
@@ -101,8 +109,15 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
     _currentIndex = targetIndex;
     _currentVocab = correctVocab;
     _options = quizOptions;
-    _selectedOption = null;
-    _isCorrect = null;
+    
+    // Check if word is already mastered (from session or persistence)
+    if (_masteredInSession.contains(correctVocab.id)) {
+      _selectedOption = correctVocab.meaning;
+      _isCorrect = true;
+    } else {
+      _selectedOption = null;
+      _isCorrect = null;
+    }
     _isIncorrect = false;
   }
 

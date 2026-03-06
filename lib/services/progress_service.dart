@@ -56,4 +56,10 @@ class ProgressService {
     List<String> masteredList = prefs.getStringList('$_masteredKeyPrefix$level') ?? [];
     return masteredList.contains(wordId.toString());
   }
+
+  // Get full list of mastered word IDs for a level
+  Future<List<String>> getMasteredWords(String level) async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getStringList('$_masteredKeyPrefix$level') ?? [];
+  }
 }
