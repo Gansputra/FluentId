@@ -3,6 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 class ProgressService {
   static const String _xpKey = 'user_xp';
   static const String _masteredKeyPrefix = 'mastered_';
+  static const String _failedKeyPrefix = 'failed_';
 
   // Save XP
   Future<void> addXp(int amount) async {
@@ -20,12 +21,30 @@ class ProgressService {
   // Mark word as mastered
   Future<void> masterWord(String level, String wordId) async {
     final prefs = await SharedPreferences.getInstance();
+    
+    // Remove from failed if it exists
+    List<String> failedList = prefs.getStringList('$_failedKeyPrefix$level') ?? [];
+    if (failedList.contains(wordId.toString())) {
+      failedList.remove(wordId.toString());
+      await prefs.setStringList('$_failedKeyPrefix$level', failedList);
+    }
+
     List<String> masteredList = prefs.getStringList('$_masteredKeyPrefix$level') ?? [];
     if (!masteredList.contains(wordId.toString())) {
       masteredList.add(wordId.toString());
       await prefs.setStringList('$_masteredKeyPrefix$level', masteredList);
       // Give XP bonus for mastering a word
       await addXp(10);
+    }
+  }
+
+  // Mark word as failed
+  Future<void> failWord(String level, String wordId) async {
+    final prefs = await SharedPreferences.getInstance();
+    List<String> failedList = prefs.getStringList('$_failedKeyPrefix$level') ?? [];
+    if (!failedList.contains(wordId.toString())) {
+      failedList.add(wordId.toString());
+      await prefs.setStringList('$_failedKeyPrefix$level', failedList);
     }
   }
 
@@ -61,5 +80,11 @@ class ProgressService {
   Future<List<String>> getMasteredWords(String level) async {
     final prefs = await SharedPreferences.getInstance();
     return prefs.getStringList('$_masteredKeyPrefix$level') ?? [];
+  }
+
+  // Get full list of failed word IDs for a level
+  Future<List<String>> getFailedWords(String level) async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getStringList('$_failedKeyPrefix$level') ?? [];
   }
 }

@@ -44,7 +44,7 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
   int _currentIndex = 0;
   int _totalQuiz = 0;
   bool _isIncorrect = false; 
-  final Set<int> _failedIndices = {}; // Track which indices were failed
+  final Set<String> _failedWordIds = {}; // Track which IDs were failed
 
   @override
   void initState() {
@@ -56,11 +56,14 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
     _vocabFuture = Future.wait([
       _vocabService.loadVocabularies(widget.fileName),
       _progressService.getMasteredWords(widget.category),
+      _progressService.getFailedWords(widget.category),
     ]).then((results) {
       final list = results[0] as List<Vocab>;
       final mastered = results[1] as List<String>;
+      final failed = results[2] as List<String>;
       
       _masteredInSession.addAll(mastered);
+      _failedWordIds.addAll(failed);
 
       if (widget.startIndex != null && widget.endIndex != null) {
         int start = widget.startIndex!.clamp(0, list.length);
@@ -132,13 +135,15 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
       _isCorrect = correct;
       if (!correct) {
         _isIncorrect = true;
-        _failedIndices.add(_currentIndex);
+        _failedWordIds.add(_currentVocab!.id);
+        _progressService.failWord(widget.category, _currentVocab!.id);
       }
     });
 
     if (correct) {
       _confettiController.play();
       _masteredInSession.add(_currentVocab!.id);
+      _failedWordIds.remove(_currentVocab!.id);
       _progressService.masterWord(widget.category, _currentVocab!.id);
       
       // Auto move is nice, but we have buttons now. 
@@ -391,8 +396,9 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
                     child: Row(
                       children: List.generate(allVocabs.length, (index) {
                         Color boxColor = Colors.white;
-                        bool isMastered = _masteredInSession.contains(allVocabs[index].id);
-                        bool isFailed = _failedIndices.contains(index);
+                        final vocab = allVocabs[index];
+                        bool isMastered = _masteredInSession.contains(vocab.id);
+                        bool isFailed = _failedWordIds.contains(vocab.id);
                         
                         if (isMastered) {
                           boxColor = Colors.green;
