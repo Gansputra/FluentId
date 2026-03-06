@@ -3,6 +3,7 @@ class Vocab {
   final String word;
   final String meaning;
   final String example;
+  final String? exampleTranslation;
   final double mastery;
 
   Vocab({
@@ -10,6 +11,7 @@ class Vocab {
     required this.word,
     required this.meaning,
     required this.example,
+    this.exampleTranslation,
     this.mastery = 0.0,
   });
 
@@ -19,6 +21,7 @@ class Vocab {
       word: json['word'] as String,
       meaning: json['meaning'] as String,
       example: json['example'] as String,
+      exampleTranslation: json['example_id'] as String?,
       mastery: (json['mastery'] as num).toDouble(),
     );
   }
@@ -29,6 +32,7 @@ class Vocab {
       'word': word,
       'meaning': meaning,
       'example': example,
+      'example_id': exampleTranslation,
       'mastery': mastery,
     };
   }

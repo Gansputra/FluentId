@@ -288,6 +288,18 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
                                       ),
                                       textAlign: TextAlign.center,
                                     ),
+                                    if (_currentVocab!.exampleTranslation != null)
+                                      Padding(
+                                        padding: const EdgeInsets.only(top: 4.0),
+                                        child: Text(
+                                          _currentVocab!.exampleTranslation!,
+                                          style: AppStyles.subtitle.copyWith(
+                                            color: Colors.green.shade600,
+                                            fontWeight: FontWeight.w500,
+                                          ),
+                                          textAlign: TextAlign.center,
+                                        ),
+                                      ),
                                   ],
                                 ),
                               ) : const SizedBox(width: double.infinity),
