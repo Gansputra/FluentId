@@ -341,27 +341,61 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
     required VoidCallback? onPressed,
     bool isNext = false,
   }) {
-    return ElevatedButton(
-      onPressed: onPressed,
-      style: ElevatedButton.styleFrom(
-        backgroundColor: Colors.white,
-        foregroundColor: AppColors.primary,
-        elevation: 0,
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
-          side: BorderSide(color: AppColors.primary.withOpacity(0.1)),
+    bool isDisabled = onPressed == null;
+
+    return AnimatedOpacity(
+      duration: const Duration(milliseconds: 300),
+      opacity: isDisabled ? 0.5 : 1.0,
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          gradient: isNext && !isDisabled ? AppColors.primaryGradient : null,
+          color: !isNext ? Colors.white : (isDisabled ? Colors.grey.shade300 : null),
+          border: !isNext 
+            ? Border.all(color: AppColors.primary.withOpacity(0.2), width: 1.5)
+            : null,
+          boxShadow: isNext && !isDisabled ? [
+            BoxShadow(
+              color: AppColors.primary.withOpacity(0.3),
+              blurRadius: 15,
+              offset: const Offset(0, 8),
+            )
+          ] : [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.03),
+              blurRadius: 10,
+              offset: const Offset(0, 4),
+            )
+          ],
         ),
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          if (!isNext) Icon(icon, size: 18),
-          if (!isNext) const SizedBox(width: 8),
-          Text(label, style: const TextStyle(fontWeight: FontWeight.bold)),
-          if (isNext) const SizedBox(width: 8),
-          if (isNext) Icon(icon, size: 18),
-        ],
+        child: Material(
+          color: Colors.transparent,
+          child: InkWell(
+            onTap: onPressed,
+            borderRadius: BorderRadius.circular(20),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  if (!isNext) Icon(icon, size: 20, color: AppColors.primary),
+                  if (!isNext) const SizedBox(width: 12),
+                  Text(
+                    label,
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                      color: isNext ? Colors.white : AppColors.primary,
+                      letterSpacing: 0.5,
+                    ),
+                  ),
+                  if (isNext) const SizedBox(width: 12),
+                  if (isNext) const Icon(Icons.arrow_forward_rounded, size: 20, color: Colors.white),
+                ],
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }
