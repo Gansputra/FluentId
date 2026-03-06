@@ -37,6 +37,8 @@ dependencies:
   confetti: ^0.7.0
   flutter_tts: ^4.2.2
   shared_preferences: ^2.5.2
+  google_fonts: ^6.2.1
+  animations: ^2.0.11
 
 dev_dependencies:
   flutter_test:

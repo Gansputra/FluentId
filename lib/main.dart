@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluentid/screens/level_selection_screen.dart';
+import 'package:fluentid/screens/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,10 +14,10 @@ class MyApp extends StatelessWidget {
       title: 'FluentID',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF6366F1)),
         useMaterial3: true,
       ),
-      home: const LevelSelectionScreen(),
+      home: const HomeScreen(),
     );
   }
 }

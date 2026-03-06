@@ -1,525 +1,164 @@
-import 'dart:math';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:confetti/confetti.dart';
-import 'package:flutter_tts/flutter_tts.dart';
-import '../models/vocab.dart';
-import '../services/vocab_service.dart';
-import 'package:fluentid/services/progress_service.dart';
-import '../widgets/interactive_particle_background.dart';
+import '../core/app_theme.dart';
+import '../widgets/category_card.dart';
+import '../services/progress_service.dart';
+import 'level_screen.dart';
 
 class HomeScreen extends StatefulWidget {
-  final String levelName;
-  final String category;
-  final String fileName;
-  final int? startIndex;
-  final int? endIndex;
-  
-  const HomeScreen({
-    super.key, 
-    required this.levelName, 
-    required this.category,
-    required this.fileName,
-    this.startIndex,
-    this.endIndex,
-  });
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
-  final VocabService _vocabService = VocabService();
-  late Future<List<Vocab>> _vocabFuture;
-  late ConfettiController _confettiController;
-  late AnimationController _shakeController;
-  late Animation<double> _shakeAnimation;
-  late FlutterTts _flutterTts;
-  
+class _HomeScreenState extends State<HomeScreen> {
   final ProgressService _progressService = ProgressService();
-  
-  Vocab? _currentVocab;
-  List<String> _options = [];
-  String? _selectedOption;
-  bool? _isCorrect;
-  final Set<String> _masteredInSession = {};
-  int _initialMasteredCount = 0;
+  int _xp = 0;
+  double _basicProgress = 0;
+  double _advancedProgress = 0;
+  double _professionalProgress = 0;
 
   @override
   void initState() {
     super.initState();
-    _loadInitialProgress();
-    _vocabFuture = _vocabService.loadVocabularies(widget.fileName).then((list) {
-      if (widget.startIndex != null && widget.endIndex != null) {
-        int start = widget.startIndex!.clamp(0, list.length);
-        int end = widget.endIndex!.clamp(0, list.length);
-        return list.sublist(start, end);
-      }
-      return list;
-    });
-    _confettiController = ConfettiController(duration: const Duration(seconds: 1));
-    _flutterTts = FlutterTts();
-    
-    _initTts();
-    
-    _shakeController = AnimationController(
-      duration: const Duration(milliseconds: 500),
-      vsync: this,
-    );
-
-    _shakeAnimation = TweenSequence<double>([
-      TweenSequenceItem(tween: Tween(begin: 0.0, end: 10.0), weight: 1),
-      TweenSequenceItem(tween: Tween(begin: 10.0, end: -10.0), weight: 1),
-      TweenSequenceItem(tween: Tween(begin: -10.0, end: 10.0), weight: 1),
-      TweenSequenceItem(tween: Tween(begin: 10.0, end: 0.0), weight: 1),
-    ]).animate(_shakeController);
+    _loadData();
   }
 
-  Future<void> _loadInitialProgress() async {
-    if (widget.startIndex != null && widget.endIndex != null) {
-      int count = await _progressService.getMasteredCountInRange(
-        widget.category, 
-        widget.startIndex!, 
-        widget.endIndex! + 1
-      );
+  Future<void> _loadData() async {
+    final xp = await _progressService.getXp();
+    final basic = await _progressService.getMasteredCount("Basic");
+    final advanced = await _progressService.getMasteredCount("Advanced");
+    final professional = await _progressService.getMasteredCount("Professional");
+
+    if (mounted) {
       setState(() {
-        _initialMasteredCount = count;
+        _xp = xp;
+        _basicProgress = basic / 1000; // Assuming 1000 total for Basic
+        _advancedProgress = advanced / 500; // Assuming 500 total for Advanced
+        _professionalProgress = professional / 200; // Assuming 200 total for Professional
       });
-    }
-  }
-
-  @override
-  void dispose() {
-    _confettiController.dispose();
-    _shakeController.dispose();
-    _flutterTts.stop();
-    super.dispose();
-  }
-
-  void _initTts() async {
-    await _flutterTts.setLanguage("en-US");
-    await _flutterTts.setPitch(1.0);
-    await _flutterTts.setSpeechRate(0.5);
-  }
-
-  Future<void> _speak(String text) async {
-    await _flutterTts.speak(text);
-  }
-
-  // Fungsi internal untuk menghitung data quiz tanpa setState
-  void _setupQuizData(List<Vocab> allVocabs) {
-    if (allVocabs.isEmpty) return;
-
-    final random = Random();
-    
-    // Filter out words mastered in this session or already mastered in DB
-    // To make it logic, we should probably check DB for EACH word, 
-    // but that's slow. Let's assume _masteredInSession tracks what we did NOW.
-    // If the user wants to re-learn, we might need a different logic.
-    // However, the request is "kosakatanya jangan ada yang diulang".
-    
-    List<Vocab> availableVocabs = allVocabs.where((v) => !_masteredInSession.contains(v.id)).toList();
-    
-    if (availableVocabs.isEmpty) {
-      // All words in this sub-level mastered in this session!
-      // We can either restart or show a finished state.
-      // For now, let's just use all words if empty to avoid crash, 
-      // but ideally we show a "Level Complete" screen.
-      availableVocabs = allVocabs;
-      _masteredInSession.clear(); 
-    }
-
-    final correctVocab = availableVocabs[random.nextInt(availableVocabs.length)];
-    
-    List<String> wrongMeanings = allVocabs
-        .where((v) => v.id != correctVocab.id)
-        .map((v) => v.meaning)
-        .toList();
-    wrongMeanings.shuffle();
-    
-    List<String> quizOptions = [correctVocab.meaning];
-    quizOptions.addAll(wrongMeanings.take(3));
-    quizOptions.shuffle();
-
-    _currentVocab = correctVocab;
-    _options = quizOptions;
-    _selectedOption = null;
-    _isCorrect = null;
-  }
-
-  // Fungsi untuk trigger quiz baru dengan setState (dipanggil dari tombol)
-  void _generateNewQuiz(List<Vocab> allVocabs) {
-    setState(() {
-      _setupQuizData(allVocabs);
-    });
-  }
-
-  void _checkAnswer(String selected) {
-    if (_selectedOption != null) return;
-
-    bool correct = selected == _currentVocab!.meaning;
-    
-    setState(() {
-      _selectedOption = selected;
-      _isCorrect = correct;
-    });
-
-    if (correct) {
-      _confettiController.play();
-      _masteredInSession.add(_currentVocab!.id);
-      _progressService.masterWord(widget.category, _currentVocab!.id);
-    } else {
-      _shakeController.forward(from: 0.0);
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: InteractiveParticleBackground(
-        child: FutureBuilder<List<Vocab>>(
-          future: _vocabFuture,
-          builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return const Center(child: CircularProgressIndicator());
-            } else if (snapshot.hasError) {
-              return Center(child: Text('Error: ${snapshot.error}'));
-            } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-              return const Center(child: Text('No data found'));
-            }
-
-            final allVocabs = snapshot.data!;
-            
-            // Inisialisasi data quiz jika belum ada, tanpa setState karena masih dalam build
-            if (_currentVocab == null) {
-              _setupQuizData(allVocabs);
-            }
-
-            return SafeArea(
-              child: Stack(
-                children: [
-                   // Progress Bar & Info at the top
-                   Positioned(
-                     top: 0,
-                     left: 0,
-                     right: 0,
-                     child: Container(
-                       padding: const EdgeInsets.only(top: 10),
-                       child: Column(
-                         children: [
-                           Padding(
-                             padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 12.0),
-                             child: Row(
-                               children: [
-                                 // Premium Back Button
-                                 Container(
-                                   decoration: BoxDecoration(
-                                     color: Colors.white.withOpacity(0.2),
-                                     borderRadius: BorderRadius.circular(15),
-                                     border: Border.all(color: Colors.white.withOpacity(0.3)),
-                                   ),
-                                   child: IconButton(
-                                     icon: const Icon(Icons.arrow_back_ios_new_rounded, color: Colors.black87, size: 20),
-                                     onPressed: () => Navigator.pop(context),
-                                   ),
-                                 ),
-                                 const SizedBox(width: 16),
-                                 Expanded(
-                                   child: Column(
-                                     crossAxisAlignment: CrossAxisAlignment.start,
-                                     children: [
-                                       Text(
-                                         widget.levelName,
-                                         style: const TextStyle(
-                                           color: Colors.black87,
-                                           fontWeight: FontWeight.bold,
-                                           fontSize: 18,
-                                           letterSpacing: 0.5,
-                                         ),
-                                       ),
-                                       const SizedBox(height: 4),
-                                       ClipRRect(
-                                          borderRadius: BorderRadius.circular(10),
-                                          child: LinearProgressIndicator(
-                                            value: _masteredInSession.length / allVocabs.length,
-                                            backgroundColor: Colors.black.withOpacity(0.05),
-                                            valueColor: const AlwaysStoppedAnimation<Color>(Colors.deepPurple),
-                                            minHeight: 6,
-                                          ),
-                                        ),
-                                     ],
-                                   ),
-                                 ),
-                                 const SizedBox(width: 16),
-                                 Container(
-                                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                                   decoration: BoxDecoration(
-                                     color: Colors.deepPurple.withOpacity(0.1),
-                                     borderRadius: BorderRadius.circular(12),
-                                   ),
-                                   child: Text(
-                                     "${_masteredInSession.length}/${allVocabs.length}",
-                                     style: const TextStyle(
-                                       color: Colors.deepPurple,
-                                       fontWeight: FontWeight.bold,
-                                       fontSize: 12,
-                                     ),
-                                   ),
-                                 ),
-                               ],
-                             ),
-                           ),
-                         ],
-                       ),
-                     ),
-                   ),
-                   Align(
-                    alignment: Alignment.topCenter,
-                    child: ConfettiWidget(
-                      confettiController: _confettiController,
-                      blastDirectionality: BlastDirectionality.explosive,
-                      shouldLoop: false,
-                      colors: const [Colors.green, Colors.blue, Colors.pink, Colors.orange, Colors.purple],
+      backgroundColor: AppColors.background,
+      body: Container(
+        decoration: const BoxDecoration(gradient: AppColors.bgGradient),
+        child: SafeArea(
+          child: SingleChildScrollView(
+            physics: const BouncingScrollPhysics(),
+            padding: const EdgeInsets.symmetric(horizontal: 24.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(height: 20),
+                // Header Row
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("Welcome Back!", style: AppStyles.subtitle),
+                        Text("Language Learner", style: AppStyles.h2),
+                      ],
                     ),
+                    const CircleAvatar(
+                      radius: 24,
+                      backgroundColor: AppColors.primary,
+                      child: Icon(Icons.person, color: Colors.white),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 32),
+                
+                // Daily Progress Card
+                Container(
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: AppColors.primary,
+                    borderRadius: BorderRadius.circular(24),
+                    boxShadow: [
+                      BoxShadow(
+                        color: AppColors.primary.withOpacity(0.3),
+                        blurRadius: 20,
+                        offset: const Offset(0, 10),
+                      ),
+                    ],
                   ),
-                  Center(
-                  child: SingleChildScrollView(
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 24.0),
-                      child: AnimatedBuilder(
-                        animation: _shakeAnimation,
-                        builder: (context, child) {
-                          return Transform.translate(
-                            offset: Offset(_shakeAnimation.value, 0),
-                            child: child,
-                          );
-                        },
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(30),
-                          child: BackdropFilter(
-                            filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
-                            child: Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 32.0),
-                              decoration: BoxDecoration(
-                                color: Colors.white.withOpacity(0.9), // Increased opacity for better contrast
-                                borderRadius: BorderRadius.circular(30),
-                                border: Border.all(color: Colors.white.withOpacity(0.8), width: 1.5),
-                                boxShadow: [
-                                  // Main drop shadow
-                                  BoxShadow(
-                                    color: Colors.deepPurple.withOpacity(0.15),
-                                    blurRadius: 40,
-                                    offset: const Offset(0, 20),
-                                    spreadRadius: -10,
-                                  ),
-                                  // Subtle outer glow
-                                  BoxShadow(
-                                    color: Colors.black.withOpacity(0.1),
-                                    blurRadius: 20,
-                                    offset: const Offset(0, 10),
-                                  ),
-                                ],
-                              ),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    "APA ARTI DARI KATA INI?",
-                                    style: TextStyle(
-                                      fontSize: 12,
-                                      color: Colors.deepPurple.withOpacity(0.6),
-                                      fontWeight: FontWeight.w800,
-                                      letterSpacing: 2,
-                                    ),
-                                  ),
-                                  const SizedBox(height: 20),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      const SizedBox(width: 56),
-                                      Expanded(
-                                        child: Text(
-                                          _currentVocab!.word,
-                                          textAlign: TextAlign.center,
-                                          style: const TextStyle(
-                                            fontSize: 42,
-                                            fontWeight: FontWeight.w900,
-                                            color: Colors.black87,
-                                            letterSpacing: -1,
-                                          ),
-                                        ),
-                                      ),
-                                      _buildSpeakerButton(),
-                                    ],
-                                  ),
-                                  const SizedBox(height: 48),
-                                  ..._options.map((option) => _buildOptionButton(option)),
-                                  if (_selectedOption != null) ...[
-                                    const SizedBox(height: 32),
-                                    _buildFeedbackSection(allVocabs),
-                                  ],
-                                ],
-                              ),
+                  child: Row(
+                    children: [
+                      const Icon(Icons.bolt_rounded, color: Colors.white, size: 32),
+                      const SizedBox(width: 16),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Daily Goal Progress",
+                              style: AppStyles.body.copyWith(color: Colors.white, fontWeight: FontWeight.bold),
                             ),
-                          ),
+                            const SizedBox(height: 4),
+                            Text(
+                              "You've earned $_xp XP so far!",
+                              style: AppStyles.subtitle.copyWith(color: Colors.white.withOpacity(0.8)),
+                            ),
+                          ],
                         ),
+                      ),
+                    ],
                   ),
                 ),
-              ),
+                
+                const SizedBox(height: 48),
+                Text("Choose Your\nLearning Path", style: AppStyles.h1.copyWith(height: 1.2)),
+                const SizedBox(height: 24),
+                
+                CategoryCard(
+                  title: "Basic",
+                  description: "Master the foundations of English",
+                  icon: Icons.auto_stories_rounded,
+                  progress: _basicProgress,
+                  color: Colors.blue,
+                  onTap: () => _navigateToLevel("Basic", "vocabBasic.json", 1000),
+                ),
+                CategoryCard(
+                  title: "Advanced",
+                  description: "Refine your vocabulary & fluency",
+                  icon: Icons.trending_up_rounded,
+                  progress: _advancedProgress,
+                  color: Colors.orange,
+                  onTap: () => _navigateToLevel("Advanced", "vocabAdvanced.json", 500),
+                ),
+                CategoryCard(
+                  title: "Professional",
+                  description: "Speak like a native in business",
+                  icon: Icons.workspace_premium_rounded,
+                  progress: _professionalProgress,
+                  color: AppColors.accent,
+                  onTap: () => _navigateToLevel("Professional", "vocabProfessional.json", 200),
+                ),
+                const SizedBox(height: 40),
+              ],
             ),
-            ],
           ),
-        );
-      },
-    ),
+        ),
       ),
     );
   }
 
-  Widget _buildSpeakerButton() {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.deepPurple.withOpacity(0.1),
-        shape: BoxShape.circle,
-      ),
-      child: IconButton(
-        icon: const Icon(Icons.volume_up_rounded, color: Colors.deepPurple, size: 28),
-        onPressed: () => _speak(_currentVocab!.word),
-      ),
-    );
-  }
-
-  Widget _buildFeedbackSection(List<Vocab> allVocabs) {
-    return Column(
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              _isCorrect! ? Icons.check_circle_rounded : Icons.error_rounded,
-              color: _isCorrect! ? Colors.green : Colors.red,
-              size: 50,
-            ),
-            const SizedBox(width: 12),
-            Text(
-              _isCorrect! ? "BENAR SEKALI!" : "KURANG TEPAT!",
-              style: TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.w900,
-                color: _isCorrect! ? Colors.green : Colors.red,
-              ),
-            ),
-          ],
-        ),
-        if (!_isCorrect!) ...[
-          const SizedBox(height: 12),
-          Text(
-            "Jawaban benar: ${_currentVocab!.meaning}",
-            textAlign: TextAlign.center,
-            style: const TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w600,
-              color: Colors.black54,
-            ),
-          ),
-        ],
-        const SizedBox(height: 32),
-        Container(
-          width: double.infinity,
-          height: 60,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            gradient: const LinearGradient(
-              colors: [Colors.deepPurple, Colors.purpleAccent],
-            ),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.deepPurple.withOpacity(0.3),
-                blurRadius: 20,
-                offset: const Offset(0, 10),
-              ),
-            ],
-          ),
-          child: ElevatedButton(
-            onPressed: () => _generateNewQuiz(allVocabs),
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.transparent,
-              foregroundColor: Colors.white,
-              shadowColor: Colors.transparent,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-            ),
-            child: const Text(
-              "LANJUTKAN",
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w900, letterSpacing: 1.5),
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-
-  Widget _buildOptionButton(String option) {
-    bool isSelected = _selectedOption == option;
-    bool isCorrectOption = option == _currentVocab?.meaning;
-    
-    Color buttonColor = Colors.deepPurple.withOpacity(0.05);
-    Color borderColor = Colors.deepPurple.withOpacity(0.15);
-    Color textColor = Colors.black87;
-
-    if (_selectedOption != null) {
-      if (isCorrectOption) {
-        buttonColor = Colors.green.withOpacity(0.2);
-        borderColor = Colors.green.withOpacity(0.4);
-        textColor = Colors.green.shade700;
-      } else if (isSelected) {
-        buttonColor = Colors.red.withOpacity(0.2);
-        borderColor = Colors.red.withOpacity(0.4);
-        textColor = Colors.red.shade700;
-      } else {
-        buttonColor = Colors.transparent;
-        borderColor = Colors.black12;
-        textColor = Colors.black26;
-      }
-    }
-
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 16.0),
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 300),
-        width: double.infinity,
-        decoration: BoxDecoration(
-          color: buttonColor,
-          borderRadius: BorderRadius.circular(20),
-          border: Border.all(color: borderColor, width: 2),
-          boxShadow: [
-            if (_selectedOption == null)
-              BoxShadow(
-                color: Colors.black.withOpacity(0.03),
-                blurRadius: 10,
-                offset: const Offset(0, 4),
-              ),
-          ],
-        ),
-        child: InkWell(
-          onTap: () => _checkAnswer(option),
-          borderRadius: BorderRadius.circular(18),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 24),
-            child: Text(
-              option,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 18,
-                color: textColor,
-                fontWeight: isSelected || (_selectedOption != null && isCorrectOption) 
-                    ? FontWeight.w900 
-                    : FontWeight.w600,
-              ),
-            ),
-          ),
+  void _navigateToLevel(String title, String fileName, int total) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => LevelScreen(
+          category: title,
+          fileName: fileName,
+          totalVocabs: total,
         ),
       ),
-    );
+    ).then((_) => _loadData());
   }
 }
