@@ -43,6 +43,7 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
   
   int _currentIndex = 0;
   int _totalQuiz = 0;
+  bool _isIncorrect = false; // Add this to track if user got it wrong at least once
 
   @override
   void initState() {
@@ -77,45 +78,43 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
     super.dispose();
   }
 
-  void _setupQuizData(List<Vocab> allVocabs) {
+  void _setupQuizData(List<Vocab> allVocabs, {int? index}) {
     if (allVocabs.isEmpty) return;
-
-    final random = Random();
     
-    // Pick the next vocab based on session order or random from not mastered
-    List<Vocab> pool = allVocabs.where((v) => !_masteredInSession.contains(v.id)).toList();
-    
-    if (pool.isEmpty) {
-      // Level completed!
-      return;
-    }
+    // use specified index or current
+    int targetIndex = index ?? _currentIndex;
+    if (targetIndex >= allVocabs.length) targetIndex = 0;
+    if (targetIndex < 0) targetIndex = 0;
 
-    final correctVocab = pool[random.nextInt(pool.length)];
+    final correctVocab = allVocabs[targetIndex];
     
     List<String> wrongMeanings = allVocabs
         .where((v) => v.id != correctVocab.id)
         .map((v) => v.meaning)
-        .toList();
+        .toSet().toList();
     wrongMeanings.shuffle();
     
     List<String> quizOptions = [correctVocab.meaning];
     quizOptions.addAll(wrongMeanings.take(3));
     quizOptions.shuffle();
 
+    _currentIndex = targetIndex;
     _currentVocab = correctVocab;
     _options = quizOptions;
     _selectedOption = null;
     _isCorrect = null;
+    _isIncorrect = false;
   }
 
   void _checkAnswer(String selected, List<Vocab> allVocabs) {
-    if (_selectedOption != null) return;
+    if (_isCorrect == true) return; // Already answered correctly
 
     bool correct = selected == _currentVocab!.meaning;
     
     setState(() {
       _selectedOption = selected;
       _isCorrect = correct;
+      if (!correct) _isIncorrect = true;
     });
 
     if (correct) {
@@ -123,24 +122,38 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
       _masteredInSession.add(_currentVocab!.id);
       _progressService.masterWord(widget.category, _currentVocab!.id);
       
-      // Auto move to next after delay
-      Future.delayed(const Duration(milliseconds: 1500), () {
-        if (mounted) {
-          _nextQuestion(allVocabs);
-        }
-      });
+      // Auto move is nice, but we have buttons now. 
+      // Let's keep a short auto-move if it's not the last one
+      if (_currentIndex < allVocabs.length - 1) {
+        Future.delayed(const Duration(milliseconds: 1500), () {
+          if (mounted && _isCorrect == true && _selectedOption == selected) {
+            _nextQuestion(allVocabs);
+          }
+        });
+      } else if (_masteredInSession.length >= allVocabs.length) {
+         Future.delayed(const Duration(milliseconds: 1500), () => _showCompletionDialog());
+      }
     }
   }
 
   void _nextQuestion(List<Vocab> allVocabs) {
-    if (_masteredInSession.length >= allVocabs.length) {
-       _showCompletionDialog();
-       return;
+    if (_currentIndex < allVocabs.length - 1) {
+      setState(() {
+        _setupQuizData(allVocabs, index: _currentIndex + 1);
+      });
+    } else {
+      if (_masteredInSession.length >= allVocabs.length) {
+        _showCompletionDialog();
+      }
     }
-    
-    setState(() {
-      _setupQuizData(allVocabs);
-    });
+  }
+
+  void _previousQuestion(List<Vocab> allVocabs) {
+    if (_currentIndex > 0) {
+      setState(() {
+        _setupQuizData(allVocabs, index: _currentIndex - 1);
+      });
+    }
   }
 
   void _showCompletionDialog() {
@@ -245,6 +258,22 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
                         ),
                       ),
                     ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        _buildNavButton(
+                          icon: Icons.arrow_back_ios_new_rounded,
+                          label: "Previous",
+                          onPressed: _currentIndex > 0 ? () => _previousQuestion(allVocabs) : null,
+                        ),
+                        _buildNavButton(
+                          icon: Icons.arrow_forward_ios_rounded,
+                          label: "Next",
+                          onPressed: _currentIndex < allVocabs.length - 1 ? () => _nextQuestion(allVocabs) : null,
+                          isNext: true,
+                        ),
+                      ],
+                    ),
                     const SizedBox(height: 24),
                     ConfettiWidget(
                       confettiController: _confettiController,
@@ -291,7 +320,11 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
                 child: LinearProgressIndicator(
                   value: progressValue,
                   backgroundColor: Colors.white,
-                  valueColor: const AlwaysStoppedAnimation<Color>(AppColors.primary),
+                  valueColor: AlwaysStoppedAnimation<Color>(
+                    _isCorrect == true 
+                        ? Colors.green 
+                        : (_isCorrect == false && _selectedOption != null ? Colors.red : AppColors.primary),
+                  ),
                   minHeight: 10,
                 ),
               ),
@@ -299,6 +332,37 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
           ),
         ),
       ],
+    );
+  }
+
+  Widget _buildNavButton({
+    required IconData icon,
+    required String label,
+    required VoidCallback? onPressed,
+    bool isNext = false,
+  }) {
+    return ElevatedButton(
+      onPressed: onPressed,
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.white,
+        foregroundColor: AppColors.primary,
+        elevation: 0,
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+          side: BorderSide(color: AppColors.primary.withOpacity(0.1)),
+        ),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          if (!isNext) Icon(icon, size: 18),
+          if (!isNext) const SizedBox(width: 8),
+          Text(label, style: const TextStyle(fontWeight: FontWeight.bold)),
+          if (isNext) const SizedBox(width: 8),
+          if (isNext) Icon(icon, size: 18),
+        ],
+      ),
     );
   }
 }
