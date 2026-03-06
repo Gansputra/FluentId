@@ -43,7 +43,8 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
   
   int _currentIndex = 0;
   int _totalQuiz = 0;
-  bool _isIncorrect = false; // Add this to track if user got it wrong at least once
+  bool _isIncorrect = false; 
+  final Set<int> _failedIndices = {}; // Track which indices were failed
 
   @override
   void initState() {
@@ -129,7 +130,10 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
     setState(() {
       _selectedOption = selected;
       _isCorrect = correct;
-      if (!correct) _isIncorrect = true;
+      if (!correct) {
+        _isIncorrect = true;
+        _failedIndices.add(_currentIndex);
+      }
     });
 
     if (correct) {
@@ -375,19 +379,51 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
                   ),
                 ],
               ),
-              const SizedBox(height: 8),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(10),
-                child: LinearProgressIndicator(
-                  value: progressValue,
-                  backgroundColor: Colors.white,
-                  valueColor: AlwaysStoppedAnimation<Color>(
-                    _isCorrect == true 
-                        ? Colors.green 
-                        : (_isCorrect == false && _selectedOption != null ? Colors.red : AppColors.primary),
-                  ),
-                  minHeight: 10,
-                ),
+              const SizedBox(height: 12),
+              // Grid-style Progress Bar (Blocks)
+              LayoutBuilder(
+                builder: (context, constraints) {
+                  const double spacing = 4.0;
+                  final double boxWidth = (constraints.maxWidth - (spacing * (allVocabs.length - 1))) / allVocabs.length;
+                  
+                  return SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: List.generate(allVocabs.length, (index) {
+                        Color boxColor = Colors.white;
+                        bool isMastered = _masteredInSession.contains(allVocabs[index].id);
+                        bool isFailed = _failedIndices.contains(index);
+                        
+                        if (isMastered) {
+                          boxColor = Colors.green;
+                        } else if (isFailed) {
+                          boxColor = Colors.red;
+                        } else if (index == _currentIndex) {
+                          boxColor = AppColors.primary.withOpacity(0.3);
+                        } else {
+                          boxColor = Colors.white.withOpacity(0.5);
+                        }
+                        
+                        return Container(
+                          width: boxWidth > 6 ? boxWidth : 8, // Minimum width of 8 pixels
+                          height: 8,
+                          margin: EdgeInsets.only(right: index == allVocabs.length - 1 ? 0 : spacing),
+                          decoration: BoxDecoration(
+                            color: boxColor,
+                            borderRadius: BorderRadius.circular(2),
+                            boxShadow: index == _currentIndex ? [
+                              BoxShadow(
+                                color: AppColors.primary.withOpacity(0.5),
+                                blurRadius: 4,
+                                spreadRadius: 1,
+                              )
+                            ] : null,
+                          ),
+                        );
+                      }),
+                    ),
+                  );
+                },
               ),
             ],
           ),
