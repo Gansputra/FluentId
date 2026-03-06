@@ -262,7 +262,37 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
                                 ],
                               ),
                             ),
-                            const SizedBox(height: 48),
+                            AnimatedSize(
+                              duration: const Duration(milliseconds: 300),
+                              child: _isCorrect == true ? Container(
+                                margin: const EdgeInsets.only(top: 24),
+                                padding: const EdgeInsets.all(16),
+                                decoration: BoxDecoration(
+                                  color: Colors.green.withOpacity(0.05),
+                                  borderRadius: BorderRadius.circular(16),
+                                  border: Border.all(color: Colors.green.withOpacity(0.2)),
+                                ),
+                                child: Column(
+                                  children: [
+                                    Text(
+                                      _currentVocab!.meaning,
+                                      style: AppStyles.h2.copyWith(color: Colors.green.shade700),
+                                    ),
+                                    const SizedBox(height: 8),
+                                    Text(
+                                      "\"${_currentVocab!.example}\"",
+                                      style: AppStyles.body.copyWith(
+                                        fontStyle: FontStyle.italic,
+                                        color: AppColors.textSecondary,
+                                        fontSize: 15,
+                                      ),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ],
+                                ),
+                              ) : const SizedBox(width: double.infinity),
+                            ),
+                            const SizedBox(height: 32),
                             ..._options.map((opt) => QuizOptionCard(
                               option: opt,
                               isSelected: _selectedOption == opt,
